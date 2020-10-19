@@ -20,6 +20,8 @@ public class Main {
             } else if (opt.equalsIgnoreCase("play")) {
                 Game a = new Game(2, 2);
                 break;
+
+                //test af commit
             }
         }
 
