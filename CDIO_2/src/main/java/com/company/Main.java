@@ -22,6 +22,7 @@ public class Main {
                 break;
 
                 //test af commit
+                //test 2
             }
         }
 
