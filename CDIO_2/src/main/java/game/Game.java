@@ -8,6 +8,7 @@ public class Game {
     private int totalNumPlayers;
     private int totalNumDice;
     private ArrayList<Player> playerList;
+    private DiceCup cup;
 
     public Game(int totalNumPlayers, int totalNumDice) {
         if (totalNumPlayers > 6){
@@ -16,14 +17,13 @@ public class Game {
             totalNumPlayers = 1;
         }
         addPlayers(totalNumPlayers);
-        DiceCup cup = new DiceCup(totalNumDice);
+        cup = new DiceCup(totalNumDice);
         initGUI();
         playGame();
     }
 
     public void playGame() {
         int winnerID = -1;
-        DiceCup cup = new DiceCup(2);
 
         while (winnerID == -1) //Game loop till winner is found
         {
