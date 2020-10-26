@@ -1,0 +1,211 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"52d4ae8a-2e74-40c9-aeee-94502276f600\" name=\"Default Changelist\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/CDIO_2.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/CDIO_2.iml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/CDIO_2/src/main/java/com/company/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/CDIO_2/src/main/java/com/company/Main.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/out/production/CDIO_2/GUI.jar\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/out/production/CDIO_2/main/java/com/company/Main.class\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Dice.class\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/out/production/CDIO_2/main/java/game/DiceCup.class\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Game.class\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Player.class\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/out/production/CDIO_2/main/java/game/RollTester.class\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CodeInsightWorkspaceSettings\">\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"mavenHome\" value=\"C:\\Program Files\\JetBrains\\IntelliJ IDEA 2020.2.2\\plugins\\maven\\lib\\maven3\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProjectId\" id=\"1j62gmCBcO3VCsBa7WwRyjqj4Fw\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"project.structure.last.edited\" value=\"Project\" />\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"main.java.com.company.Main\" />\n      <module name=\"CDIO_2\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"main.java.com.company.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"52d4ae8a-2e74-40c9-aeee-94502276f600\" name=\"Default Changelist\" comment=\"\" />\n      <created>1603110334007</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1603110334007</updated>\n      <workItem from=\"1603110335081\" duration=\"47000\" />\n      <workItem from=\"1603110428060\" duration=\"710000\" />\n      <workItem from=\"1603200130138\" duration=\"1940000\" />\n      <workItem from=\"1603704092320\" duration=\"27000\" />\n      <workItem from=\"1603704144909\" duration=\"293000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"443\" y=\"117\" width=\"1024\" height=\"852\" key=\"#Project_Structure\" timestamp=\"1603704174569\">\n      <screen x=\"56\" y=\"0\" width=\"1864\" height=\"1080\" />\n    </state>\n    <state x=\"443\" y=\"117\" width=\"1024\" height=\"852\" key=\"#Project_Structure/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080\" timestamp=\"1603704174569\" />\n    <state x=\"640\" y=\"257\" key=\"#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog\" timestamp=\"1603110338021\">\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\n    </state>\n    <state x=\"640\" y=\"257\" key=\"#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1603110338021\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision a89ceef3eec119c80cac69f1367f0528e4c9d44a)
++++ .idea/workspace.xml	(date 1603705998532)
+@@ -1,18 +1,36 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="BranchesTreeState">
++    <expand>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </expand>
++    <select>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </select>
++  </component>
+   <component name="ChangeListManager">
+     <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/CDIO_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CDIO_2.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/CDIO_2/src/main/java/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CDIO_2/src/main/java/com/company/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/GUI.jar" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/com/company/Main.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Dice.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/DiceCup.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Game.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Player.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/RollTester.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CDIO_2/main/java/com/company/Main.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Game.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Player.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -22,6 +40,13 @@
+   <component name="CodeInsightWorkspaceSettings">
+     <option name="optimizeImportsOnTheFly" value="true" />
+   </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+@@ -54,12 +79,15 @@
+     <property name="project.structure.side.proportion" value="0.0" />
+   </component>
+   <component name="RecentsManager">
++    <key name="CreateClassDialog.RecentsKey">
++      <recent name="main.java.game" />
++    </key>
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$" />
+     </key>
+   </component>
+   <component name="RunManager">
+-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="main.java.com.company.Main" />
+       <module name="CDIO_2" />
+       <extension name="coverage">
+@@ -72,11 +100,17 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <recent_temporary>
+-      <list>
+-        <item itemvalue="Application.Main" />
+-      </list>
+-    </recent_temporary>
++    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
++      <option name="arquillianRunConfiguration">
++        <value>
++          <option name="containerStateName" value="" />
++        </value>
++      </option>
++      <option name="TEST_OBJECT" value="class" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+@@ -96,6 +130,30 @@
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="main" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
++    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="443" y="117" width="1024" height="852" key="#Project_Structure" timestamp="1603704174569">
+@@ -106,5 +164,37 @@
+       <screen x="0" y="0" width="1920" height="1040" />
+     </state>
+     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603110338021" />
++    <state width="937" height="351" key="GridCell.Tab.0.bottom" timestamp="1603705421597">
++      <screen x="56" y="0" width="1864" height="1080" />
++    </state>
++    <state width="937" height="351" key="GridCell.Tab.0.bottom/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603705421597" />
++    <state width="937" height="351" key="GridCell.Tab.0.center" timestamp="1603705421597">
++      <screen x="56" y="0" width="1864" height="1080" />
++    </state>
++    <state width="937" height="351" key="GridCell.Tab.0.center/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603705421597" />
++    <state width="937" height="351" key="GridCell.Tab.0.left" timestamp="1603705421597">
++      <screen x="56" y="0" width="1864" height="1080" />
++    </state>
++    <state width="937" height="351" key="GridCell.Tab.0.left/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603705421597" />
++    <state width="937" height="351" key="GridCell.Tab.0.right" timestamp="1603705421597">
++      <screen x="56" y="0" width="1864" height="1080" />
++    </state>
++    <state width="937" height="351" key="GridCell.Tab.0.right/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603705421597" />
++    <state width="937" height="351" key="GridCell.Tab.1.bottom" timestamp="1603705421598">
++      <screen x="56" y="0" width="1864" height="1080" />
++    </state>
++    <state width="937" height="351" key="GridCell.Tab.1.bottom/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603705421598" />
++    <state width="937" height="351" key="GridCell.Tab.1.center" timestamp="1603705421598">
++      <screen x="56" y="0" width="1864" height="1080" />
++    </state>
++    <state width="937" height="351" key="GridCell.Tab.1.center/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603705421598" />
++    <state width="937" height="351" key="GridCell.Tab.1.left" timestamp="1603705421598">
++      <screen x="56" y="0" width="1864" height="1080" />
++    </state>
++    <state width="937" height="351" key="GridCell.Tab.1.left/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603705421598" />
++    <state width="937" height="351" key="GridCell.Tab.1.right" timestamp="1603705421598">
++      <screen x="56" y="0" width="1864" height="1080" />
++    </state>
++    <state width="937" height="351" key="GridCell.Tab.1.right/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603705421598" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/game/Game.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package main.java.game;\n\nimport desktop_resources.GUI;\nimport java.util.ArrayList;\nimport java.util.Scanner;\n\npublic class Game {\n    private int totalNumPlayers;\n    private int totalNumDice;\n    private ArrayList<Player> playerList;\n    private DiceCup cup;\n\n    public Game(int totalNumPlayers, int totalNumDice) {\n        if (totalNumPlayers > 6){\n            totalNumPlayers = 6;\n        } else if (totalNumPlayers < 1) {\n            totalNumPlayers = 1;\n        }\n        addPlayers(totalNumPlayers);\n        cup = new DiceCup(totalNumDice);\n        initGUI();\n        playGame();\n    }\n\n    public void playGame() {\n        int winnerID = -1;\n\n        while (winnerID == -1) //Game loop till winner is found\n        {\n            for (int i = 0; i < playerList.size(); i++) {   //A full round\n                GUI.showMessage(playerList.get(i).getName()+\"'s turn, press OK to roll dice\");\n                //Scuffed way of awaiting user input(click)..\n\n                cup.rollDice();\n                int a = cup.getDiceinCup().get(0).getValue();\n                int b = cup.getDiceinCup().get(1).getValue();\n                GUI.setDice(a,b);\n\n                if (a == b) {\n                    if (a == 1) {\n                        playerList.get(i).setGameScore(0);\n                        GUI.showMessage(\"Oh no \"+playerList.get(i).getName()+\"'s points have been reset to 0 for throwing two 1's!\");\n                    } else {\n                        playerList.get(i).addToScore(cup.getSum());\n                    }\n                } else {\n                    playerList.get(i).addToScore(cup.getSum());\n                }\n\n                GUI.setBalance(playerList.get(i).getName(),playerList.get(i).getGameScore());\n                if (playerList.get(i).getGameScore() >= 40) {\n                    winnerID = i;\n                    break;\n                }\n            }\n        }\n        GUI.showMessage(playerList.get(winnerID).getName()+\" has won the game, congratulations!\");\n    }\n\n    private void initGUI() {\n        for (int i = 0; i < playerList.size(); i++) {\n            GUI.addPlayer(playerList.get(i).getName(),0);\n        }\n    }\n\n    private void addPlayers(int a) {\n        Scanner input = new Scanner(System.in);\n        playerList = new ArrayList<Player>();\n        for (int i = 1; i <= a; i++) {\n            Player p = new Player(i);\n            System.out.println(\"Please enter name of Player \"+i+\" and press Enter\");\n            p.setName(input.nextLine());\n            playerList.add(p);\n        }\n        input.close();\n    }\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/game/Game.java	(revision a89ceef3eec119c80cac69f1367f0528e4c9d44a)
++++ src/main/java/game/Game.java	(date 1603705996440)
+@@ -9,6 +9,7 @@
+     private int totalNumDice;
+     private ArrayList<Player> playerList;
+     private DiceCup cup;
++    private GameBoard board;
+ 
+     public Game(int totalNumPlayers, int totalNumDice) {
+         if (totalNumPlayers > 6){
+Index: src/main/java/game/GameBoard.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/game/GameBoard.java	(date 1603706089064)
++++ src/main/java/game/GameBoard.java	(date 1603706089064)
+@@ -0,0 +1,6 @@
++package main.java.game;
++
++public class GameBoard {
++
++
++}
