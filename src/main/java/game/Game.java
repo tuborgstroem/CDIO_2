@@ -23,6 +23,8 @@ public class Game implements englishStrings{
             totalNumPlayers = 6;
         } else if (opt < 1) {
             totalNumPlayers = 1;
+        } else {
+            totalNumPlayers = opt;
         }
         addPlayers(totalNumPlayers);
         cup = new DiceCup(totalNumDice);
