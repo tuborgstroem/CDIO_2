@@ -27,7 +27,7 @@ public class Game implements englishStrings{
             totalNumPlayers = opt;
         }
         addPlayers(totalNumPlayers);
-        cup = new DiceCup(totalNumDice);
+        cup = new DiceCup(2);
         initGUI();
         playGame();
     }
