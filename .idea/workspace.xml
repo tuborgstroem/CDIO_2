@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/development" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="added board and tiles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CDIO_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CDIO_2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CDIO_2/src/main/java/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CDIO_2/src/main/java/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/GUI.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Dice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/DiceCup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/RollTester.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CDIO_2/main/java/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CDIO_2/main/java/game/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +41,19 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -40,6 +71,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -49,17 +81,21 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="main.java.game" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.java.com.company.Main" />
       <module name="CDIO_2" />
       <extension name="coverage">
@@ -72,11 +108,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,11 +122,40 @@
       <workItem from="1603200130138" duration="1940000" />
       <workItem from="1603704092320" duration="27000" />
       <workItem from="1603704144909" duration="293000" />
+      <workItem from="1603707355475" duration="1665000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/development" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added board and tiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="added board and tiles" />
   </component>
   <component name="WindowStateProjectService">
     <state x="443" y="117" width="1024" height="852" key="#Project_Structure" timestamp="1603704174569">
@@ -106,5 +166,49 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603110338021" />
+    <state x="430" y="88" width="1050" height="911" key="CommitChangelistDialog2" timestamp="1603708617490">
+      <screen x="56" y="0" width="1864" height="1080" />
+    </state>
+    <state x="430" y="88" width="1050" height="911" key="CommitChangelistDialog2/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603708617490" />
+    <state width="937" height="284" key="GridCell.Tab.0.bottom" timestamp="1603708679642">
+      <screen x="56" y="0" width="1864" height="1080" />
+    </state>
+    <state width="937" height="284" key="GridCell.Tab.0.bottom/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603708679642" />
+    <state width="937" height="351" key="GridCell.Tab.0.bottom/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
+    <state width="937" height="284" key="GridCell.Tab.0.center" timestamp="1603708679642">
+      <screen x="56" y="0" width="1864" height="1080" />
+    </state>
+    <state width="937" height="284" key="GridCell.Tab.0.center/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603708679642" />
+    <state width="937" height="351" key="GridCell.Tab.0.center/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
+    <state width="937" height="284" key="GridCell.Tab.0.left" timestamp="1603708679642">
+      <screen x="56" y="0" width="1864" height="1080" />
+    </state>
+    <state width="937" height="284" key="GridCell.Tab.0.left/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603708679642" />
+    <state width="937" height="351" key="GridCell.Tab.0.left/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
+    <state width="937" height="284" key="GridCell.Tab.0.right" timestamp="1603708679642">
+      <screen x="56" y="0" width="1864" height="1080" />
+    </state>
+    <state width="937" height="284" key="GridCell.Tab.0.right/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603708679642" />
+    <state width="937" height="351" key="GridCell.Tab.0.right/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
+    <state width="937" height="351" key="GridCell.Tab.1.bottom" timestamp="1603708132426">
+      <screen x="56" y="0" width="1864" height="1080" />
+    </state>
+    <state width="937" height="351" key="GridCell.Tab.1.bottom/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603708132426" />
+    <state width="937" height="351" key="GridCell.Tab.1.bottom/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
+    <state width="937" height="351" key="GridCell.Tab.1.center" timestamp="1603708132426">
+      <screen x="56" y="0" width="1864" height="1080" />
+    </state>
+    <state width="937" height="351" key="GridCell.Tab.1.center/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603708132426" />
+    <state width="937" height="351" key="GridCell.Tab.1.center/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
+    <state width="937" height="351" key="GridCell.Tab.1.left" timestamp="1603708132426">
+      <screen x="56" y="0" width="1864" height="1080" />
+    </state>
+    <state width="937" height="351" key="GridCell.Tab.1.left/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603708132426" />
+    <state width="937" height="351" key="GridCell.Tab.1.left/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
+    <state width="937" height="351" key="GridCell.Tab.1.right" timestamp="1603708132426">
+      <screen x="56" y="0" width="1864" height="1080" />
+    </state>
+    <state width="937" height="351" key="GridCell.Tab.1.right/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603708132426" />
+    <state width="937" height="351" key="GridCell.Tab.1.right/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
   </component>
 </project>
