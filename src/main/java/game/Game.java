@@ -10,7 +10,7 @@ public class Game implements englishStrings{
     private ArrayList<Player> playerList;
     private DiceCup cup;
 
-    public Game(int totalNumPlayers, int totalNumDice) {
+    public Game() {
         setupGame();
     }
 
