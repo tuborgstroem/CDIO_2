@@ -1,6 +1,7 @@
 package main.java.game;
 
 import desktop_resources.GUI;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ public class Game {
     private int totalNumDice;
     private ArrayList<Player> playerList;
     private DiceCup cup;
-
+    private GameBoard board;
     public Game(int totalNumPlayers, int totalNumDice) {
         if (totalNumPlayers > 6){
             totalNumPlayers = 6;
@@ -59,7 +60,9 @@ public class Game {
 
     private void initGUI() {
         for (int i = 0; i < playerList.size(); i++) {
-            GUI.addPlayer(playerList.get(i).getName(),0);
+//            Color.
+            GUI.addPlayer(playerList.get(i).getName(),0 );
+            GUI.setCar(i+1, playerList.get(i).getName());
         }
     }
 
