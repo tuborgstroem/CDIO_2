@@ -1,7 +1,7 @@
 package game;
 
 /**
- * Shold be used for the game board.
+ * Should be used for the game board.
  * Tiles are the individual fields
  */
 public class GameBoard {
