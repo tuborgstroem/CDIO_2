@@ -1,18 +1,31 @@
-package main.java.game;
+package game;
 
-import desktop_resources.GUI;
 
+
+import gui_fields.GUI_Car;
+import gui_fields.GUI_Player;
+import gui_main.GUI;
+import main.java.game.DiceCup;
+import main.java.game.GameBoard;
+
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game implements englishStrings {
     private int totalNumPlayers;
     private int totalNumDice;
-    private ArrayList<Player> playerList;
+    private Player[] playerList;
     private DiceCup cup;
     private GameBoard board;
+    private Color[] colors = {Color.BLUE, Color.RED};
+    GUI gui;
+    private final int startBalance = 1000;
+    private final int startLocation = 1;
 
     public Game() {
+        gui = new GUI();
+        System.out.println("hej");
         Scanner inp = new Scanner(System.in);
         int opt;
         System.out.println(stringNumberOfPlayers);
@@ -35,55 +48,63 @@ public class Game implements englishStrings {
 
         while (winnerID == -1) //Game loop till winner is found
         {
-            for (int i = 0; i < playerList.size(); i++) {   //A full round
-                GUI.showMessage(playerList.get(i).getName()+stringNextTurn);
+            for (int i = 0; i < playerList.length; i++) {   //A full round
+                Player player = playerList[i];
+                gui.showMessage(player.getName()+stringNextTurn);
                 //Scuffed way of awaiting user input(click)..
 
                 cup.rollDice();
+//                int a = 0;
+//                int b = 0;
+
                 int a = cup.getDiceinCup().get(0).getValue();
                 int b = cup.getDiceinCup().get(1).getValue();
-                GUI.setDice(a,b);
+                gui.setDice(a,b);
+//                gui.removeCar(player.getLocation(), player.getName());
 
-                if (a == b) {
-                    if (a == 1) {
-                        playerList.get(i).setGameScore(0);
-                        GUI.showMessage(playerList.get(i).getName()+stringPointReset);
-                    } else {
-                        playerList.get(i).addToScore(cup.getSum());
-                    }
-                } else {
-                    playerList.get(i).addToScore(cup.getSum());
-                }
+//
+//                if (a == b) {
+//                    if (a == 1) {
+//                        playerList.get(i).setGameScore(0);
+//                        gui.showMessage(playerList.get(i).getName()+stringPointReset);
+//                    } else {
+//                        playerList.get(i).addToScore(cup.getSum());
+//                    }
+//                } else {
+//                    playerList.get(i).addToScore(cup.getSum());
+//                }
 
-                GUI.setBalance(playerList.get(i).getName(),playerList.get(i).getGameScore());
-                if (playerList.get(i).getGameScore() >= 40) {
+//                gui.setBalance(player.getName(),player.getGameScore());
+                player.moveLocation(a+b);
+//                gui.setCar(player.getLocation(), player.getName());
+                if (player.getBalance() >= 40) {
                     winnerID = i;
                     break;
                 }
             }
         }
-        GUI.showMessage(playerList.get(winnerID).getName()+stringPlayerWon);
+//        gui.showMessage(playerList.get(winnerID).getName()+stringPlayerWon);
     }
 
     private void initGUI() {
-        for (int i = 0; i < playerList.size(); i++) {
-//            Color.
-            GUI.addPlayer(playerList.get(i).getName(),0 );
-            GUI.setCar(i+1, playerList.get(i).getName());
-        }
+
     }
 
     private void addPlayers(int a) {
         Scanner input = new Scanner(System.in);
-        playerList = new ArrayList<Player>();
-        for (int i = 1; i <= a; i++) {
-            Player p = new Player(i);
+        playerList = new Player[a];
+        for (int i = 0; i < a; i++) {
             System.out.println(stringEnterPlayerNamesA+i+stringEnterPlayerNamesB);
-            p.setName(input.nextLine());
-            playerList.add(p);
+            String name = input.nextLine();
+            GUI_Car car = new GUI_Car();
+            GUI_Player gui_player = new GUI_Player(name, startBalance ,car);
+            gui.addPlayer(gui_player);
+            Player p = new Player(name, startBalance, startLocation, gui_player, car);
+            playerList[i] = p;
         }
         input.close();
     }
+
 
 
 }
