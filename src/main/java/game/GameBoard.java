@@ -1,8 +1,10 @@
-package main.java.game;
+package game;
 
+/**
+ * Shold be used for the game board.
+ * Tiles are the individual fields
+ */
 public class GameBoard {
     private Tile[] tiles;
-
-
 
 }

@@ -1,11 +1,13 @@
-package main.java.game;
+package game;
+
+import gui_fields.GUI_Field;
 
 public class Tile {
 
-    int number;
-    String description;
-    int effect;
-    boolean extraTurn;
-
+    private int number;
+    private String description;
+    private int effect;
+    private boolean extraTurn;
+    private GUI_Field gui_field;
 
 }

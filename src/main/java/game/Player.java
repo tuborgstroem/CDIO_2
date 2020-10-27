@@ -1,59 +1,26 @@
 package game;
 
 import gui_fields.GUI_Car;
+import gui_fields.GUI_Field;
 import gui_fields.GUI_Player;
 
-public class Player {
+public class Player extends GUI_Player {
 
     //player variables
-    private String name;
     private int balance;
     private int location;
-    private GUI_Player playerGUI;
-    private GUI_Car car;
-
-    //constructs player
-//    public Player(int id){this.id = id; location = 1;}
-
 
     /**
      *
      * @param playerName The name of the player string
      * @param playerBalance The amount of money the player starts with
      * @param startLocation The tile the player starts on
-     * @param gui_player The GUI implementation of the player
      * @param playerCar The GUI implementation for the car
      */
-    public Player(String playerName, int playerBalance, int startLocation, GUI_Player gui_player, GUI_Car playerCar){
-        this.name = playerName;
-        this.balance = playerBalance;
+    public Player(String playerName, int playerBalance, int startLocation, GUI_Car playerCar){
+        super(playerName, playerBalance, playerCar);
         this.location = startLocation;
-        this.playerGUI = gui_player;
 
-    }
-    //returns playerid
-//    public int getId() {
-//        return id;
-//    }
-
-    //returns playername
-    public String getName() {
-        return name;
-    }
-
-    //sets playername
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    //returns playerscore
-    public int getBalance() {
-        return balance;
-    }
-
-    //sets gamescore
-    public void setBalance(int newBalance) {
-        this.balance = newBalance;
     }
 
     //adds to gamescore
@@ -61,10 +28,6 @@ public class Player {
         this.balance += balanceGain;
     }
 
-    //returns playerstring
-//    public String toString() {
-//        return id + "";
-//    }
 
     //returns player location
     public int getLocation() { return location;}
@@ -74,16 +37,43 @@ public class Player {
         location = newLocation;
     }
 
-    //move x tiles
-    public void moveLocation(int moveNumber){
-
+    /**
+     *
+     * @param moveNumber How many tiles should the player be moved?
+     * @param game the game class for redrawing the cars in the gui
+     */
+    public void moveLocation(int moveNumber, Game game){
+        removeOneCar(game);
         location =+ moveNumber;
         setBalance(location);
         while (location > 12) {
             location -= 11;
         }
+        game.getGui().getFields()[location].setCar(this, true);
     }
 
-    //Set the player's GUI_player
-    public void setGUIPlayer(GUI_Player gui_player) { this.playerGUI = gui_player; }
+    /**
+     * removes the players car from the field and redraws the others
+     * @param game the game
+     */
+    private void removeOneCar(Game game){
+        GUI_Field field = game.getGui().getFields()[location];
+        Player replaceCars[] = new Player[game.getTotalNumPlayers()];
+        int j= 0;
+        for(int i =0; i < game.getPlayerList().length; i++ ){
+            if (field.hasCar(game.getPlayerList()[i]) & !game.getPlayerList()[i].getName().equals(this.getName()) ){
+                replaceCars[j] = game.getPlayerList()[i];
+                j++;
+            }
+        }
+        field.removeAllCars();
+        if (replaceCars.length > 0){
+            for(int i =0; i < replaceCars.length; i++){
+                if(replaceCars[i] != null){
+                    field.setCar(replaceCars[i], true);
+                }
+            }
+        }
+    }
 }
+
