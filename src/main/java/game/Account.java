@@ -1,11 +1,10 @@
-package main.java.game;
+package game;
 
 public class Account {
-
     private int score = 1000;
 
         public int addScore(int point){
-            this.score += point;
+            this.score = this.score + point;
             if (this.score < 0)
                 this.score = 0;
             return this.score;
