@@ -19,20 +19,13 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/development" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="added board and tiles">
+    <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="clean up in folders and files">
+      <change afterPath="$PROJECT_DIR$/src/main/java/game/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/java/game/Account.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +34,9 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,6 +59,9 @@
         <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1j62gmCBcO3VCsBa7WwRyjqj4Fw" />
   <component name="ProjectViewState">
@@ -102,6 +101,17 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="CDIO_2" />
@@ -150,6 +160,14 @@
       <workItem from="1603707355475" duration="7057000" />
       <workItem from="1603718544756" duration="16592000" />
     </task>
+    <task id="LOCAL-00001" summary="clean up in folders and files">
+      <created>1603884047427</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603884047427</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +199,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added board and tiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="added board and tiles" />
+    <MESSAGE value="clean up in folders and files" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up in folders and files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="201" width="800" height="736" key="#Intentions" timestamp="1603838679056">
@@ -301,10 +320,18 @@
       <screen x="56" y="0" width="1864" height="1080" />
     </state>
     <state x="1193" y="141" width="727" height="296" key="GridCell.Tab.3.right/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603717751544" />
+    <state x="273" y="177" key="Vcs.Push.Dialog.v2" timestamp="1603884054722">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="273" y="177" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1603884054722" />
     <state x="760" y="1413" width="446" height="447" key="chooseDestDirectoryDialog" timestamp="1603722044829">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="760" y="1413" width="446" height="447" key="chooseDestDirectoryDialog/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1603722044829" />
+    <state x="465" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603884098815">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="465" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.831@0.23.1440.831" timestamp="1603884098815" />
     <state x="771" y="1288" width="1149" height="706" key="dock-window-1" timestamp="1603807426352">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
