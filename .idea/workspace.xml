@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="lidt ændringer i account" />
+    <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="lavede test account" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603963164782</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lidt ændringer i account">
+      <created>1603963256304</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603963256304</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +302,8 @@
     <MESSAGE value="added board and tiles" />
     <MESSAGE value="clean up in folders and files" />
     <MESSAGE value="ændringer i Account" />
-    <option name="LAST_COMMIT_MESSAGE" value="ændringer i Account" />
+    <MESSAGE value="lidt ændringer i account" />
+    <option name="LAST_COMMIT_MESSAGE" value="lidt ændringer i account" />
   </component>
   <component name="WindowStateProjectService">
     <state x="555" y="201" width="800" height="736" key="#Intentions" timestamp="1603838679056">
@@ -456,10 +464,10 @@
       <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="174" y="76" key="SettingsEditor/0.23.1440.832@0.23.1440.832" timestamp="1603890180971" />
-    <state x="273" y="177" key="Vcs.Push.Dialog.v2" timestamp="1603963177778">
+    <state x="273" y="177" key="Vcs.Push.Dialog.v2" timestamp="1603963266908">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
-    <state x="273" y="177" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1603963177778" />
+    <state x="273" y="177" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1603963266908" />
     <state x="273" y="177" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1603884555790" />
     <state x="570" y="279" width="446" height="447" key="chooseDestDirectoryDialog" timestamp="1603886397085">
       <screen x="0" y="23" width="1440" height="831" />
