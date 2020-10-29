@@ -7,7 +7,6 @@ import gui_fields.GUI_Player;
 public class Player extends GUI_Player {
 
     //player variables
-    private int balance;
     private int location;
 
     /**
@@ -25,17 +24,12 @@ public class Player extends GUI_Player {
 
     //adds to gamescore
     public void addToBalance(int balanceGain) {
-        this.balance += balanceGain;
+        this.setBalance(this.getBalance() +balanceGain) ;
     }
 
 
     //returns player location
     public int getLocation() { return location;}
-
-    //set location
-    public void setLocation(int newLocation){
-        location = newLocation;
-    }
 
     /**
      *
@@ -43,13 +37,18 @@ public class Player extends GUI_Player {
      * @param game the game class for redrawing the cars in the gui
      */
     public void moveLocation(int moveNumber, Game game){
-        removeOneCar(game);
-        location =+ moveNumber;
-        setBalance(location);
-        while (location > 12) {
-            location -= 11;
+        if (location < 0 ){
+            location = 0;
         }
-        landOnField(game.getGui().getFields()[location]);
+        else if (location >= 0) {
+            removeOneCar(game);
+            location = +moveNumber;
+            setBalance(location);
+            while (location > 12) {
+                location -= 11;
+            }
+            landOnField(game.getGui().getFields()[location]);
+        }
     }
 
     /**

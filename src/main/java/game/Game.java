@@ -18,13 +18,12 @@ public class Game implements englishStrings {
     private GameBoard board;
     private GUI gui;
     private final int startBalance = 1000;
-    private final int startLocation = 1;
+    private final int startLocation = 0;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW, Color.CYAN, Color.PINK};
 
     public Game() {
         gui = new GUI();
-        System.out.println("hej");
         Scanner inp = new Scanner(System.in);
         int opt;
         System.out.println(stringNumberOfPlayers);

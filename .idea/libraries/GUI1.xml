@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="GUI1">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/CDIO_2/out/production/CDIO_2/GUI.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
