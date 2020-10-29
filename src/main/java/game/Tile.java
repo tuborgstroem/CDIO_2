@@ -29,6 +29,10 @@ public class Tile {
         return effect;
     }
 
+    public boolean getExtraTurn() {
+        return extraTurn;
+    }
+
     public GUI_Field getGui_field() {
         return gui_field;
     }

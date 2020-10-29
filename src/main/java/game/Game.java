@@ -60,6 +60,10 @@ public class Game implements englishStrings {
                     winnerID = i;
                     break;
                 }
+                if (board.getTiles()[player.getLocation()].getExtraTurn()) {
+                    gui.showMessage(player.getName()+stringExtraTurn);
+                    i--;
+                }
             }
         }
         gui.showMessage(playerList[winnerID].getName()+stringPlayerWon);
