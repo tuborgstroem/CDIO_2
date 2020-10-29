@@ -17,12 +17,13 @@ public class Game implements englishStrings {
     private GUI gui;
     private final int startBalance = 1000;
     private final int startLocation = 1;
+    private final int numberOfTiles = 13;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW, Color.CYAN, Color.PINK};
 
     public Game() {
         gui = new GUI();
-        System.out.println("hej");
+        board = new GameBoard(numberOfTiles, gui.getFields());
         Scanner inp = new Scanner(System.in);
         int opt;
         System.out.println(stringNumberOfPlayers);
@@ -90,5 +91,9 @@ public class Game implements englishStrings {
 
     public int getTotalNumPlayers() {
         return totalNumPlayers;
+    }
+
+    public GameBoard getBoard() {
+        return board;
     }
 }

@@ -49,15 +49,17 @@ public class Player extends GUI_Player {
         while (location > 12) {
             location -= 11;
         }
-        landOnField(game.getGui().getFields()[location]);
+        landOnField(game.getBoard().getTiles()[location]);
     }
 
     /**
      * This is what happens when a player lands on a new field
      * @param field the field the player lands on
      */
-    private void landOnField(GUI_Field field) {
-        field.setCar(this, true);
+    private void landOnField(Tile tile) {
+        tile.getGui_field().setCar(this, true);
+        int playerValue = getBalance()+tile.getEffect();
+        setBalance(playerValue);
     }
 
     /**
