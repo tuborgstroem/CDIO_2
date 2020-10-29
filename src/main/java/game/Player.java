@@ -9,6 +9,7 @@ public class Player extends GUI_Player {
     //player variables
     private int balance;
     private int location;
+    private Account account;
 
     /**
      *
@@ -20,7 +21,7 @@ public class Player extends GUI_Player {
     public Player(String playerName, int playerBalance, int startLocation, GUI_Car playerCar){
         super(playerName, playerBalance, playerCar);
         this.location = startLocation;
-
+        account = new Account(playerBalance);
     }
 
     //adds to gamescore
@@ -45,7 +46,6 @@ public class Player extends GUI_Player {
     public void moveLocation(int moveNumber, Game game){
         removeOneCar(game);
         location =+ moveNumber;
-        setBalance(location);
         while (location > 12) {
             location -= 11;
         }
@@ -58,7 +58,9 @@ public class Player extends GUI_Player {
      */
     private void landOnField(Tile tile) {
         tile.getGui_field().setCar(this, true);
-        int playerValue = getBalance()+tile.getEffect();
+        //int playerValue = getBalance()+tile.getEffect();
+        int playerValue = account.getBalance()+tile.getEffect();
+        account.setBalance(playerValue);
         setBalance(playerValue);
     }
 

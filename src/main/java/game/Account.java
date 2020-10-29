@@ -1,36 +1,30 @@
 package game;
 
 public class Account {
-    int score;
+    int balance;
 
     public Account(int V)
     {
-        score = V;
+        balance = V;
     }
 
-    public int getScore()
+    public int getBalance()
     {
-        return score;
+        return balance;
     }
 
-    public void setScore(int nyScore)
+    public void setBalance(int input)
     {
-        score=nyScore;
+        balance=input;
+        if (balance < 0) balance = 0;
     }
 
-    public int tilføjScore(int indskud)
+    public int addToBalance(int input)
     {
-        return score = score + indskud;
+        balance += input;
+        if (balance < 0) balance = 0;
+        return balance;
     }
-
-    public int hævScore(int fradrag)
-    {
-        score = score - fradrag;
-        if (score < 0)
-            score = 0;
-        return score;
-    }
-
 }
 
 

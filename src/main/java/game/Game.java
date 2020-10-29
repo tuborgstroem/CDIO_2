@@ -16,7 +16,7 @@ public class Game implements englishStrings {
     private GameBoard board;
     private GUI gui;
     private final int startBalance = 1000;
-    private final int startLocation = 1;
+    private final int startLocation = 0;
     private final int numberOfTiles = 13;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW, Color.CYAN, Color.PINK};
@@ -35,6 +35,7 @@ public class Game implements englishStrings {
         } else {
             totalNumPlayers = opt;
         }
+
         addPlayers(totalNumPlayers);
         cup = new DiceCup(2);
         playGame();
@@ -55,7 +56,7 @@ public class Game implements englishStrings {
                 gui.setDice(a,b);
                 player.moveLocation(a+b, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
-                if (player.getBalance() >= 40) {
+                if (player.getBalance() >= 3000) {
                     winnerID = i;
                     break;
                 }
