@@ -18,13 +18,6 @@ public class Account {
         balance=input;
         if (balance < 0) balance = 0;
     }
-
-    public int addToBalance(int input)
-    {
-        balance += input;
-        if (balance < 0) balance = 0;
-        return balance;
-    }
 }
 
 
