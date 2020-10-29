@@ -13,11 +13,34 @@ public class Account {
         return balance;
     }
 
-    public void setBalance(int input)
+    public void setBalance(int amount)
     {
-        balance=input;
+        balance=amount;
         if (balance < 0) balance = 0;
     }
+
+    public void withdraw(int amount)
+    {
+        if (amount > 0) {
+            if (amount > balance) {
+                System.out.println("Can't withdraw, not enough funds. Available: "+balance);
+            } else {
+                balance -= amount;
+            }
+        }
+
+    }
+
+    public void deposit(int amount)
+    {
+        if (amount > 0) {
+            balance += amount;
+        } else {
+            System.out.println("Amount deposited must be higher than 0.");
+        }
+    }
+
+
 }
 
 
