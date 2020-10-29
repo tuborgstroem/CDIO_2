@@ -22,7 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="lavede test account" />
+    <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="lavede test account">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_26_20__10_55_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_26_20__10_55_AM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/DiceCup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/DiceCup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/game/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/game/AccountTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +60,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="mavenHome" value="D:\Programmer\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -112,14 +118,16 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AccounttestTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="CDIO_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -133,6 +141,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -198,29 +219,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testTest.getBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CDIO_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.testTest" />
-      <option name="METHOD_NAME" value="getBalance" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.AccounttestTest" />
         <item itemvalue="JUnit.Test_accountTest.getScore" />
         <item itemvalue="JUnit.Test_accountTest" />
         <item itemvalue="JUnit.testTest" />
-        <item itemvalue="JUnit.testTest.getBalance" />
       </list>
     </recent_temporary>
   </component>
@@ -364,36 +369,40 @@
       <screen x="56" y="0" width="1864" height="1080" />
     </state>
     <state width="1874" height="227" key="GridCell.Tab.-1.right/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603839581130" />
-    <state width="1314" height="197" key="GridCell.Tab.0.bottom" timestamp="1603963241314">
-      <screen x="0" y="23" width="1440" height="831" />
+    <state width="1609" height="248" key="GridCell.Tab.0.bottom" timestamp="1603977218773">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1609" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603977218773" />
     <state width="909" height="275" key="GridCell.Tab.0.bottom/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1603805721952" />
     <state width="1874" height="296" key="GridCell.Tab.0.bottom/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603841799587" />
     <state width="657" height="255" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1603920850473" />
     <state width="1314" height="197" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1603963241314" />
     <state width="1314" height="197" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1603962639791" />
     <state width="937" height="351" key="GridCell.Tab.0.bottom/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
-    <state width="1314" height="197" key="GridCell.Tab.0.center" timestamp="1603963241313">
-      <screen x="0" y="23" width="1440" height="831" />
+    <state width="1609" height="248" key="GridCell.Tab.0.center" timestamp="1603977218773">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1609" height="248" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603977218773" />
     <state width="909" height="275" key="GridCell.Tab.0.center/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1603805721952" />
     <state width="1874" height="296" key="GridCell.Tab.0.center/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603841799587" />
     <state width="657" height="255" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1603920850472" />
     <state width="1314" height="197" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1603963241313" />
     <state width="1314" height="197" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1603962639791" />
     <state width="937" height="351" key="GridCell.Tab.0.center/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
-    <state width="1314" height="197" key="GridCell.Tab.0.left" timestamp="1603963241312">
-      <screen x="0" y="23" width="1440" height="831" />
+    <state width="1609" height="248" key="GridCell.Tab.0.left" timestamp="1603977218773">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1609" height="248" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603977218773" />
     <state width="909" height="275" key="GridCell.Tab.0.left/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1603805721952" />
     <state width="1874" height="296" key="GridCell.Tab.0.left/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603841799586" />
     <state width="657" height="255" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1603920850471" />
     <state width="1314" height="197" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1603963241312" />
     <state width="1314" height="197" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1603962639789" />
     <state width="937" height="351" key="GridCell.Tab.0.left/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
-    <state width="1314" height="197" key="GridCell.Tab.0.right" timestamp="1603963241313">
-      <screen x="0" y="23" width="1440" height="831" />
+    <state width="1609" height="248" key="GridCell.Tab.0.right" timestamp="1603977218773">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1609" height="248" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603977218773" />
     <state width="909" height="275" key="GridCell.Tab.0.right/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1603805721952" />
     <state width="1874" height="296" key="GridCell.Tab.0.right/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603841799587" />
     <state width="657" height="255" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1603920850472" />
@@ -474,9 +483,10 @@
     </state>
     <state x="760" y="1413" width="446" height="447" key="chooseDestDirectoryDialog/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1603722044829" />
     <state x="570" y="279" key="chooseDestDirectoryDialog/0.23.1440.831@0.23.1440.831" timestamp="1603886397085" />
-    <state x="465" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603884561903">
-      <screen x="0" y="23" width="1440" height="832" />
+    <state x="620" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603975753383">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="620" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603975753383" />
     <state x="465" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.831@0.23.1440.831" timestamp="1603884098815" />
     <state x="465" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.832@0.23.1440.832" timestamp="1603884561903" />
     <state x="452" y="257" width="442" height="346" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603961635043">

@@ -3,9 +3,7 @@ package game;
 
 
 import gui_fields.GUI_Car;
-import gui_fields.GUI_Player;
 import gui_main.GUI;
-import main.java.game.DiceCup;
 
 import java.awt.*;
 import java.util.Scanner;
