@@ -6,10 +6,10 @@ import gui_fields.GUI_Field;
  * Should be used for the game board.
  * Tiles are the individual fields
  */
-public class GameBoard implements englishFlavourStrings{
+public class GameBoard implements englishBoardStrings{
     private Tile[] tiles;
     private int numberOfTiles;
-    private final String[] descriptions={"","","Tower","Crater","Palace gates", "Cold Desert", "Walled city","Monastery","Black cave","Huts in the mountain", "The Werewall(werewolf-wall)", "The pit", "Goldmine"};
+    private final String[] descriptions={"","",stringTileDesc[2],stringTileDesc[3],stringTileDesc[4],stringTileDesc[5],stringTileDesc[6],stringTileDesc[7],stringTileDesc[8],stringTileDesc[9],stringTileDesc[10],stringTileDesc[11],stringTileDesc[12]};
     private final int[] effects={0,0,250, -100, 100, -20, 180, 0, -70, 60, -80, -50, 650};
     private final String[] flavorText={"","",
             stringFlavourTile[2] + effects[2],
