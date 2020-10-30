@@ -8,6 +8,8 @@ import gui_main.GUI;
 import java.awt.*;
 import java.util.Scanner;
 
+import static game.englishFlavourStrings.stringFlavourTile;
+
 public class Game implements englishStrings {
     private final int totalNumPlayers;
     private int totalNumDice;
@@ -63,6 +65,41 @@ public class Game implements englishStrings {
                 if (board.getTiles()[player.getLocation()].getExtraTurn()) {
                     gui.showMessage(player.getName()+stringExtraTurn);
                     i--;
+                }
+                switch (player.getLocation()) {
+                    case 2:
+                        gui.showMessage(stringFlavourTile[2] + "250 gold");
+                        break;
+                    case 3:
+                        gui.showMessage(stringFlavourTile[3] + "-100 gold");
+                        break;
+                    case 4:
+                        gui.showMessage(stringFlavourTile[4] + "100 gold");
+                        break;
+                    case 5:
+                        gui.showMessage(stringFlavourTile[5] + "-20 gold");
+                        break;
+                    case 6:
+                        gui.showMessage(stringFlavourTile[6] + "180 gold");
+                        break;
+                    case 7:
+                        gui.showMessage(stringFlavourTile[7] + "+ 0 gold");
+                        break;
+                    case 8:
+                        gui.showMessage(stringFlavourTile[8] + "-70 gold");
+                        break;
+                    case 9:
+                        gui.showMessage(stringFlavourTile[9] + "60 gold");
+                        break;
+                    case 10:
+                        gui.showMessage(stringFlavourTile[10] + "-80 gold");
+                        break;
+                    case 11:
+                        gui.showMessage(stringFlavourTile[11] + "-50 gold");
+                        break;
+                    case 12:
+                        gui.showMessage(stringFlavourTile[12] + "650 gold");
+                        break;
                 }
             }
         }
