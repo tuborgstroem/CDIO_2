@@ -1,6 +1,6 @@
 package game;
 
-public interface englishStrings{
+interface englishStrings{
     String stringPlayerWon = " has won the game, congratulations!";
     String stringNextTurn = "'s turn, press OK to roll dice.";
     String stringEnterPlayerNamesA = "Please enter name of Player ";
@@ -9,7 +9,7 @@ public interface englishStrings{
     String stringExtraTurn = " gets an extra turn!";
 }
 
-interface englishFlavourStrings{
+interface englishBoardStrings{
     String[] stringFlavourTile = {"","",
             "You find an abandoned tower with a chest filled with coins. +",
             "You fall into the great crater, losing some of your belongings during the tumble. ",
@@ -23,4 +23,17 @@ interface englishFlavourStrings{
             "You fall into a pit, dropping some coins. ",
             "You discover an abandoned Goldmine, the minecarts still filled with gold. You cant help but wonder where everyone went... +"
     };
+    String[] stringTileDesc = {"","",
+            "Tower",
+            "Crater",
+            "Palace gates",
+            "Cold Desert",
+            "Walled city",
+            "Monastery",
+            "Black cave",
+            "Huts in the mountain",
+            "The Werewall(werewolf-wall)",
+            "The pit",
+            "Goldmine"};
+
 }
