@@ -8,7 +8,7 @@ import gui_main.GUI;
 import java.awt.*;
 import java.util.Scanner;
 
-import static game.englishFlavourStrings.stringFlavourTile;
+import static game.englishBoardStrings.stringFlavourTile;
 
 public class Game implements englishStrings {
     private final int totalNumPlayers;
