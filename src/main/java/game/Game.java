@@ -18,7 +18,7 @@ public class Game implements englishStrings {
     private GameBoard board;
     private GUI gui;
     private final int startBalance = 1000;
-    private final int startLocation = 0;
+    private final int startLocation = 1;
     private final int numberOfTiles = 13;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW, Color.CYAN, Color.PINK};
