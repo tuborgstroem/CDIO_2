@@ -1,24 +1,46 @@
 package game;
 
 public class Account {
-    private int score = 1000;
+    int balance;
 
-        public int addScore(int point){
-            this.score = this.score + point;
-            if (this.score < 0)
-                this.score = 0;
-            return this.score;
+    public Account(int V)
+    {
+        balance = V;
+    }
+
+    public int getBalance()
+    {
+        return balance;
+    }
+
+    public void setBalance(int amount)
+    {
+        balance=amount;
+        if (balance < 0) balance = 0;
+    }
+
+    public void withdraw(int amount)
+    {
+        if (amount > 0) {
+            if (amount > balance) {
+                System.out.println("Can't withdraw, not enough funds. Available: "+balance);
+            } else {
+                balance -= amount;
+            }
         }
 
-        public int getScore(){
-            return this.score;
-        }
-        public void setScore(int score){
-            this.score = score;
-            if (this.score < 0)
-                this.score = 0;
+    }
+
+    public void deposit(int amount)
+    {
+        if (amount > 0) {
+            balance += amount;
+        } else {
+            System.out.println("Amount deposited must be higher than 0.");
         }
     }
 
+
+}
 
 

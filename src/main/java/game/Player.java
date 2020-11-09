@@ -7,7 +7,9 @@ import gui_fields.GUI_Player;
 public class Player extends GUI_Player {
 
     //player variables
+    private int balance;
     private int location;
+    private Account account;
 
     /**
      *
@@ -19,17 +21,22 @@ public class Player extends GUI_Player {
     public Player(String playerName, int playerBalance, int startLocation, GUI_Car playerCar){
         super(playerName, playerBalance, playerCar);
         this.location = startLocation;
-
+        account = new Account(playerBalance);
     }
 
     //adds to gamescore
     public void addToBalance(int balanceGain) {
-        this.setBalance(this.getBalance() +balanceGain) ;
+        this.balance += balanceGain;
     }
 
 
     //returns player location
     public int getLocation() { return location;}
+
+    //set location
+    public void setLocation(int newLocation){
+        location = newLocation;
+    }
 
     /**
      *
@@ -37,26 +44,24 @@ public class Player extends GUI_Player {
      * @param game the game class for redrawing the cars in the gui
      */
     public void moveLocation(int moveNumber, Game game){
-        if (location < 0 ){
-            location = 0;
+        removeOneCar(game);
+        location += moveNumber;
+        while (location > 12) {
+            location -= 11;
         }
-        else if (location >= 0) {
-            removeOneCar(game);
-            location = +moveNumber;
-            setBalance(location);
-            while (location > 12) {
-                location -= 11;
-            }
-            landOnField(game.getGui().getFields()[location]);
-        }
+        landOnField(game.getBoard().getTiles()[location]);
     }
 
     /**
      * This is what happens when a player lands on a new field
      * @param field the field the player lands on
      */
-    private void landOnField(GUI_Field field) {
-        field.setCar(this, true);
+    private void landOnField(Tile tile) {
+        tile.getGui_field().setCar(this, true);
+        //int playerValue = getBalance()+tile.getEffect();
+        int playerValue = account.getBalance()+tile.getEffect();
+        account.setBalance(playerValue);
+        setBalance(playerValue);
     }
 
     /**
