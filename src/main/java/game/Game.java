@@ -20,24 +20,25 @@ public class Game implements englishStrings {
     private final int startBalance = 1000;
     private final int startLocation = 1;
     private final int numberOfTiles = 13;
+    private final int maxNumberOfPlayers = 4;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW, Color.CYAN, Color.PINK};
 
     public Game() {
-        gui = new GUI();
-        board = new GameBoard(numberOfTiles, gui.getFields());
+
         Scanner inp = new Scanner(System.in);
         int opt;
         System.out.println(stringNumberOfPlayers);
         opt = inp.nextInt();
-        if (opt > 6){
-            totalNumPlayers = 6;
+        if (opt > maxNumberOfPlayers){
+            totalNumPlayers = maxNumberOfPlayers;
         } else if (opt < 1) {
             totalNumPlayers = 1;
         } else {
             totalNumPlayers = opt;
         }
-
+        gui = new GUI();
+        board = new GameBoard(numberOfTiles, gui.getFields());
         addPlayers(totalNumPlayers);
         cup = new DiceCup(2);
         playGame();
@@ -124,6 +125,7 @@ public class Game implements englishStrings {
     }
 
     public Player[] getPlayerList() {
+
         return playerList;
     }
 

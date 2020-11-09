@@ -1,11 +1,13 @@
 package game;
 
+
+
 interface englishStrings{
     String stringPlayerWon = " has won the game, congratulations!";
     String stringNextTurn = "'s turn, press OK to roll dice.";
     String stringEnterPlayerNamesA = "Please enter name of Player ";
     String stringEnterPlayerNamesB = " and press Enter";
-    String stringNumberOfPlayers = "Please enter number of players, between 1-6";
+    String stringNumberOfPlayers = "Please enter number of players";
     String stringExtraTurn = " gets an extra turn!";
 }
 
