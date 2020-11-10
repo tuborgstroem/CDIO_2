@@ -46,8 +46,8 @@ public class Player extends GUI_Player {
     public void moveLocation(int moveNumber, Game game){
         removeOneCar(game);
         location += moveNumber;
-        while (location > 12) {
-            location -= 11;
+        while (location > 25) {
+            location -= 24;
         }
         landOnField(game.getBoard().getTiles()[location]);
     }
