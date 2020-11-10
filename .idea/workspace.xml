@@ -19,20 +19,23 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:development" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="Fiksede dice package">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_26_20,_10_55_AM_[Default_Changelist]/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_26_20,_10_55_AM_[Default_Changelist]/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_26_20,_10_55_AM_[Default_Changelist]/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_26_20,_10_55_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/englishStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/englishStrings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/game/GameBoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/GameBoard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/game/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Tile.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +52,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,6 +89,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="36" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="128" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -105,7 +110,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.5735632" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -152,17 +157,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -231,10 +225,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="JUnit.AccounttestTest" />
+        <item itemvalue="JUnit.testTest" />
         <item itemvalue="JUnit.Test_accountTest.getScore" />
         <item itemvalue="JUnit.Test_accountTest" />
-        <item itemvalue="JUnit.testTest" />
+        <item itemvalue="JUnit.AccounttestTest" />
       </list>
     </recent_temporary>
   </component>
@@ -255,6 +249,7 @@
       <workItem from="1603718544756" duration="16592000" />
       <workItem from="1604326406530" duration="5471000" />
       <workItem from="1604760313839" duration="113000" />
+      <workItem from="1605016899573" duration="2483000" />
     </task>
     <task id="LOCAL-00001" summary="clean up in folders and files">
       <created>1603884047427</created>
@@ -308,7 +303,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/development" />
+                        <option value="development" />
                       </list>
                     </value>
                   </entry>
@@ -392,46 +387,50 @@
       <screen x="56" y="0" width="1864" height="1080" />
     </state>
     <state width="1874" height="227" key="GridCell.Tab.-1.right/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603839581130" />
-    <state width="1246" height="286" key="GridCell.Tab.0.bottom" timestamp="1604411980162">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state width="888" height="266" key="GridCell.Tab.0.bottom" timestamp="1605020205054">
+      <screen x="56" y="27" width="1864" height="1053" />
     </state>
     <state width="1769" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603988915509" />
-    <state width="1246" height="286" key="GridCell.Tab.0.bottom/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1604411980162" />
+    <state width="889" height="266" key="GridCell.Tab.0.bottom/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1604934112608" />
     <state width="1874" height="296" key="GridCell.Tab.0.bottom/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603841799587" />
     <state width="657" height="255" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1603920850473" />
     <state width="1314" height="197" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1603963241314" />
     <state width="1314" height="197" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1603962639791" />
     <state width="937" height="351" key="GridCell.Tab.0.bottom/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
-    <state width="1246" height="286" key="GridCell.Tab.0.center" timestamp="1604411980162">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state width="888" height="266" key="GridCell.Tab.0.bottom/56.27.1864.1053@56.27.1864.1053" timestamp="1605020205054" />
+    <state width="888" height="266" key="GridCell.Tab.0.center" timestamp="1605020205053">
+      <screen x="56" y="27" width="1864" height="1053" />
     </state>
     <state width="1769" height="258" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603988915509" />
-    <state width="1246" height="286" key="GridCell.Tab.0.center/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1604411980162" />
+    <state width="889" height="266" key="GridCell.Tab.0.center/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1604934112608" />
     <state width="1874" height="296" key="GridCell.Tab.0.center/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603841799587" />
     <state width="657" height="255" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1603920850472" />
     <state width="1314" height="197" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1603963241313" />
     <state width="1314" height="197" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1603962639791" />
     <state width="937" height="351" key="GridCell.Tab.0.center/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
-    <state width="1246" height="286" key="GridCell.Tab.0.left" timestamp="1604411980162">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state width="888" height="266" key="GridCell.Tab.0.center/56.27.1864.1053@56.27.1864.1053" timestamp="1605020205053" />
+    <state width="888" height="266" key="GridCell.Tab.0.left" timestamp="1605020205052">
+      <screen x="56" y="27" width="1864" height="1053" />
     </state>
     <state width="1769" height="258" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603988915509" />
-    <state width="1246" height="286" key="GridCell.Tab.0.left/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1604411980162" />
+    <state width="889" height="266" key="GridCell.Tab.0.left/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1604934112608" />
     <state width="1874" height="296" key="GridCell.Tab.0.left/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603841799586" />
     <state width="657" height="255" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1603920850471" />
     <state width="1314" height="197" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1603963241312" />
     <state width="1314" height="197" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1603962639789" />
     <state width="937" height="351" key="GridCell.Tab.0.left/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
-    <state width="1246" height="286" key="GridCell.Tab.0.right" timestamp="1604411980162">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state width="888" height="266" key="GridCell.Tab.0.left/56.27.1864.1053@56.27.1864.1053" timestamp="1605020205052" />
+    <state width="888" height="266" key="GridCell.Tab.0.right" timestamp="1605020205053">
+      <screen x="56" y="27" width="1864" height="1053" />
     </state>
     <state width="1769" height="258" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603988915509" />
-    <state width="1246" height="286" key="GridCell.Tab.0.right/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1604411980162" />
+    <state width="889" height="266" key="GridCell.Tab.0.right/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1604934112608" />
     <state width="1874" height="296" key="GridCell.Tab.0.right/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603841799587" />
     <state width="657" height="255" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1603920850472" />
     <state width="1314" height="197" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1603963241313" />
     <state width="1314" height="197" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" timestamp="1603962639791" />
     <state width="937" height="351" key="GridCell.Tab.0.right/56.0.1864.1080/1920.0.1920.1080@56.0.1864.1080" timestamp="1603707331322" />
+    <state width="888" height="266" key="GridCell.Tab.0.right/56.27.1864.1053@56.27.1864.1053" timestamp="1605020205053" />
     <state width="1246" height="286" key="GridCell.Tab.1.bottom" timestamp="1604411980162">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
@@ -500,11 +499,12 @@
       <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="268" y="179" key="Maven.ArtifactSearchDialog/0.23.1440.832@0.23.1440.832" timestamp="1603890752410" />
-    <state x="495" y="1308" width="1024" height="852" key="SettingsEditor" timestamp="1604411791751">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state x="537" y="249" width="1022" height="737" key="SettingsEditor" timestamp="1605020805861">
+      <screen x="56" y="27" width="1864" height="1053" />
     </state>
     <state x="495" y="1308" width="1024" height="852" key="SettingsEditor/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1604411791751" />
     <state x="174" y="76" key="SettingsEditor/0.23.1440.832@0.23.1440.832" timestamp="1603890180971" />
+    <state x="537" y="249" width="1022" height="737" key="SettingsEditor/56.27.1864.1053@56.27.1864.1053" timestamp="1605020805861" />
     <state x="364" y="193" key="Vcs.Push.Dialog.v2" timestamp="1603977711127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -552,10 +552,11 @@
       <screen x="56" y="0" width="1864" height="1080" />
     </state>
     <state x="1193" y="141" width="727" height="333" key="dock-window-4/0.1080.1920.1080/56.0.1864.1080@56.0.1864.1080" timestamp="1603717832278" />
-    <state x="679" y="1198" width="618" height="870" key="find.popup" timestamp="1603805382058">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state x="773" y="231" width="758" height="849" key="find.popup" timestamp="1605017942562">
+      <screen x="56" y="27" width="1864" height="1053" />
     </state>
     <state x="679" y="1198" width="618" height="870" key="find.popup/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1603805382058" />
+    <state x="773" y="231" width="758" height="849" key="find.popup/56.27.1864.1053@56.27.1864.1053" timestamp="1605017942562" />
     <state x="297" y="1235" width="1372" height="803" key="new project wizard" timestamp="1603723570762">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
@@ -579,7 +580,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/game/Game.java</url>
-          <line>26</line>
+          <line>48</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

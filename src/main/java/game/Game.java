@@ -18,7 +18,7 @@ public class Game implements englishStrings {
     //private final int numberOfTiles = 25;
     private final int maxNumberOfPlayers = 4;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
-                            Color.YELLOW, Color.CYAN, Color.PINK};
+                            Color.YELLOW/*, Color.CYAN, Color.PINK*/};
     GUI_Field[] fields = {
             new GUI_Start(),
             new GUI_Street(),

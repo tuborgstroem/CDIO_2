@@ -4,6 +4,7 @@ import gui_fields.GUI_Field;
 
 public class Tile {
 
+    private Player owner;
     private int number;
     private String description;
     private int effect;
@@ -21,7 +22,7 @@ public class Tile {
         gui_field.setTitle(description);
         gui_field.setSubText(Integer.toString(number));
         gui_field.setDescription(flavor);
-
+        owner = null;
 
     }
 
