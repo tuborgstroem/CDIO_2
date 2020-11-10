@@ -15,11 +15,12 @@ public class Game implements englishStrings {
     private GUI gui;
     private final int startBalance = 1000;
     private final int startLocation = 0;
-    //private final int numberOfTiles = 25;
+    private final int numberOfTiles = 24;
     private final int maxNumberOfPlayers = 4;
+    private final int chancePerSide = 1;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW,/*, Color.CYAN, Color.PINK};*/Color.PINK};
-    GUI_Field[] fields = {
+    GUI_Field[] fields /*= {
             new GUI_Start(),
             new GUI_Street(),
             new GUI_Street(),  //chance
@@ -44,9 +45,10 @@ public class Game implements englishStrings {
             new GUI_Chance(),  //chance
             new GUI_Street(),
             new GUI_Street()
-    };
+    }*/;
 
     public Game() {
+        initGUIFields();
         gui = new GUI(fields);
         totalNumPlayers = gui.getUserInteger("Enter number of players. 1-4.",1,maxNumberOfPlayers);
 
@@ -54,6 +56,35 @@ public class Game implements englishStrings {
         addPlayers(totalNumPlayers);
         cup = new DiceCup(1);
         playGame();
+    }
+
+    private void initGUIFields() {
+        int sideLength = numberOfTiles/4;
+        final int chanceFreq = sideLength/chancePerSide;
+        int i =0;
+        fields[i] = new GUI_Start();
+        for( i = 1; i<numberOfTiles; i++){
+            if(i%chanceFreq == 0){
+                if(i%2 == 0){ //Only works with this size
+                    switch (i){
+                        case(6):
+                            fields[i] = new GUI_Jail();
+                        break;
+                        case(12):
+                            fields[i] = new GUI_Refuge();
+                        case(18):
+                            fields[i] = new GUI_Empty();
+                    }
+                }
+                else {
+                    fields[i] = new GUI_Chance();
+                }
+            }
+            else{
+                fields[i]= new GUI_Street();
+            }
+
+        }
     }
 
     public void playGame() {
