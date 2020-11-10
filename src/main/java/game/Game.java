@@ -20,32 +20,7 @@ public class Game implements englishStrings {
     private final int chancePerSide = 1;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW,/*, Color.CYAN, Color.PINK};*/Color.PINK};
-    GUI_Field[] fields /*= {
-            new GUI_Start(),
-            new GUI_Street(),
-            new GUI_Street(),  //chance
-            new GUI_Chance(),
-            new GUI_Street(),
-            new GUI_Street(),
-            new GUI_Jail(),
-            new GUI_Street(),
-            new GUI_Street(),
-            new GUI_Chance(),  //chance
-            new GUI_Street(),
-            new GUI_Street(),
-            new GUI_Street(),   //Special
-            new GUI_Street(),
-            new GUI_Street(),
-            new GUI_Chance(),  //chance
-            new GUI_Street(),
-            new GUI_Street(),
-            new GUI_Street(),   //Special
-            new GUI_Street(),
-            new GUI_Street(),
-            new GUI_Chance(),  //chance
-            new GUI_Street(),
-            new GUI_Street()
-    }*/;
+    GUI_Field[] fields;
 
     public Game() {
         initGUIFields();
