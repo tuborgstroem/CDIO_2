@@ -2,13 +2,10 @@ package game;
 
 
 
-import gui_fields.GUI_Car;
+import gui_fields.*;
 import gui_main.GUI;
 
 import java.awt.*;
-import java.util.Scanner;
-
-import static game.englishBoardStrings.stringFlavourTile;
 
 public class Game implements englishStrings {
     private final int totalNumPlayers;
@@ -18,26 +15,43 @@ public class Game implements englishStrings {
     private GameBoard board;
     private GUI gui;
     private final int startBalance = 1000;
-    private final int startLocation = 1;
+    private final int startLocation = 0;
     private final int numberOfTiles = 13;
     private final int maxNumberOfPlayers = 4;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW, Color.CYAN, Color.PINK};
+    GUI_Field[] fields = {
+            new GUI_Start(),
+            new GUI_Street(),
+            new GUI_Street(),
+            new GUI_Chance(),
+            new GUI_Street(),
+            new GUI_Street(),
+            new GUI_Jail(),    //Besøg
+            new GUI_Street(),
+            new GUI_Street(),
+            new GUI_Chance(),
+            new GUI_Street(),
+            new GUI_Street(),
+            new GUI_Street(),    //Gratis parkering
+            new GUI_Street(),
+            new GUI_Street(),
+            new GUI_Chance(),
+            new GUI_Street(),
+            new GUI_Street(),
+            new GUI_Street(),
+            new GUI_Street(),
+            new GUI_Street(),
+            new GUI_Chance(),
+            new GUI_Street(),
+            new GUI_Street()
+    };
 
     public Game() {
-
-        Scanner inp = new Scanner(System.in);
-        int opt;
+        gui = new GUI(fields);
         System.out.println(stringNumberOfPlayers);
-        opt = inp.nextInt();
-        if (opt > maxNumberOfPlayers){
-            totalNumPlayers = maxNumberOfPlayers;
-        } else if (opt < 1) {
-            totalNumPlayers = 1;
-        } else {
-            totalNumPlayers = opt;
-        }
-        gui = new GUI();
+        totalNumPlayers = gui.getUserInteger("Enter number of players. 1-4.",1,maxNumberOfPlayers);
+
         board = new GameBoard(numberOfTiles, gui.getFields());
         addPlayers(totalNumPlayers);
         cup = new DiceCup(2);
@@ -67,7 +81,7 @@ public class Game implements englishStrings {
                     gui.showMessage(player.getName()+stringExtraTurn);
                     i--;
                 }
-                switch (player.getLocation()) {
+/*                switch (player.getLocation()) {
                     case 2:
                         gui.showMessage(stringFlavourTile[2] + "250 gold");
                         break;
@@ -101,27 +115,27 @@ public class Game implements englishStrings {
                     case 12:
                         gui.showMessage(stringFlavourTile[12] + "650 gold");
                         break;
-                }
+                }*/
             }
         }
         gui.showMessage(playerList[winnerID].getName()+stringPlayerWon);
     }
 
     private void addPlayers(int a) {
-        Scanner input = new Scanner(System.in);
+        //Scanner input = new Scanner(System.in);
         playerList = new Player[a];
         for (int i = 0; i < a; i++) {
-            System.out.println(stringEnterPlayerNamesA+i+stringEnterPlayerNamesB);
-            String name = input.nextLine();
+            //System.out.println(stringEnterPlayerNamesA+i+stringEnterPlayerNamesB);
+            //String name = input.nextLine();
             GUI_Car car = new GUI_Car();
             car.setPrimaryColor(colors[i]);
 
-            Player p = new Player(name, startBalance, startLocation, car);
+            Player p = new Player(gui.getUserString("Enter name of player "+(i+1)), startBalance, startLocation, car);
             gui.addPlayer(p);
             playerList[i] = p;
             gui.getFields()[p.getLocation()].setCar(p, true);
         }
-        input.close();
+        //input.close();
     }
 
     public Player[] getPlayerList() {
