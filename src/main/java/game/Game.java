@@ -34,8 +34,9 @@ public class Game implements englishStrings {
     }
 
     private void initGUIFields() {
+        fields = new GUI_Field[numberOfTiles];
         int sideLength = numberOfTiles/4;
-        final int chanceFreq = sideLength/chancePerSide;
+        final int chanceFreq = sideLength/(chancePerSide*2);
         int i =0;
         fields[i] = new GUI_Start();
         for( i = 1; i<numberOfTiles; i++){
@@ -47,8 +48,11 @@ public class Game implements englishStrings {
                         break;
                         case(12):
                             fields[i] = new GUI_Refuge();
+                        break;
                         case(18):
-                            fields[i] = new GUI_Empty();
+                            fields[i] = new GUI_Jail();
+                            fields[i].setSubText("Go to Jail!");
+                        break;
                     }
                 }
                 else {
