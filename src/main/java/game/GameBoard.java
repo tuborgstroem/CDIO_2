@@ -29,8 +29,8 @@ public class GameBoard implements englishBoardStrings{
     public GameBoard (int numOfTiles, GUI_Field[] gui_fields) {
         numberOfTiles=numOfTiles;
         tiles = new Tile[numOfTiles];
-        tiles[0] = new Tile();
-        for (int i = 1; i < numOfTiles; i++) {
+        //tiles[0] = new Tile();
+        for (int i = 0; i < numOfTiles; i++) {
             boolean extraTurn1 = false;
             if (i == 10) extraTurn1 = true;
             tiles[i] = new Tile(i, "test", 0, extraTurn1, gui_fields[i], "flavour");
