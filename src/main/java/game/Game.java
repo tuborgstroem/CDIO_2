@@ -18,30 +18,30 @@ public class Game implements englishStrings {
     //private final int numberOfTiles = 25;
     private final int maxNumberOfPlayers = 4;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
-                            Color.YELLOW/*, Color.CYAN, Color.PINK*/};
+                            Color.YELLOW,/*, Color.CYAN, Color.PINK};*/Color.PINK};
     GUI_Field[] fields = {
             new GUI_Start(),
             new GUI_Street(),
-            new GUI_Street(),
+            new GUI_Street(),  //chance
             new GUI_Chance(),
             new GUI_Street(),
             new GUI_Street(),
             new GUI_Jail(),
             new GUI_Street(),
             new GUI_Street(),
-            new GUI_Chance(),
+            new GUI_Chance(),  //chance
             new GUI_Street(),
             new GUI_Street(),
             new GUI_Street(),   //Special
             new GUI_Street(),
             new GUI_Street(),
-            new GUI_Chance(),
+            new GUI_Chance(),  //chance
             new GUI_Street(),
             new GUI_Street(),
             new GUI_Street(),   //Special
             new GUI_Street(),
             new GUI_Street(),
-            new GUI_Chance(),
+            new GUI_Chance(),  //chance
             new GUI_Street(),
             new GUI_Street()
     };
@@ -52,7 +52,7 @@ public class Game implements englishStrings {
 
         board = new GameBoard(gui.getFields().length, gui.getFields());
         addPlayers(totalNumPlayers);
-        cup = new DiceCup(2);
+        cup = new DiceCup(1);
         playGame();
     }
 
@@ -63,14 +63,11 @@ public class Game implements englishStrings {
         {
             for (int i = 0; i < playerList.length; i++) {   //A full round
                 Player player = playerList[i];
-                //gui.showMessage(player.getName()+stringNextTurn);
                 gui.getUserButtonPressed("Player "+(i+1)+"'s turn.","Roll");
-                //Scuffed way of awaiting user input(click)..
                 cup.rollDice();
                 int a = cup.getDiceinCup().get(0).getValue();
-                int b = cup.getDiceinCup().get(1).getValue();
-                gui.setDice(a,b);
-                player.moveLocation(a+b, this);
+                gui.setDie(a);
+                player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
                 if (player.getBalance() >= 3000) {
                     winnerID = i;
@@ -113,6 +110,42 @@ public class Game implements englishStrings {
                         break;
                     case 12:
                         gui.showMessage(stringFlavourTile[12] + "650 gold");
+                        break;
+                    case 13:
+                        gui.showMessage(stringFlavourTile[13] + "650 gold");
+                        break;
+                    case 14:
+                        gui.showMessage(stringFlavourTile[14] + "650 gold");
+                        break;
+                    case 15:
+                        gui.showMessage(stringFlavourTile[15] + "650 gold");
+                        break;
+                    case 16:
+                        gui.showMessage(stringFlavourTile[16] + "650 gold");
+                        break;
+                    case 17:
+                        gui.showMessage(stringFlavourTile[17] + "650 gold");
+                        break;
+                    case 18:
+                        gui.showMessage(stringFlavourTile[18] + "650 gold");
+                        break;
+                    case 19:
+                        gui.showMessage(stringFlavourTile[19] + "650 gold");
+                        break;
+                    case 20:
+                        gui.showMessage(stringFlavourTile[20] + "650 gold");
+                        break;
+                    case 21:
+                        gui.showMessage(stringFlavourTile[21] + "650 gold");
+                        break;
+                    case 22:
+                        gui.showMessage(stringFlavourTile[22] + "650 gold");
+                        break;
+                    case 23:
+                        gui.showMessage(stringFlavourTile[23] + "650 gold");
+                        break;
+                    case 24:
+                        gui.showMessage(stringFlavourTile[24] + "650 gold");
                         break;
                 }*/
             }
