@@ -27,19 +27,19 @@ public class Game implements englishStrings {
             new GUI_Chance(),
             new GUI_Street(),
             new GUI_Street(),
-            new GUI_Jail(),    //Besøg
+            new GUI_Jail(),
             new GUI_Street(),
             new GUI_Street(),
             new GUI_Chance(),
             new GUI_Street(),
             new GUI_Street(),
-            new GUI_Street(),    //Gratis parkering
+            new GUI_Street(),   //Special
             new GUI_Street(),
             new GUI_Street(),
             new GUI_Chance(),
             new GUI_Street(),
             new GUI_Street(),
-            new GUI_Street(),
+            new GUI_Street(),   //Special
             new GUI_Street(),
             new GUI_Street(),
             new GUI_Chance(),
