@@ -111,6 +111,42 @@ public class Game implements englishStrings {
                     case 12:
                         gui.showMessage(stringFlavourTile[12] + "650 gold");
                         break;
+                    case 13:
+                        gui.showMessage(stringFlavourTile[13] + "650 gold");
+                        break;
+                    case 14:
+                        gui.showMessage(stringFlavourTile[14] + "650 gold");
+                        break;
+                    case 15:
+                        gui.showMessage(stringFlavourTile[15] + "650 gold");
+                        break;
+                    case 16:
+                        gui.showMessage(stringFlavourTile[16] + "650 gold");
+                        break;
+                    case 17:
+                        gui.showMessage(stringFlavourTile[17] + "650 gold");
+                        break;
+                    case 18:
+                        gui.showMessage(stringFlavourTile[18] + "650 gold");
+                        break;
+                    case 19:
+                        gui.showMessage(stringFlavourTile[19] + "650 gold");
+                        break;
+                    case 20:
+                        gui.showMessage(stringFlavourTile[20] + "650 gold");
+                        break;
+                    case 21:
+                        gui.showMessage(stringFlavourTile[21] + "650 gold");
+                        break;
+                    case 22:
+                        gui.showMessage(stringFlavourTile[22] + "650 gold");
+                        break;
+                    case 23:
+                        gui.showMessage(stringFlavourTile[23] + "650 gold");
+                        break;
+                    case 24:
+                        gui.showMessage(stringFlavourTile[24] + "650 gold");
+                        break;
                 }*/
             }
         }
