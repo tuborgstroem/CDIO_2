@@ -52,7 +52,7 @@ public class Game implements englishStrings {
 
         board = new GameBoard(gui.getFields().length, gui.getFields());
         addPlayers(totalNumPlayers);
-        cup = new DiceCup(2);
+        cup = new DiceCup(1);
         playGame();
     }
 
@@ -63,14 +63,11 @@ public class Game implements englishStrings {
         {
             for (int i = 0; i < playerList.length; i++) {   //A full round
                 Player player = playerList[i];
-                //gui.showMessage(player.getName()+stringNextTurn);
                 gui.getUserButtonPressed("Player "+(i+1)+"'s turn.","Roll");
-                //Scuffed way of awaiting user input(click)..
                 cup.rollDice();
                 int a = cup.getDiceinCup().get(0).getValue();
-                int b = cup.getDiceinCup().get(1).getValue();
-                gui.setDice(a,b);
-                player.moveLocation(a+b, this);
+                gui.setDie(a);
+                player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
                 if (player.getBalance() >= 3000) {
                     winnerID = i;
