@@ -9,14 +9,13 @@ import java.awt.*;
 
 public class Game implements englishStrings {
     private final int totalNumPlayers;
-    private int totalNumDice;
     private Player[] playerList;
     private DiceCup cup;
     private GameBoard board;
     private GUI gui;
     private final int startBalance = 1000;
     private final int startLocation = 0;
-    private final int numberOfTiles = 25;
+    //private final int numberOfTiles = 25;
     private final int maxNumberOfPlayers = 4;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW, Color.CYAN, Color.PINK};
@@ -49,10 +48,9 @@ public class Game implements englishStrings {
 
     public Game() {
         gui = new GUI(fields);
-        System.out.println(stringNumberOfPlayers);
         totalNumPlayers = gui.getUserInteger("Enter number of players. 1-4.",1,maxNumberOfPlayers);
 
-        board = new GameBoard(numberOfTiles, gui.getFields());
+        board = new GameBoard(gui.getFields().length, gui.getFields());
         addPlayers(totalNumPlayers);
         cup = new DiceCup(2);
         playGame();
@@ -65,7 +63,8 @@ public class Game implements englishStrings {
         {
             for (int i = 0; i < playerList.length; i++) {   //A full round
                 Player player = playerList[i];
-                gui.showMessage(player.getName()+stringNextTurn);
+                //gui.showMessage(player.getName()+stringNextTurn);
+                gui.getUserButtonPressed("Player "+(i+1)+"'s turn.","Roll");
                 //Scuffed way of awaiting user input(click)..
                 cup.rollDice();
                 int a = cup.getDiceinCup().get(0).getValue();

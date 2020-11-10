@@ -33,7 +33,7 @@ public class GameBoard implements englishBoardStrings{
         for (int i = 1; i < numOfTiles; i++) {
             boolean extraTurn1 = false;
             if (i == 10) extraTurn1 = true;
-            tiles[i] = new Tile(i, descriptions[i], effects[i], extraTurn1, gui_fields[i], flavorText[i]);
+            tiles[i] = new Tile(i, "test", 0, extraTurn1, gui_fields[i], "flavour");
 
         }
     }
