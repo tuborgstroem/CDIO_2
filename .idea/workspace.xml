@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -16,28 +19,43 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="Fiksede dice package">
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/game/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/game/PlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/game/PlayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/game/PlayerTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/game/DiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_28_20,_5_42_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_28_20__5_42_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1kBnKS6ZJOZ0aoxp3ROymP4UUDR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -50,24 +68,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="JUnit.PlayerTest.constructorTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="CDIO_3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="game" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.DiceTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -75,6 +91,69 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CDIO_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="game" />
+      <option name="MAIN_CLASS_NAME" value="game.DiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiceTest.getSides" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CDIO_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="game" />
+      <option name="MAIN_CLASS_NAME" value="game.DiceTest" />
+      <option name="METHOD_NAME" value="getSides" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiceTest.getValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CDIO_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="game" />
+      <option name="MAIN_CLASS_NAME" value="game.DiceTest" />
+      <option name="METHOD_NAME" value="getValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiceTest.roll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CDIO_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="game" />
+      <option name="MAIN_CLASS_NAME" value="game.DiceTest" />
+      <option name="METHOD_NAME" value="roll" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,44 +173,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest.addToBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CDIO_3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="game" />
-      <option name="MAIN_CLASS_NAME" value="game.PlayerTest" />
-      <option name="METHOD_NAME" value="addToBalance" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerTest.constructorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CDIO_3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="game.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="game" />
-      <option name="MAIN_CLASS_NAME" value="game.PlayerTest" />
-      <option name="METHOD_NAME" value="constructorTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlayerTest.constructorTest" />
-        <item itemvalue="JUnit.PlayerTest.addToBalance" />
+        <item itemvalue="JUnit.DiceTest" />
+        <item itemvalue="JUnit.DiceTest.getValue" />
+        <item itemvalue="JUnit.DiceTest.roll" />
+        <item itemvalue="JUnit.DiceTest.getSides" />
         <item itemvalue="JUnit.PlayerTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -192,25 +240,29 @@
       <screen x="56" y="0" width="1864" height="2160" />
     </state>
     <state x="90" y="0" width="1710" height="887" key="DiffContextDialog/56.0.1864.2160@56.0.1864.2160" timestamp="1605046405288" />
-    <state width="1818" height="340" key="GridCell.Tab.0.bottom" timestamp="1605184209034">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state width="1177" height="221" key="GridCell.Tab.0.bottom" timestamp="1605189768861">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state width="1818" height="340" key="GridCell.Tab.0.bottom/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184209034" />
+    <state width="1177" height="221" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1605189768861" />
     <state width="1282" height="319" key="GridCell.Tab.0.bottom/56.0.1864.2160@56.0.1864.2160" timestamp="1605047484922" />
-    <state width="1818" height="340" key="GridCell.Tab.0.center" timestamp="1605184209034">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state width="1177" height="221" key="GridCell.Tab.0.center" timestamp="1605189768860">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state width="1818" height="340" key="GridCell.Tab.0.center/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184209034" />
+    <state width="1177" height="221" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1605189768860" />
     <state width="1282" height="319" key="GridCell.Tab.0.center/56.0.1864.2160@56.0.1864.2160" timestamp="1605047484922" />
-    <state width="1818" height="340" key="GridCell.Tab.0.left" timestamp="1605184209034">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state width="1177" height="221" key="GridCell.Tab.0.left" timestamp="1605189768860">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state width="1818" height="340" key="GridCell.Tab.0.left/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184209034" />
+    <state width="1177" height="221" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1605189768860" />
     <state width="1282" height="319" key="GridCell.Tab.0.left/56.0.1864.2160@56.0.1864.2160" timestamp="1605047484921" />
-    <state width="1818" height="340" key="GridCell.Tab.0.right" timestamp="1605184209034">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state width="1177" height="221" key="GridCell.Tab.0.right" timestamp="1605189768861">
+      <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state width="1818" height="340" key="GridCell.Tab.0.right/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184209034" />
+    <state width="1177" height="221" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" timestamp="1605189768861" />
     <state width="1282" height="319" key="GridCell.Tab.0.right/56.0.1864.2160@56.0.1864.2160" timestamp="1605047484922" />
     <state width="1818" height="340" key="GridCell.Tab.1.bottom" timestamp="1605184209034">
       <screen x="0" y="1080" width="1920" height="1080" />
@@ -240,6 +292,10 @@
       <screen x="56" y="0" width="1864" height="2160" />
     </state>
     <state x="517" y="225" width="876" height="636" key="VCS.ChangeListViewerDialog/56.0.1864.2160@56.0.1864.2160" timestamp="1605046318312" />
+    <state x="536" y="296" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1605185658895">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state x="536" y="296" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.832@0.23.1440.832" timestamp="1605185658895" />
     <state x="690" y="1327" width="586" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605183314260">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
@@ -271,11 +327,6 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/game/PlayerTest.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/game/Player.java</url>
           <line>27</line>
           <option name="timeStamp" value="20" />
@@ -292,5 +343,10 @@
         <watch expression="fields" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CDIO_3$DiceTest_getValue.ic" NAME="DiceTest.getValue Coverage Results" MODIFIED="1605189760387" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>game.*</FILTER>
+    </SUITE>
   </component>
 </project>
