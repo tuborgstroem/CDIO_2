@@ -19,7 +19,7 @@ public class Game implements englishStrings {
     private final int maxNumberOfPlayers = 4;
     private final int chancePerSide = 1;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
-                            Color.YELLOW,/*, Color.CYAN, Color.PINK};*/Color.PINK};
+                            Color.YELLOW,/*, Color.CYAN, Color.PINK};*/};
     GUI_Field[] fields;
 
     public Game() {
@@ -45,9 +45,11 @@ public class Game implements englishStrings {
                     switch (i){
                         case(6):
                             fields[i] = new GUI_Jail();
+                            fields[i].setSubText("Prison");
                         break;
                         case(12):
                             fields[i] = new GUI_Refuge();
+                            fields[i].setSubText("Parking lot");
                         break;
                         case(18):
                             fields[i] = new GUI_Jail();
@@ -57,10 +59,12 @@ public class Game implements englishStrings {
                 }
                 else {
                     fields[i] = new GUI_Chance();
+                    fields[i].setSubText("Chancecard");
                 }
             }
             else{
                 fields[i]= new GUI_Street();
+
             }
 
         }
