@@ -19,16 +19,19 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/development" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="Fiksede dice package">
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/game/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/game/PlayerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/game/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/game/PlayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/game/PlayerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +40,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kBnKS6ZJOZ0aoxp3ROymP4UUDR" />
@@ -50,11 +58,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="JUnit.PlayerTest.constructorTest">
+  <component name="RunManager" selected="JUnit.PlayerTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="CDIO_3" />
@@ -126,11 +137,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlayerTest.moveLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CDIO_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="game" />
+      <option name="MAIN_CLASS_NAME" value="game.PlayerTest" />
+      <option name="METHOD_NAME" value="moveLocation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="CDIO_2" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="CDIO_2" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlayerTest" />
+        <item itemvalue="JUnit.PlayerTest.moveLocation" />
         <item itemvalue="JUnit.PlayerTest.constructorTest" />
         <item itemvalue="JUnit.PlayerTest.addToBalance" />
-        <item itemvalue="JUnit.PlayerTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -162,7 +237,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="origin/development" />
                       </list>
                     </value>
                   </entry>
@@ -192,25 +267,25 @@
       <screen x="56" y="0" width="1864" height="2160" />
     </state>
     <state x="90" y="0" width="1710" height="887" key="DiffContextDialog/56.0.1864.2160@56.0.1864.2160" timestamp="1605046405288" />
-    <state width="1818" height="340" key="GridCell.Tab.0.bottom" timestamp="1605184209034">
+    <state width="1818" height="275" key="GridCell.Tab.0.bottom" timestamp="1605186616576">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1818" height="340" key="GridCell.Tab.0.bottom/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184209034" />
+    <state width="1818" height="275" key="GridCell.Tab.0.bottom/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605186616576" />
     <state width="1282" height="319" key="GridCell.Tab.0.bottom/56.0.1864.2160@56.0.1864.2160" timestamp="1605047484922" />
-    <state width="1818" height="340" key="GridCell.Tab.0.center" timestamp="1605184209034">
+    <state width="1818" height="275" key="GridCell.Tab.0.center" timestamp="1605186616576">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1818" height="340" key="GridCell.Tab.0.center/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184209034" />
+    <state width="1818" height="275" key="GridCell.Tab.0.center/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605186616576" />
     <state width="1282" height="319" key="GridCell.Tab.0.center/56.0.1864.2160@56.0.1864.2160" timestamp="1605047484922" />
-    <state width="1818" height="340" key="GridCell.Tab.0.left" timestamp="1605184209034">
+    <state width="1818" height="275" key="GridCell.Tab.0.left" timestamp="1605186616576">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1818" height="340" key="GridCell.Tab.0.left/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184209034" />
+    <state width="1818" height="275" key="GridCell.Tab.0.left/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605186616576" />
     <state width="1282" height="319" key="GridCell.Tab.0.left/56.0.1864.2160@56.0.1864.2160" timestamp="1605047484921" />
-    <state width="1818" height="340" key="GridCell.Tab.0.right" timestamp="1605184209034">
+    <state width="1818" height="275" key="GridCell.Tab.0.right" timestamp="1605186616576">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state width="1818" height="340" key="GridCell.Tab.0.right/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184209034" />
+    <state width="1818" height="275" key="GridCell.Tab.0.right/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605186616576" />
     <state width="1282" height="319" key="GridCell.Tab.0.right/56.0.1864.2160@56.0.1864.2160" timestamp="1605047484922" />
     <state width="1818" height="340" key="GridCell.Tab.1.bottom" timestamp="1605184209034">
       <screen x="0" y="1080" width="1920" height="1080" />
@@ -232,6 +307,14 @@
     </state>
     <state width="1818" height="340" key="GridCell.Tab.1.right/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184209034" />
     <state width="1282" height="319" key="GridCell.Tab.1.right/56.0.1864.2160@56.0.1864.2160" timestamp="1605047484922" />
+    <state x="215" y="1186" width="1536" height="901" key="MergeDialog" timestamp="1605184886032">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="215" y="1186" width="1536" height="901" key="MergeDialog/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184886032" />
+    <state x="619" y="1396" width="728" height="482" key="MultipleFileMergeDialog" timestamp="1605184759557">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="619" y="1396" width="728" height="482" key="MultipleFileMergeDialog/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184759557" />
     <state x="632" y="223" width="645" height="640" key="RollbackChangesDialog" timestamp="1605046016417">
       <screen x="56" y="0" width="1864" height="2160" />
     </state>
@@ -240,10 +323,14 @@
       <screen x="56" y="0" width="1864" height="2160" />
     </state>
     <state x="517" y="225" width="876" height="636" key="VCS.ChangeListViewerDialog/56.0.1864.2160@56.0.1864.2160" timestamp="1605046318312" />
-    <state x="690" y="1327" width="586" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605183314260">
+    <state x="583" y="1369" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1605184847000">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
-    <state x="690" y="1327" width="586" height="619" key="git4idea.branch.GitSmartOperationDialog/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605183314260" />
+    <state x="583" y="1369" width="800" height="535" key="Vcs.Push.Dialog.v2/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184847000" />
+    <state x="690" y="1327" width="586" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605184883705">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="690" y="1327" width="586" height="619" key="git4idea.branch.GitSmartOperationDialog/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605184883705" />
     <state x="574" y="440" width="761" height="207" key="git4idea.ui.GitStashDialog" timestamp="1605046097418">
       <screen x="56" y="0" width="1864" height="2160" />
     </state>

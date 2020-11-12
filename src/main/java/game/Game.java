@@ -87,77 +87,6 @@ public class Game implements englishStrings {
                     gui.showMessage(player.getName()+stringExtraTurn);
                     i--;
                 }
-/*                switch (player.getLocation()) {
-                    case 2:
-                        gui.showMessage(stringFlavourTile[2] + "250 gold");
-                        break;
-                    case 3:
-                        gui.showMessage(stringFlavourTile[3] + "-100 gold");
-                        break;
-                    case 4:
-                        gui.showMessage(stringFlavourTile[4] + "100 gold");
-                        break;
-                    case 5:
-                        gui.showMessage(stringFlavourTile[5] + "-20 gold");
-                        break;
-                    case 6:
-                        gui.showMessage(stringFlavourTile[6] + "180 gold");
-                        break;
-                    case 7:
-                        gui.showMessage(stringFlavourTile[7] + "+ 0 gold");
-                        break;
-                    case 8:
-                        gui.showMessage(stringFlavourTile[8] + "-70 gold");
-                        break;
-                    case 9:
-                        gui.showMessage(stringFlavourTile[9] + "60 gold");
-                        break;
-                    case 10:
-                        gui.showMessage(stringFlavourTile[10] + "-80 gold");
-                        break;
-                    case 11:
-                        gui.showMessage(stringFlavourTile[11] + "-50 gold");
-                        break;
-                    case 12:
-                        gui.showMessage(stringFlavourTile[12] + "650 gold");
-                        break;
-                    case 13:
-                        gui.showMessage(stringFlavourTile[13] + "650 gold");
-                        break;
-                    case 14:
-                        gui.showMessage(stringFlavourTile[14] + "650 gold");
-                        break;
-                    case 15:
-                        gui.showMessage(stringFlavourTile[15] + "650 gold");
-                        break;
-                    case 16:
-                        gui.showMessage(stringFlavourTile[16] + "650 gold");
-                        break;
-                    case 17:
-                        gui.showMessage(stringFlavourTile[17] + "650 gold");
-                        break;
-                    case 18:
-                        gui.showMessage(stringFlavourTile[18] + "650 gold");
-                        break;
-                    case 19:
-                        gui.showMessage(stringFlavourTile[19] + "650 gold");
-                        break;
-                    case 20:
-                        gui.showMessage(stringFlavourTile[20] + "650 gold");
-                        break;
-                    case 21:
-                        gui.showMessage(stringFlavourTile[21] + "650 gold");
-                        break;
-                    case 22:
-                        gui.showMessage(stringFlavourTile[22] + "650 gold");
-                        break;
-                    case 23:
-                        gui.showMessage(stringFlavourTile[23] + "650 gold");
-                        break;
-                    case 24:
-                        gui.showMessage(stringFlavourTile[24] + "650 gold");
-                        break;
-                }*/
             }
         }
         gui.showMessage(playerList[winnerID].getName()+stringPlayerWon);
@@ -171,7 +100,7 @@ public class Game implements englishStrings {
             //String name = input.nextLine();
             GUI_Car car = new GUI_Car();
             car.setPrimaryColor(colors[i]);
-
+            System.out.println("FOLLOWING SHOULD BE CHANGED TO STRING VARIABLE FROM INTERFACE!!!!!");
             Player p = new Player(gui.getUserString("Enter name of player "+(i+1)), startBalance, startLocation, car);
             gui.addPlayer(p);
             playerList[i] = p;
