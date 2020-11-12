@@ -7,7 +7,6 @@ import gui_fields.GUI_Player;
 public class Player extends GUI_Player {
 
     //player variables
-    private int balance;
     private int location;
     private Account account;
 
@@ -26,7 +25,7 @@ public class Player extends GUI_Player {
 
     //adds to gamescore
     public void addToBalance(int balanceGain) {
-        this.balance += balanceGain;
+        this.setBalance(this.getBalance()+balanceGain) ;
     }
 
 
