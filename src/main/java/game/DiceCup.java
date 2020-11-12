@@ -10,7 +10,7 @@ public class DiceCup {
 
     public DiceCup(int numOfDice, ArrayList<Integer> sidesOfDice) {
         numberOfDice = numOfDice;
-        diceIncup = new ArrayList<Dice>();
+        diceIncup = new ArrayList<>();
         for (int i = 0; i > numOfDice; i++) {
             Dice d;
             if (sidesOfDice.size() >= i) {
