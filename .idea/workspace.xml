@@ -29,10 +29,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_28_20,_5_42_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_28_20__5_42_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Files.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/ReadFiles.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Files">
     <configuration name="Files" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game.Files" />
       <module name="CDIO_3" />
@@ -179,9 +179,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Files" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.ReadFiles" />
-        <item itemvalue="Application.Files" />
         <item itemvalue="JUnit.PlayerTest.constructorTest" />
         <item itemvalue="JUnit.PlayerTest.addToBalance" />
       </list>
@@ -197,7 +197,7 @@
       <updated>1605182800585</updated>
       <workItem from="1605182804432" duration="224000" />
       <workItem from="1605183044708" duration="1199000" />
-      <workItem from="1605189744216" duration="898000" />
+      <workItem from="1605189744216" duration="1285000" />
     </task>
     <task id="LOCAL-00001" summary="Added file creater + reader">
       <created>1605189066613</created>
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605189066613</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="String test">
+      <created>1605190649829</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605190649829</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +246,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Small cleanup" />
     <MESSAGE value="Added file creater + reader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added file creater + reader" />
+    <MESSAGE value="String test" />
+    <option name="LAST_COMMIT_MESSAGE" value="String test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="1291" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605183507555">
@@ -258,10 +266,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="699" y="316" key="#com.intellij.ide.util.TreeClassChooserDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605185106013" />
-    <state x="490" y="97" width="986" height="911" key="CommitChangelistDialog2" timestamp="1605189066128">
+    <state x="753" y="395" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605190806850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="490" y="97" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605189066128" />
+    <state x="753" y="395" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605190806850" />
+    <state x="490" y="97" width="986" height="911" key="CommitChangelistDialog2" timestamp="1605190649175">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="97" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605190649175" />
     <state x="490" y="1181" width="986" height="911" key="CommitChangelistDialog2/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605183301273" />
     <state x="90" y="0" width="1710" height="887" key="DiffContextDialog" timestamp="1605046405288">
       <screen x="56" y="0" width="1864" height="2160" />
@@ -319,10 +331,10 @@
       <screen x="56" y="0" width="1864" height="2160" />
     </state>
     <state x="517" y="225" width="876" height="636" key="VCS.ChangeListViewerDialog/56.0.1864.2160@56.0.1864.2160" timestamp="1605046318312" />
-    <state x="561" y="259" key="Vcs.Push.Dialog.v2" timestamp="1605189069249">
+    <state x="561" y="259" key="Vcs.Push.Dialog.v2" timestamp="1605190651409">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="561" y="259" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605189069249" />
+    <state x="561" y="259" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605190651409" />
     <state x="787" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605189989041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
