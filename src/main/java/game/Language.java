@@ -46,7 +46,7 @@ public class Language {
 
     }
 
-    public String getContentLine(int a) {
+    public String getLine(int a) {
         return strContainer[a];
     }
 }
