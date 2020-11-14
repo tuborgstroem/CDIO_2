@@ -77,7 +77,7 @@ public class Game implements englishStrings {
         {
             for (int i = 0; i < playerList.length; i++) {   //A full round
                 Player player = playerList[i];
-                gui.getUserButtonPressed("Player "+(i+1)+"'s turn.","Roll");
+                gui.getUserButtonPressed(playerList[i].getName()+"'s turn.","Roll");
                 cup.rollDice();
                 int a = cup.getDiceinCup().get(0).getValue();
                 gui.setDie(a);
@@ -176,7 +176,7 @@ public class Game implements englishStrings {
             GUI_Car car = new GUI_Car();
             car.setPrimaryColor(colors[i]);
 
-            Player p = new Player(gui.getUserString("Enter name of player "+(i+1)), startBalance, startLocation, car);
+            Player p = new Player(gui.getUserString("Enter name of player"+" "+(i+1)+"."), startBalance, startLocation, car);
             gui.addPlayer(p);
             playerList[i] = p;
             gui.getFields()[p.getLocation()].setCar(p, true);
@@ -184,10 +184,7 @@ public class Game implements englishStrings {
         //input.close();
     }
 
-    public Player[] getPlayerList() {
-
-        return playerList;
-    }
+    public Player[] getPlayerList() { return playerList; }
 
     public GUI getGui() {
         return gui;
