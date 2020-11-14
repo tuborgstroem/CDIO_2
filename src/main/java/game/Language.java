@@ -8,9 +8,9 @@ public class Language {
     private String[] strContainer;
     private String contentLine;
 
-    public Language() {
+    public Language(String textFile) {
         try {
-            reader = new BufferedReader(new FileReader("Language.txt"));
+            reader = new BufferedReader(new FileReader(textFile));
             contentLine = reader.readLine();
             counter = 1;
 
@@ -20,7 +20,7 @@ public class Language {
             reader.close();
 
             //Repeat read (so it starts from the beginning)
-            reader = new BufferedReader(new FileReader("Language.txt"));
+            reader = new BufferedReader(new FileReader(textFile));
             contentLine = reader.readLine();
             counter = 1;
 
