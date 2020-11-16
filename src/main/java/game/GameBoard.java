@@ -1,7 +1,6 @@
 package game;
 
-import gui_fields.GUI_Field;
-import gui_fields.GUI_Street;
+import gui_fields.*;
 
 /**
  * Should be used for the game board.
@@ -9,18 +8,23 @@ import gui_fields.GUI_Street;
  */
 public class GameBoard implements englishBoardStrings{
     private Tile[] tiles;
-    private final int[] effects={0,1,1,0,1,1,0,2,2,0,2,2,0,3,3,0,3,3,0,4,4,0,4,4};
+    private final int[] effects={2,1,1,0,1,1,0,2,2,0,2,2,0,3,3,0,3,3,0,4,4,0,4,4};
     private final Language tileStrings = new Language("resources/engTileStrings.txt");
 
     public GameBoard (int numOfTiles, GUI_Field[] gui_fields) {
         tiles = new Tile[numOfTiles];
         //tiles[0] = new Tile();
         for (int i = 0; i < numOfTiles; i++) {
-            if (gui_fields[i] instanceof GUI_Street) {
-                tiles[i] = new Tile(effects[i], tileStrings.getLine(i), effects[i], gui_fields[i], "");
-            } else
-            {
-                tiles[i] = new Tile();
+            //tiles[i] = new Tile(effects[i], tileStrings.getLine(i), effects[i], gui_fields[i], "");
+            //if (gui_fields[i] instanceof GUI_Start) {
+            //    tiles[i].getGui_field().setTitle(tileStrings.getLine(i));
+            //}
+            tiles[i] = new Tile(effects[i],gui_fields[i]);
+            if (gui_fields[i] instanceof GUI_Street || gui_fields[i] instanceof GUI_Start) {
+                tiles[i].getGui_field().setTitle(tileStrings.getLine(i));
+                tiles[i].getGui_field().setSubText("M"+effects[i]);
+            } else {
+                tiles[i].getGui_field().setSubText(tileStrings.getLine(i));
             }
         }
     }
