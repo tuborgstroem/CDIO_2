@@ -20,12 +20,13 @@ public class Game implements englishStrings {
     private final int chancePerSide = 1;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW,/*, Color.CYAN, Color.PINK};*/};
-    GUI_Field[] fields;
+    private final Language langStrings = new Language("resources/engGameStrings.txt")
+    private GUI_Field[] fields;
 
     public Game() {
         initGUIFields();
         gui = new GUI(fields);
-        totalNumPlayers = gui.getUserInteger("Enter number of players. 1-4.",1,maxNumberOfPlayers);
+        totalNumPlayers = gui.getUserInteger(langStrings.getLine(1)+" 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
 
         board = new GameBoard(gui.getFields().length, gui.getFields());
         addPlayers(totalNumPlayers);
@@ -77,7 +78,7 @@ public class Game implements englishStrings {
         {
             for (int i = 0; i < playerList.length; i++) {   //A full round
                 Player player = playerList[i];
-                gui.getUserButtonPressed(playerList[i].getName()+"'s turn.","Roll");
+                gui.getUserButtonPressed(playerList[i].getName()+langStrings.getLine(3),langStrings.getLine(5));
                 cup.rollDice();
                 int a = cup.getDiceinCup().get(0).getValue();
                 gui.setDie(a);
@@ -164,7 +165,7 @@ public class Game implements englishStrings {
                 }*/
             }
         }
-        gui.showMessage(playerList[winnerID].getName()+stringPlayerWon);
+        gui.showMessage(playerList[winnerID].getName()+langStrings.getLine(4));
     }
 
     private void addPlayers(int a) {
@@ -176,7 +177,7 @@ public class Game implements englishStrings {
             GUI_Car car = new GUI_Car();
             car.setPrimaryColor(colors[i]);
 
-            Player p = new Player(gui.getUserString("Enter name of player"+" "+(i+1)+"."), startBalance, startLocation, car);
+            Player p = new Player(gui.getUserString(langStrings.getLine(2)+" "+(i+1)+"."), startBalance, startLocation, car);
             gui.addPlayer(p);
             playerList[i] = p;
             gui.getFields()[p.getLocation()].setCar(p, true);
