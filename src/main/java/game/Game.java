@@ -39,23 +39,18 @@ public class Game implements englishStrings {
         final int chanceFreq = sideLength/(chancePerSide*2);
         int i =0;
         fields[i] = new GUI_Start();
-        fields[i].setTitle("Start");
-        fields[i].setSubText("");
         for( i = 1; i<numberOfTiles; i++){
             if(i%chanceFreq == 0){
                 if(i%2 == 0){ //Only works with this size
                     switch (i){
                         case(6):
                             fields[i] = new GUI_Jail();
-                            fields[i].setSubText("Prison");
                         break;
                         case(12):
                             fields[i] = new GUI_Refuge();
-                            fields[i].setSubText("Parking lot");
                         break;
                         case(18):
                             fields[i] = new GUI_Jail();
-                            fields[i].setSubText("Go to jail!");
                         break;
                     }
                 }
