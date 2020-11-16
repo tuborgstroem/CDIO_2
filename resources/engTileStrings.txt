@@ -1,24 +1,24 @@
 Start
 Burger Bar
 Pizza House
-Chance
+Chancecard
 Candy Store
 Icecream Kiosk
 Jail
 Museum
 Library
-Chance
+Chancecard
 Skate Park
 Swimming Pool
-Free Parking
+Parking lot
 Game Hall
 Cinema
-Chance
+Chancecard
 Toy Store
 Animal Store
 Jail
 Bowling Hall
 Zoo
-Chance
+Chancecard
 Water Park
 Beach Promenade
