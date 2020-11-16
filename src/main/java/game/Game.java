@@ -26,9 +26,8 @@ public class Game implements englishStrings {
     public Game() {
         initGUIFields();
         gui = new GUI(fields);
-        totalNumPlayers = gui.getUserInteger(langStrings.getLine(0)+" 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
-
         board = new GameBoard(gui.getFields().length, gui.getFields());
+        totalNumPlayers = gui.getUserInteger(langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
         addPlayers(totalNumPlayers);
         cup = new DiceCup(1);
         playGame();
