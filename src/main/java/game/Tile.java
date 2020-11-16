@@ -4,6 +4,7 @@ import gui_fields.GUI_Field;
 
 public class Tile {
 
+
     private Player owner;
     private int number;
     private String description;
@@ -39,6 +40,10 @@ public class Tile {
 
     public GUI_Field getGui_field() {
         return gui_field;
+    }
+
+    public void showMessage(Player player){
+        System.out.println(player.getName() + this.description + "penis");
     }
 }
 

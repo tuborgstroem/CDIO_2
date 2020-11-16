@@ -9,7 +9,6 @@ import gui_fields.*;
 public class GameBoard implements englishBoardStrings{
     private Tile[] tiles;
     private final int[] effects={2,1,1,0,1,1,0,2,2,0,2,2,0,3,3,0,3,3,0,4,4,0,4,4};
-    private final Language tileStrings = new Language("resources/engTileStrings.txt");
 
     public GameBoard (int numOfTiles, GUI_Field[] gui_fields) {
         tiles = new Tile[numOfTiles];
@@ -21,10 +20,10 @@ public class GameBoard implements englishBoardStrings{
             //}
             tiles[i] = new Tile(effects[i],gui_fields[i]);
             if (gui_fields[i] instanceof GUI_Street || gui_fields[i] instanceof GUI_Start) {
-                tiles[i].getGui_field().setTitle(tileStrings.getLine(i));
+                tiles[i].getGui_field().setTitle(Game.tileStrings.getLine(i));
                 tiles[i].getGui_field().setSubText("M"+effects[i]);
             } else {
-                tiles[i].getGui_field().setSubText(tileStrings.getLine(i));
+                tiles[i].getGui_field().setSubText(Game.tileStrings.getLine(i));
             }
         }
     }

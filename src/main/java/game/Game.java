@@ -20,7 +20,9 @@ public class Game implements englishStrings {
     private final int chancePerSide = 1;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW,/*, Color.CYAN, Color.PINK};*/};
-    private final Language langStrings = new Language("resources/engGameStrings.txt");
+    public static final Language langStrings = new Language("resources/engGameStrings.txt");
+    public static final Language tileStrings = new Language("resources/engTileStrings.txt");
+
     private GUI_Field[] fields;
 
     public Game() {
