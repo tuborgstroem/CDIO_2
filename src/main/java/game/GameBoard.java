@@ -1,5 +1,6 @@
 package game;
 
+import com.company.Main;
 import gui_fields.*;
 
 import java.awt.*;
@@ -22,11 +23,12 @@ public class GameBoard implements englishBoardStrings{
             //}
             tiles[i] = new Tile(effects[i],gui_fields[i]);
             if (gui_fields[i] instanceof GUI_Street || gui_fields[i] instanceof GUI_Start) {
-                tiles[i].getGui_field().setTitle(Game.tileStrings.getLine(i));
+
+                tiles[i].getGui_field().setTitle(Main.tileStrings.getLine(i));
                 tiles[i].getGui_field().setSubText("M"+effects[i]);
-                tiles[i].getGui_field().setDescription(Game.tileStrings.getLine(i));
+                tiles[i].getGui_field().setDescription(Main.tileStrings.getLine(i));
             } else {
-                tiles[i].getGui_field().setSubText(Game.tileStrings.getLine(i));
+                tiles[i].getGui_field().setSubText(Main.tileStrings.getLine(i));
             }
         }
     }

@@ -2,6 +2,7 @@ package game;
 
 
 
+import com.company.Main;
 import gui_fields.*;
 import gui_main.GUI;
 
@@ -20,8 +21,6 @@ public class Game implements englishStrings {
     private final int chancePerSide = 1;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
                             Color.YELLOW,/*, Color.CYAN, Color.PINK};*/};
-    public static final Language langStrings = new Language("resources/engGameStrings.txt");
-    public static final Language tileStrings = new Language("resources/engTileStrings.txt");
 
     private GUI_Field[] fields;
 
@@ -29,7 +28,7 @@ public class Game implements englishStrings {
         initGUIFields();
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
-        totalNumPlayers = gui.getUserInteger(langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
+        totalNumPlayers = gui.getUserInteger(Main.langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
         if(totalNumPlayers >1){
             addPlayers(totalNumPlayers);
         }
@@ -82,7 +81,7 @@ public class Game implements englishStrings {
         {
             for (int i = 0; i < playerList.length; i++) {   //A full round
                 Player player = playerList[i];
-                gui.getUserButtonPressed(playerList[i].getName()+langStrings.getLine(2),langStrings.getLine(4));
+                gui.getUserButtonPressed(playerList[i].getName()+Main.langStrings.getLine(2),Main.langStrings.getLine(4));
                 cup.rollDice();
                 int a = cup.getDiceinCup().get(0).getValue();
                 gui.setDie(a);
@@ -165,7 +164,7 @@ public class Game implements englishStrings {
                 }*/
             }
         }
-        gui.showMessage(playerList[winnerID].getName()+langStrings.getLine(3));
+        gui.showMessage(playerList[winnerID].getName()+Main.langStrings.getLine(3));
     }
 
     private void addPlayers(int a) {
@@ -174,7 +173,7 @@ public class Game implements englishStrings {
             GUI_Car car = new GUI_Car();
             car.setPrimaryColor(colors[i]);
 
-            Player p = new Player(gui.getUserString(langStrings.getLine(1)+" "+(i+1)+"."), startBalance, startLocation, car);
+            Player p = new Player(gui.getUserString(Main.langStrings.getLine(1)+" "+(i+1)+"."), startBalance, startLocation, car);
             gui.addPlayer(p);
             playerList[i] = p;
             gui.getFields()[p.getLocation()].setCar(p, true);
