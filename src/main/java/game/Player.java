@@ -8,7 +8,7 @@ public class Player extends GUI_Player {
 
     //player variables
     private int location;
-    private Account account;
+    final private Account account;
 
     /**
      *
@@ -51,7 +51,7 @@ public class Player extends GUI_Player {
         landOnField(game.getBoard().getTiles()[location]);
     }
 
-    /**
+    /*
      * This is what happens when a player lands on a new field
      * @param field the field the player lands on
      */

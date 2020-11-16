@@ -21,7 +21,6 @@ int balance = 1000;
     @BeforeEach
     public void beforeTestsMethod(){
         testplayer = new Player(testName, balance, location, null);
-
     }
 
     @Test
@@ -31,7 +30,4 @@ int balance = 1000;
         assertEquals(balance+addedToBalance, testplayer.getBalance());
     }
 
-    @Test
-    void moveLocation() {
-    }
 }
