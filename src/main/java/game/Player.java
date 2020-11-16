@@ -1,8 +1,6 @@
 package game;
 
-import gui_fields.GUI_Car;
-import gui_fields.GUI_Field;
-import gui_fields.GUI_Player;
+import gui_fields.*;
 
 public class Player extends GUI_Player {
 
@@ -48,19 +46,24 @@ public class Player extends GUI_Player {
         while (location >= 24) {
             location -= 24;
         }
-        landOnField(game.getBoard().getTiles()[location]);
+        landOnField(game.getBoard().getTiles()[location], game);
     }
 
     /*
      * This is what happens when a player lands on a new field
      * @param field the field the player lands on
      */
-    private void landOnField(Tile tile) {
+    private void landOnField(Tile tile, Game game) {
         tile.getGui_field().setCar(this, true);
         //int playerValue = getBalance()+tile.getEffect();
-        int playerValue = account.getBalance()+tile.getEffect();
-        account.setBalance(playerValue);
-        setBalance(playerValue);
+        if(tile.getGui_field() instanceof GUI_Street) {
+            int playerValue = account.getBalance() + tile.getEffect();
+            account.setBalance(playerValue);
+            setBalance(playerValue);
+        }
+        else if(tile.getGui_field() instanceof GUI_Chance){
+            game.drawChance(this);
+        }
     }
 
     /**

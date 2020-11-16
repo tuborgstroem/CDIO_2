@@ -9,6 +9,12 @@ public class Main {
     public static final Language tileStrings = new Language("resources/engTileStrings.txt");
 
     public static void main(String[] args) {
-        Game game = new Game();
+        boolean test = true;
+        if (test){
+            Game game = new Game(test);
+        }
+        else {
+            Game game = new Game();
+        }
     }
 }
