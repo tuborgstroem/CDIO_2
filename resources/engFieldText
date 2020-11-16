@@ -1,0 +1,5 @@
+"Player" landed on "Tile", it is not owned by anyone so you buy it for "m" dollars
+"Player" landed on "Tile", it is owned by yourself so you enjoy your stay
+"Player" landed on "Tile", it is owned by "Player" and you have to pay rent lose "m" dollars
+"Player" landed on "ChanceTile", draw a "Chancecard"
+

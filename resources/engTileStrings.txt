@@ -16,7 +16,7 @@ Cinema
 Chancecard
 Toy Store
 Animal Store
-Jail
+Go to jail!
 Bowling Hall
 Zoo
 Chancecard

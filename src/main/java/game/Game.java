@@ -30,7 +30,13 @@ public class Game implements englishStrings {
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
         totalNumPlayers = gui.getUserInteger(langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
-        addPlayers(totalNumPlayers);
+        if(totalNumPlayers >1){
+            addPlayers(totalNumPlayers);
+        }
+        else{
+            addPlayers(1);
+        }
+
         cup = new DiceCup(1);
         playGame();
     }
