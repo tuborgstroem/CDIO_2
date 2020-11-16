@@ -1,6 +1,5 @@
 package com.company;
 
-import game.Files;
 import game.Game;
 
 public class Main {
