@@ -21,11 +21,20 @@ public class Tile {
         gui_field.setSubText(Integer.toString(number));
         gui_field.setDescription(flavor);
         owner = null;
+    }
 
+    public Tile (int effect1, GUI_Field gui_field1){
+        effect=effect1;
+        gui_field=gui_field1;
+        owner = null;
     }
 
     public int getEffect() {
         return effect;
+    }
+
+    public Player getOwner() {
+        return owner;
     }
 
     public GUI_Field getGui_field() {
