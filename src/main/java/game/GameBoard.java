@@ -2,6 +2,8 @@ package game;
 
 import gui_fields.*;
 
+import java.awt.*;
+
 /**
  * Should be used for the game board.
  * Tiles are the individual fields
@@ -23,6 +25,7 @@ public class GameBoard implements englishBoardStrings{
             if (gui_fields[i] instanceof GUI_Street || gui_fields[i] instanceof GUI_Start) {
                 tiles[i].getGui_field().setTitle(tileStrings.getLine(i));
                 tiles[i].getGui_field().setSubText("M"+effects[i]);
+                tiles[i].getGui_field().setDescription(tileStrings.getLine(i));
             } else {
                 tiles[i].getGui_field().setSubText(tileStrings.getLine(i));
             }
