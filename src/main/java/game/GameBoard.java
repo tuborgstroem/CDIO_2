@@ -18,6 +18,8 @@ public class GameBoard implements englishBoardStrings{
         for (int i = 0; i < numOfTiles; i++) {
             if (!gui_fields[i].getSubText().equals("Parking lot") && !gui_fields[i].getSubText().equals("Prison") && !gui_fields[i].getTitle().equals("Start") && !gui_fields[i].getSubText().equals("Go to jail!") && !gui_fields[i].getSubText().equals("Chancecard")) {
                 tiles[i] = new Tile(effects[i], tileStrings.getLine(i), effects[i], gui_fields[i], "");
+            } else {
+                tiles[i] = new Tile();
             }
         }
     }
