@@ -1,6 +1,7 @@
 package game;
 
 import gui_fields.GUI_Field;
+import gui_fields.GUI_Street;
 
 /**
  * Should be used for the game board.
@@ -8,33 +9,16 @@ import gui_fields.GUI_Field;
  */
 public class GameBoard implements englishBoardStrings{
     private Tile[] tiles;
-    private int numberOfTiles;
-    private final String[] descriptions={"","",stringTileDesc[2],stringTileDesc[3],stringTileDesc[4],stringTileDesc[5],stringTileDesc[6],stringTileDesc[7],stringTileDesc[8],stringTileDesc[9],stringTileDesc[10],stringTileDesc[11],stringTileDesc[12]};
-    private final int[] effects={0,0,250, -100, 100, -20, 180, 0, -70, 60, -80, -50, 650};
-    private final String[] flavorText={"","",
-            stringFlavourTile[2] + effects[2],
-            stringFlavourTile[3] + effects[3],
-            stringFlavourTile[4] + effects[4],
-            stringFlavourTile[5] + effects[5],
-            stringFlavourTile[6] + effects[6],
-            stringFlavourTile[7],
-            stringFlavourTile[8] + effects[8],
-            stringFlavourTile[9] + effects[9],
-            stringFlavourTile[10] + effects[10],
-            stringFlavourTile[11] + effects[11],
-            stringFlavourTile[12] + effects[12],
-    };
-
+    private final int[] effects={0,1,1,0,1,1,0,2,2,0,2,2,0,3,3,0,3,3,0,4,4,0,4,4};
+    private final Language tileStrings = new Language("resources/engTileStrings.txt");
 
     public GameBoard (int numOfTiles, GUI_Field[] gui_fields) {
-        numberOfTiles=numOfTiles;
         tiles = new Tile[numOfTiles];
         //tiles[0] = new Tile();
         for (int i = 0; i < numOfTiles; i++) {
-            boolean extraTurn1 = false;
-            if (i == 10) extraTurn1 = true;
-            tiles[i] = new Tile(i, "test", 0, extraTurn1, gui_fields[i], "flavour");
-
+            if (!gui_fields[i].getSubText().equals("Parking lot") && !gui_fields[i].getSubText().equals("Prison") && !gui_fields[i].getTitle().equals("Start") && !gui_fields[i].getSubText().equals("Go to jail!") && !gui_fields[i].getSubText().equals("Chancecard")) {
+                tiles[i] = new Tile(effects[i], tileStrings.getLine(i), effects[i], gui_fields[i], "");
+            }
         }
     }
 
