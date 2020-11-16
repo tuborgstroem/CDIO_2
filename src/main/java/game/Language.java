@@ -12,17 +12,18 @@ public class Language {
         try {
             reader = new BufferedReader(new FileReader(textFile));
             contentLine = reader.readLine();
-            counter = 1;
+            counter = 0;
 
             //Set up array dimensions first
             while (contentLine != null) { contentLine = reader.readLine(); counter++; }
             strContainer = new String[counter];
+            strContainer[0] = "";
             reader.close();
 
             //Repeat read (so it starts from the beginning)
             reader = new BufferedReader(new FileReader(textFile));
             contentLine = reader.readLine();
-            counter = 1;
+            counter = 0;
 
             while (contentLine != null) {
 /*                if (contentLine.charAt(0) == '#') {     // If string starts with '#' then skip to and add next line to array.
