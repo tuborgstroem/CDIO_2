@@ -1,9 +1,24 @@
-"Player" Landed on "Tile", it is not owned by anyone so you buy it for "m" dollars
-"Player" Landed on "Tile", it is owned by yourself so you enjoy your stay
-"Player" Landed on "Tile", it is owned by "Player" and you have to pay rent lose "m" dollars
-"Player" Landed on "ChanceTile", draw a "Chancecard"
-"Player" You visited the jail, enjoy your free stay
-"Player" You parked on the road and enjoyed a nice picnic
-"Player" You were speeding on your way towards the bowling hall and got caught by the police, go to jail
-"Player" Landed on Start, next time you move forwards get 2 dollars
-
+1 You landed on "Tile", it is not owned by anyone so you buy it for "m" dollars
+2 You landed on "Tile", it is owned by yourself so you enjoy your stay
+3 You landed on "Tile", it is owned by "Player" and you have to pay rent lose "m" dollars
+4 You landed on "ChanceTile", draw a "Chancecard"
+5 You visited the jail, enjoy your free stay
+6 You parked on the road and enjoyed a nice picnic
+7 You were speeding on your way towards the bowling hall and got caught by the police, go to jail
+8 You Landed on Start, next time you move forwards get 2 dollars
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24

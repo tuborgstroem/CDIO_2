@@ -7,8 +7,9 @@ import gui_fields.*;
 import gui_main.GUI;
 
 import java.awt.*;
+import java.util.Random;
 
-public class Game implements englishStrings {
+public class Game {
     private final int totalNumPlayers;
     private Player[] playerList;
     private DiceCup cup;
@@ -19,12 +20,15 @@ public class Game implements englishStrings {
     private final int numberOfTiles = 24;
     private final int maxNumberOfPlayers = 4;
     private final int chancePerSide = 1;
-    private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
-                            Color.YELLOW,/*, Color.CYAN, Color.PINK};*/};
+    private final Color[] colors = {Color.RED, Color.BLUE, Color.GREEN,
+            Color.YELLOW,/*, Color.CYAN, Color.PINK};*/};
     private ChanceCards chanceCards;
     private GUI_Field[] fields;
+    private Language tileTextStrings;
+    private String tileString;
+    private String showString;
 
-    public Game(Boolean test){
+    public Game(Boolean test) {
         initGUIFields();
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
@@ -32,7 +36,7 @@ public class Game implements englishStrings {
         totalNumPlayers = 4;
         String[] playerNames = {"Thor", "Tobias", "Kian", "Sume"};
         playerList = new Player[totalNumPlayers];
-        for(int i = 0; i < totalNumPlayers; i++){
+        for (int i = 0; i < totalNumPlayers; i++) {
             GUI_Car car = new GUI_Car();
             car.setPrimaryColor(colors[i]);
             Player p = new Player(playerNames[i], startBalance, startLocation, car);
@@ -43,16 +47,16 @@ public class Game implements englishStrings {
         cup = new DiceCup(1);
         playGame();
     }
+
     public Game() {
         initGUIFields();
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
         chanceCards = new ChanceCards(this);
-        totalNumPlayers = gui.getUserInteger(Main.langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
-        if(totalNumPlayers >1){
+        totalNumPlayers = gui.getUserInteger(Main.langStrings.getLine(0) + ". 1-" + maxNumberOfPlayers, 1, maxNumberOfPlayers);
+        if (totalNumPlayers > 1) {
             addPlayers(totalNumPlayers);
-        }
-        else{
+        } else {
             addPlayers(1);
         }
 
@@ -62,32 +66,30 @@ public class Game implements englishStrings {
 
     private void initGUIFields() {
         fields = new GUI_Field[numberOfTiles];
-        int sideLength = numberOfTiles/4;
-        final int chanceFreq = sideLength/(chancePerSide*2);
-        int i =0;
+        int sideLength = numberOfTiles / 4;
+        final int chanceFreq = sideLength / (chancePerSide * 2);
+        int i = 0;
         fields[i] = new GUI_Start();
-        for( i = 1; i<numberOfTiles; i++){
-            if(i%chanceFreq == 0){
-                if(i%2 == 0 ){ //Only works with this size
-                    switch (i){
-                        case(6):
+        for (i = 1; i < numberOfTiles; i++) {
+            if (i % chanceFreq == 0) {
+                if (i % 2 == 0) { //Only works with this size
+                    switch (i) {
+                        case (6):
                             fields[i] = new GUI_Jail();
-                        break;
-                        case(12):
+                            break;
+                        case (12):
                             fields[i] = new GUI_Refuge();
-                        break;
-                        case(18):
+                            break;
+                        case (18):
                             fields[i] = new GUI_Jail();
-                        break;
+                            break;
                     }
-                }
-                else {
+                } else {
                     fields[i] = new GUI_Chance();
                     fields[i].setSubText("Chancecard");
                 }
-            }
-            else{
-                fields[i]= new GUI_Street();
+            } else {
+                fields[i] = new GUI_Street();
 
             }
         }
@@ -96,12 +98,11 @@ public class Game implements englishStrings {
 
     public void playGame() {
         int winnerID = -1;
-
         while (winnerID == -1) //Game loop till winner is found
         {
             for (int i = 0; i < playerList.length; i++) {   //A full round
                 Player player = playerList[i];
-                gui.getUserButtonPressed(playerList[i].getName()+Main.langStrings.getLine(2),Main.langStrings.getLine(4));
+                gui.getUserButtonPressed(playerList[i].getName() + Main.langStrings.getLine(2), Main.langStrings.getLine(4));
                 cup.rollDice();
                 int a = cup.getDiceinCup().get(0).getValue();
 //                int a = 3;
@@ -112,81 +113,116 @@ public class Game implements englishStrings {
                     winnerID = i;
                     break;
                 }
-/*                switch (player.getLocation()) {
+                /* switch (player.getLocation()) {
+//                    case 1:
+//                        String message = tileString.getLine(1);
+//                        displayMessage(message);
+//                        break;
                     case 2:
-                        gui.showMessage(stringFlavourTile[2] + "250 gold");
+                        String message = tileTextStrings.getLine(2);
+                        displayMessage(message);
                         break;
                     case 3:
-                        gui.showMessage(stringFlavourTile[3] + "-100 gold");
+                        message = tileTextStrings.getLine(3);
+                        displayMessage(message);
                         break;
                     case 4:
-                        gui.showMessage(stringFlavourTile[4] + "100 gold");
+                        message = tileTextStrings.getLine(4);
+                        displayMessage(message);
                         break;
                     case 5:
-                        gui.showMessage(stringFlavourTile[5] + "-20 gold");
+                        message = tileTextStrings.getLine(5);
+                        displayMessage(message);
                         break;
                     case 6:
-                        gui.showMessage(stringFlavourTile[6] + "180 gold");
+                        message = tileTextStrings.getLine(6);
+                        displayMessage(message);
                         break;
                     case 7:
-                        gui.showMessage(stringFlavourTile[7] + "+ 0 gold");
+                        message = tileTextStrings.getLine(7);
+                        displayMessage(message);
                         break;
                     case 8:
-                        gui.showMessage(stringFlavourTile[8] + "-70 gold");
+                        message = tileTextStrings.getLine(8);
+                        displayMessage(message);
                         break;
                     case 9:
-                        gui.showMessage(stringFlavourTile[9] + "60 gold");
+                        message = tileTextStrings.getLine(9);
+                        displayMessage(message);
                         break;
                     case 10:
-                        gui.showMessage(stringFlavourTile[10] + "-80 gold");
+                        message = tileTextStrings.getLine(10);
+                        displayMessage(message);
                         break;
                     case 11:
-                        gui.showMessage(stringFlavourTile[11] + "-50 gold");
+                        message = tileTextStrings.getLine(11);
+                        displayMessage(message);
                         break;
                     case 12:
-                        gui.showMessage(stringFlavourTile[12] + "650 gold");
+                        message = tileTextStrings.getLine(12);
+                        displayMessage(message);
                         break;
                     case 13:
-                        gui.showMessage(stringFlavourTile[13] + "650 gold");
+                        message = tileTextStrings.getLine(13);
+                        displayMessage(message);
                         break;
                     case 14:
-                        gui.showMessage(stringFlavourTile[14] + "650 gold");
+                        message = tileTextStrings.getLine(14);
+                        displayMessage(message);
                         break;
                     case 15:
-                        gui.showMessage(stringFlavourTile[15] + "650 gold");
+                        message = tileTextStrings.getLine(15);
+                        displayMessage(message);
                         break;
                     case 16:
-                        gui.showMessage(stringFlavourTile[16] + "650 gold");
+                        message = tileTextStrings.getLine(16);
+                        displayMessage(message);
                         break;
                     case 17:
-                        gui.showMessage(stringFlavourTile[17] + "650 gold");
+                        message = tileTextStrings.getLine(17);
+                        displayMessage(message);
                         break;
                     case 18:
-                        gui.showMessage(stringFlavourTile[18] + "650 gold");
+                        message = tileTextStrings.getLine(18);
+                        displayMessage(message);
                         break;
                     case 19:
-                        gui.showMessage(stringFlavourTile[19] + "650 gold");
+                        message = tileTextStrings.getLine(19);
+                        displayMessage(message);
                         break;
                     case 20:
-                        gui.showMessage(stringFlavourTile[20] + "650 gold");
+                        message = tileTextStrings.getLine(20);
+                        displayMessage(message);
                         break;
                     case 21:
-                        gui.showMessage(stringFlavourTile[21] + "650 gold");
+                        message = tileTextStrings.getLine(21);
+                        displayMessage(message);
                         break;
                     case 22:
-                        gui.showMessage(stringFlavourTile[22] + "650 gold");
+                        message = tileTextStrings.getLine(22);
+                        displayMessage(message);
                         break;
                     case 23:
-                        gui.showMessage(stringFlavourTile[23] + "650 gold");
+                        message = tileTextStrings.getLine(23);
+                        displayMessage(message);
                         break;
                     case 24:
-                        gui.showMessage(stringFlavourTile[24] + "650 gold");
+                        message = tileTextStrings.getLine(24);
+                        displayMessage(message);
                         break;
-                }*/
+                } */
+
             }
         }
-        gui.showMessage(playerList[winnerID].getName()+Main.langStrings.getLine(3));
+        gui.showMessage(playerList[winnerID].getName() + Main.langStrings.getLine(3));
     }
+    private void displayMessage(String message) {
+        getGui().displayChanceCard(message);
+
+        getGui().showMessage(showString);
+    }
+
+
 
     private void addPlayers(int a) {
         playerList = new Player[a];
@@ -194,12 +230,13 @@ public class Game implements englishStrings {
             GUI_Car car = new GUI_Car();
             car.setPrimaryColor(colors[i]);
 
-            Player p = new Player(gui.getUserString(Main.langStrings.getLine(1)+" "+(i+1)+"."), startBalance, startLocation, car);
+            Player p = new Player(gui.getUserString(Main.langStrings.getLine(1) + " " + (i + 1) + "."), startBalance, startLocation, car);
             gui.addPlayer(p);
             playerList[i] = p;
             gui.getFields()[p.getLocation()].setCar(p, true);
         }
     }
+
 
     public Player[] getPlayerList() { return playerList; }
 
