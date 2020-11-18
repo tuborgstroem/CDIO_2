@@ -96,6 +96,7 @@ public class Game implements englishStrings {
 
     public void playGame() {
         int winnerID = -1;
+        boolean ownsAdjacent;
 
         while (winnerID == -1) //Game loop till winner is found
         {
@@ -108,81 +109,20 @@ public class Game implements englishStrings {
                 gui.setDie(a);
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
+
+                //The following code checks whether or not the two tiles in a color group are owned by the same player.
+                //tempTileNumber gets the first tile number from the board color array of a given color(where the player landed)
+                ownsAdjacent = false;
+                int tempTileNumber = board.getColorArray(board.getTiles()[player.getLocation()].getTileColor())[0];
+                if (board.getTiles()[tempTileNumber].getOwner() == board.getTiles()[tempTileNumber+1].getOwner()
+                        && board.getTiles()[tempTileNumber].getOwner() != player) {
+                    ownsAdjacent = true;
+                }
+
                 if (player.getBalance() >= 3000) {
                     winnerID = i;
                     break;
                 }
-/*                switch (player.getLocation()) {
-                    case 2:
-                        gui.showMessage(stringFlavourTile[2] + "250 gold");
-                        break;
-                    case 3:
-                        gui.showMessage(stringFlavourTile[3] + "-100 gold");
-                        break;
-                    case 4:
-                        gui.showMessage(stringFlavourTile[4] + "100 gold");
-                        break;
-                    case 5:
-                        gui.showMessage(stringFlavourTile[5] + "-20 gold");
-                        break;
-                    case 6:
-                        gui.showMessage(stringFlavourTile[6] + "180 gold");
-                        break;
-                    case 7:
-                        gui.showMessage(stringFlavourTile[7] + "+ 0 gold");
-                        break;
-                    case 8:
-                        gui.showMessage(stringFlavourTile[8] + "-70 gold");
-                        break;
-                    case 9:
-                        gui.showMessage(stringFlavourTile[9] + "60 gold");
-                        break;
-                    case 10:
-                        gui.showMessage(stringFlavourTile[10] + "-80 gold");
-                        break;
-                    case 11:
-                        gui.showMessage(stringFlavourTile[11] + "-50 gold");
-                        break;
-                    case 12:
-                        gui.showMessage(stringFlavourTile[12] + "650 gold");
-                        break;
-                    case 13:
-                        gui.showMessage(stringFlavourTile[13] + "650 gold");
-                        break;
-                    case 14:
-                        gui.showMessage(stringFlavourTile[14] + "650 gold");
-                        break;
-                    case 15:
-                        gui.showMessage(stringFlavourTile[15] + "650 gold");
-                        break;
-                    case 16:
-                        gui.showMessage(stringFlavourTile[16] + "650 gold");
-                        break;
-                    case 17:
-                        gui.showMessage(stringFlavourTile[17] + "650 gold");
-                        break;
-                    case 18:
-                        gui.showMessage(stringFlavourTile[18] + "650 gold");
-                        break;
-                    case 19:
-                        gui.showMessage(stringFlavourTile[19] + "650 gold");
-                        break;
-                    case 20:
-                        gui.showMessage(stringFlavourTile[20] + "650 gold");
-                        break;
-                    case 21:
-                        gui.showMessage(stringFlavourTile[21] + "650 gold");
-                        break;
-                    case 22:
-                        gui.showMessage(stringFlavourTile[22] + "650 gold");
-                        break;
-                    case 23:
-                        gui.showMessage(stringFlavourTile[23] + "650 gold");
-                        break;
-                    case 24:
-                        gui.showMessage(stringFlavourTile[24] + "650 gold");
-                        break;
-                }*/
             }
         }
         gui.showMessage(playerList[winnerID].getName()+Main.langStrings.getLine(3));
