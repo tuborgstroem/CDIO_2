@@ -67,10 +67,10 @@ public class Player extends GUI_Player {
             } else if (tile.getOwner() != this && tile.getOwner() != null) {
 
                 GameBoard b = game.getBoard();
-                tempTileNumber = b.getColorArray(tile.getTileColor())[0];   //Gets array for specific color player landed on
+                tempTileNumber = b.getColorArray(tile.getTileColor())[0];
                 if (b.getTiles()[tempTileNumber].getOwner() == b.getTiles()[(tempTileNumber+1)].getOwner()) {
-                    playerValue = getBalance() - tile.getEffect()*2;
-                    ownerValue = tile.getOwner().getBalance() + tile.getEffect()*2;
+                    playerValue = getBalance() - tile.getEffect() * 2;
+                    ownerValue = tile.getOwner().getBalance() + tile.getEffect() * 2;
                 } else {
                     playerValue = getBalance() - tile.getEffect();
                     ownerValue = tile.getOwner().getBalance() + tile.getEffect();
