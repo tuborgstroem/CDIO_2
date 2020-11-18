@@ -55,21 +55,29 @@ public class Player extends GUI_Player {
      */
     private void landOnField(Tile tile, Game game) {
         tile.getGui_field().setCar(this, true);
-        //int playerValue = getBalance()+tile.getEffect();
+        int playerValue;
+        int ownerValue;
+        int tempTileNumber;
+
         if(tile.getGui_field() instanceof GUI_Street) {
-//            if (game.getBoard().getTiles()[this.getLocation()].getOwner() == null) {
-//                game.getBoard().getTiles()[this.getLocation()].setOwner(this);
-//                int a = game.getBoard().getTiles()[this.getLocation()].getEffect();
             if (tile.getOwner() == null){
                 tile.setOwner(this);
-                int playerValue = account.getBalance() - tile.getEffect();
-                account.setBalance(playerValue);
+                playerValue = getBalance() - tile.getEffect();
                 setBalance(playerValue);
+            } else if (tile.getOwner() != this && tile.getOwner() != null) {
+
+                GameBoard b = game.getBoard();
+                tempTileNumber = b.getColorArray(tile.getTileColor())[0];   //Gets array for specific color player landed on
+                if (b.getTiles()[tempTileNumber].getOwner() == b.getTiles()[(tempTileNumber+1)].getOwner()) {
+                    playerValue = getBalance() - tile.getEffect()*2;
+                    ownerValue = tile.getOwner().getBalance() + tile.getEffect()*2;
+                } else {
+                    playerValue = getBalance() - tile.getEffect();
+                    ownerValue = tile.getOwner().getBalance() + tile.getEffect();
+                }
+                setBalance(playerValue);
+                tile.getOwner().setBalance(ownerValue);
             }
-
-
-
-
         }
         else if(tile.getGui_field() instanceof GUI_Chance){
             game.drawChance(this);

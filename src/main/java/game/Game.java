@@ -8,7 +8,7 @@ import gui_main.GUI;
 
 import java.awt.*;
 
-public class Game implements englishStrings {
+public class Game {
     private final int totalNumPlayers;
     private Player[] playerList;
     private DiceCup cup;
@@ -96,7 +96,7 @@ public class Game implements englishStrings {
 
     public void playGame() {
         int winnerID = -1;
-        boolean ownsAdjacent;
+        //boolean ownsAdjacent;
 
         while (winnerID == -1) //Game loop till winner is found
         {
@@ -109,26 +109,15 @@ public class Game implements englishStrings {
                 gui.setDie(a);
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
-
-                //The following code checks whether or not the two tiles in a color group are owned by the same player.
-                //tempTileNumber gets the first tile number from the tile array of a given color(where the player landed)
-                ownsAdjacent = false;
-                int tempTileNumber = board.getColorArray(board.getTiles()[player.getLocation()].getTileColor())[0];
-                if (board.getTiles()[tempTileNumber].getOwner() == board.getTiles()[(tempTileNumber+1)].getOwner()
-                        && board.getTiles()[player.getLocation()].getOwner() != player
-                        && board.getTiles()[player.getLocation()].getOwner() != null
-                )
-                {
-                    ownsAdjacent = true;
-                }
+                board.getTiles()[1].setOwner(playerList[1]);
+                board.getTiles()[2].setOwner(playerList[1]);
+                board.getTiles()[4].setOwner(playerList[1]);
+                board.getTiles()[5].setOwner(playerList[1]);
 
                 if (player.getBalance() >= 3000) {
                     winnerID = i;
                     break;
                 }
-//                else (player.getBalance() <= 0) {
-//
-//                }
             }
         }
         gui.showMessage(playerList[winnerID].getName()+Main.langStrings.getLine(3));

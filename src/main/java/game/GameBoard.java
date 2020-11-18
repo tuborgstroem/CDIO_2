@@ -10,7 +10,7 @@ import java.lang.reflect.Array;
  * Should be used for the game board.
  * Tiles are the individual fields
  */
-public class GameBoard implements englishBoardStrings{
+public class GameBoard {
     private Tile[] tiles;
     private final int[] effects={2,1,1,0,1,1,0,2,2,0,2,2,0,3,3,0,3,3,0,4,4,0,5,5};
     private final Color[] tileColor = {Color.RED, Color.YELLOW, Color.GREEN, Color.BLUE, Color.ORANGE, Color.CYAN, Color.PINK, Color.WHITE};
