@@ -109,10 +109,6 @@ public class Game {
                 gui.setDie(a);
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
-                board.getTiles()[1].setOwner(playerList[1]);
-                board.getTiles()[2].setOwner(playerList[1]);
-                board.getTiles()[4].setOwner(playerList[1]);
-                board.getTiles()[5].setOwner(playerList[1]);
 
                 if (player.getBalance() >= 3000) {
                     winnerID = i;
