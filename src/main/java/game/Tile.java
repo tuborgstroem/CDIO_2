@@ -41,6 +41,10 @@ public class Tile {
         return owner;
     }
 
+    public void setOwner(Player owner) {
+        this.owner = owner;
+    }
+
     public Color getTileColor() {
         return tileColor;
     }
