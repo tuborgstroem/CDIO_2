@@ -111,11 +111,11 @@ public class Game implements englishStrings {
                 gui.getFields()[player.getLocation()].setCar(player, true);
 
                 //The following code checks whether or not the two tiles in a color group are owned by the same player.
-                //tempTileNumber gets the first tile number from the board color array of a given color(where the player landed)
+                //tempTileNumber gets the first tile number from the tile array of a given color(where the player landed)
                 ownsAdjacent = false;
                 int tempTileNumber = board.getColorArray(board.getTiles()[player.getLocation()].getTileColor())[0];
                 if (board.getTiles()[tempTileNumber].getOwner() == board.getTiles()[tempTileNumber+1].getOwner()
-                        && board.getTiles()[tempTileNumber].getOwner() != player) {
+                        && board.getTiles()[player.getLocation()].getOwner() != player) {
                     ownsAdjacent = true;
                 }
 
