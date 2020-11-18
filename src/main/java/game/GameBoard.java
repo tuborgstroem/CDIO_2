@@ -12,7 +12,7 @@ import java.lang.reflect.Array;
  */
 public class GameBoard implements englishBoardStrings{
     private Tile[] tiles;
-    private final int[] effects={2,1,1,0,1,1,0,2,2,0,2,2,0,3,3,0,3,3,0,4,4,0,4,4};
+    private final int[] effects={2,1,1,0,1,1,0,2,2,0,2,2,0,3,3,0,3,3,0,4,4,0,5,5};
     private final Color[] tileColor = {Color.RED, Color.YELLOW, Color.GREEN, Color.BLUE, Color.ORANGE, Color.CYAN, Color.PINK, Color.WHITE};
     private int[][] colorArr;
     private int colorCounter;

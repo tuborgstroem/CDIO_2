@@ -57,9 +57,19 @@ public class Player extends GUI_Player {
         tile.getGui_field().setCar(this, true);
         //int playerValue = getBalance()+tile.getEffect();
         if(tile.getGui_field() instanceof GUI_Street) {
-            int playerValue = account.getBalance() + tile.getEffect();
-            account.setBalance(playerValue);
-            setBalance(playerValue);
+//            if (game.getBoard().getTiles()[this.getLocation()].getOwner() == null) {
+//                game.getBoard().getTiles()[this.getLocation()].setOwner(this);
+//                int a = game.getBoard().getTiles()[this.getLocation()].getEffect();
+            if (tile.getOwner() == null){
+                tile.setOwner(this);
+                int playerValue = account.getBalance() - tile.getEffect();
+                account.setBalance(playerValue);
+                setBalance(playerValue);
+            }
+
+
+
+
         }
         else if(tile.getGui_field() instanceof GUI_Chance){
             game.drawChance(this);

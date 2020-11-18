@@ -126,6 +126,9 @@ public class Game implements englishStrings {
                     winnerID = i;
                     break;
                 }
+//                else (player.getBalance() <= 0) {
+//
+//                }
             }
         }
         gui.showMessage(playerList[winnerID].getName()+Main.langStrings.getLine(3));
@@ -143,6 +146,8 @@ public class Game implements englishStrings {
             gui.getFields()[p.getLocation()].setCar(p, true);
         }
     }
+
+
 
     public Player[] getPlayerList() { return playerList; }
 
