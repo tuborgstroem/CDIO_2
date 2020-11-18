@@ -112,13 +112,13 @@ public class Game implements englishStrings {
 
                 //The following code checks whether or not the two tiles in a color group are owned by the same player.
                 //tempTileNumber gets the first tile number from the tile array of a given color(where the player landed)
-                board.getTiles()[4].setOwner(playerList[1]);
-                board.getTiles()[5].setOwner(playerList[1]);
                 ownsAdjacent = false;
                 int tempTileNumber = board.getColorArray(board.getTiles()[player.getLocation()].getTileColor())[0];
-                if (board.getTiles()[tempTileNumber].getOwner() == board.getTiles()[tempTileNumber+1].getOwner()
+                if (board.getTiles()[tempTileNumber].getOwner() == board.getTiles()[(tempTileNumber+1)].getOwner()
                         && board.getTiles()[player.getLocation()].getOwner() != player
-                        && board.getTiles()[player.getLocation()].getOwner() != null) {
+                        && board.getTiles()[player.getLocation()].getOwner() != null
+                )
+                {
                     ownsAdjacent = true;
                 }
 
