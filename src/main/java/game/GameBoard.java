@@ -57,6 +57,8 @@ public class GameBoard implements englishBoardStrings{
 
     public int[] getColorArray(Color c) { //Returns 1-dimensional array with the color appropriate tiles
         int[] tempArr = new int[arraySize];
+        tempArr[0] = 0; //default
+        tempArr[1] = 0; //default
         for (int i = 0; i < 8; i++) {
             if (c == tileColor[i]) {
                 for (int j = 0; j < arraySize; j++) {
