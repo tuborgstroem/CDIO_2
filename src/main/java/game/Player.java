@@ -7,6 +7,7 @@ public class Player extends GUI_Player {
     //player variables
     private int location;
     final private Account account;
+    private boolean bankrrupt;
 
     /**
      *
@@ -19,11 +20,26 @@ public class Player extends GUI_Player {
         super(playerName, playerBalance, playerCar);
         this.location = startLocation;
         account = new Account(playerBalance);
+        bankrrupt = false;
     }
+
+    public boolean getBankrrupt(){ return this.bankrrupt;}
 
     //adds to gamescore
     public void addToBalance(int balanceGain) {
         this.setBalance(this.getBalance()+balanceGain) ;
+    }
+
+    public boolean withdrawFromBalance(int payment){
+        int newBalance = this.getBalance() - payment;
+        if (newBalance < 0){
+            bankrrupt = true;
+            return false;
+        }
+        else{
+            this.setBalance(newBalance);
+            return true;
+        }
     }
 
 
@@ -55,26 +71,24 @@ public class Player extends GUI_Player {
      */
     private void landOnField(Tile tile, Game game) {
         tile.getGui_field().setCar(this, true);
-        int playerValue;
+        int tileRent;
         int ownerValue;
         int tempTileNumber;
 
         if(tile.getGui_field() instanceof GUI_Street) {
             if (tile.getOwner() == null){
                 buyTile(this, tile, false);
+                game.getGui().showMessage(this.getName() + " buys " + tile.getGui_field().getTitle() + " for " + Integer.toString(tile.getRent()));
             } else if (tile.getOwner() != this && tile.getOwner() != null) {
-
                 GameBoard b = game.getBoard();
                 tempTileNumber = b.getColorArray(tile.getTileColor())[0];
                 if (b.getTiles()[tempTileNumber].getOwner() == b.getTiles()[(tempTileNumber+1)].getOwner()) {
-                    playerValue = getBalance() - tile.getRent() * 2;
-                    ownerValue = tile.getOwner().getBalance() + tile.getRent() * 2;
+                    tileRent = tile.getRent() * 2;
                 } else {
-                    playerValue = getBalance() - tile.getRent();
-                    ownerValue = tile.getOwner().getBalance() + tile.getRent();
+                    tileRent = tile.getRent();
                 }
-                setBalance(playerValue);
-                tile.getOwner().setBalance(ownerValue);
+                payRent(this, tile.getOwner(), tileRent);
+                game.getGui().showMessage(this.getName() + " pays " + Integer.toString(tileRent) + " to " + tile.getOwner().getName());
             }
         }
         else if(tile.getGui_field() instanceof GUI_Chance){
@@ -84,16 +98,19 @@ public class Player extends GUI_Player {
 
     public void buyTile(Player player, Tile tile, boolean getFree){
         if(!getFree){
-            if (player.getBalance() >= tile.getRent()){
+            if(this.withdrawFromBalance(tile.getRent())){
                 tile.setOwner(this);
-                int playerValue = getBalance() - tile.getRent();
-                setBalance(playerValue);
             }
         }
-        else{
+        else {
             tile.setOwner(this);
         }
+    }
 
+    public void payRent(Player fromPlayer, Player toPlayer, int amount){
+        if (fromPlayer.withdrawFromBalance(amount)){
+            toPlayer.addToBalance(amount);
+        }
     }
 
     /**

@@ -1,10 +1,11 @@
 package game;
 
 import gui_fields.GUI_Field;
+import gui_fields.GUI_Street;
+
 import java.awt.*;
 
 public class Tile {
-
 
     private Player owner;
     private int number;

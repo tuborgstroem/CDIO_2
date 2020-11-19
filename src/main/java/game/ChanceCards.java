@@ -16,7 +16,8 @@ public class ChanceCards {
 
     public void DrawCard(Player player){
 
-        int a = rand.nextInt(9);
+//        int a = rand.nextInt();
+        int a = 0;
         switch (a){
             case(0):
                 moveToStart(player);
@@ -71,12 +72,16 @@ public class ChanceCards {
         System.out.println("Candy");
         String message = chanceCardsStrings.getLine(3);
         displayMessage(message);
+        if (!player.withdrawFromBalance(2)){
+            System.out.println("LOOSER!!");
+        }
     }
 
     private void homeworkDone(Player player){
         System.out.println("homework");
         String message = chanceCardsStrings.getLine(4);
         displayMessage(message);
+        player.addToBalance(2);
     }
 
     private void birthday(Player player){

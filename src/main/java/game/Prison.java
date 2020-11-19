@@ -19,7 +19,7 @@ import gui_fields.GUI_Field;
         }
 
         public void setIPrison(Player player){
-            player.setPlacering(6);
+//            player.setPlacering(6);
         }
 
         /**
@@ -30,7 +30,7 @@ import gui_fields.GUI_Field;
         public void landOnField(Player player) {
             gui.showMessage(toString());
             setIPrison(player);
-            player.setPrison(true);
+//            player.setPrison(true);
         }
 
 

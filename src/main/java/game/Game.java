@@ -115,8 +115,8 @@ public class Game {
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
 
-                if (player.getBalance() >= 3000) {
-                    winnerID = i;
+                if (player.getBankrrupt()) {
+                    gui.showMessage(player.getName() + Main.langStrings.getLine(5));
                     break;
                 }
             }
@@ -136,7 +136,6 @@ public class Game {
             gui.getFields()[p.getLocation()].setCar(p, true);
         }
     }
-
 
 
     public Player[] getPlayerList() { return playerList; }
