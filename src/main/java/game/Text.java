@@ -3,11 +3,19 @@ package game;
 import gui_fields.*;
 import gui_main.GUI;
 
+
 public class Text {
     private GUI_Field[] fields;
     private Game game;
     public final Language textStrings;
-    private String tileString;
+    private final String landString;
+    private final String unOwnedString;
+    private final String ownedSelfString;
+    private final String ownedOtherStringLast;
+    private final String ownedOtherStringFirst;
+
+    private final String currencyPlural;
+    private final String currencySingular;
     private GameBoard board;
     private GUI gui;
     private Player player;
@@ -15,115 +23,47 @@ public class Text {
 
     public Text(Game game) {
         textStrings = new Language("resources/engFieldText.txt");
-        tileString = textStrings.getLine(0);
+        int i = 0;
+        landString = textStrings.getLine(i++);
+        unOwnedString = textStrings.getLine(i++);
+        ownedSelfString = textStrings.getLine(i++);
+        ownedOtherStringFirst = textStrings.getLine(i++);
+        ownedOtherStringLast = textStrings.getLine(i++);
+        currencyPlural = textStrings.getLine(i++);
+        currencySingular = textStrings.getLine(i++);
+
+//        tileString = textStrings.getLine(0);
         this.game = game;
+        board = game.getBoard();
+        gui = game.getGui();
     }
 
 
     public void TileMessage (Player player) {
-        switch (player.getLocation()) {
-//            case 1:
-//                String message = textStrings.getLine(1);
-//                displayMessage(message);
-//                break;
-            case 2:
-                String message = textStrings.getLine(2);
-                displayMessage(message);
-                break;
-            case 3:
-                message = textStrings.getLine(3);
-                displayMessage(message);
-                break;
-//            case 4:
-//                message = textStrings.getLine(4);
-//                displayMessage(message);
-//                break;
-            case 5:
-                message = textStrings.getLine(5);
-                displayMessage(message);
-                break;
-            case 6:
-                message = textStrings.getLine(6);
-                displayMessage(message);
-                break;
-//            case 7:
-//                message = textStrings.getLine(7);
-//                displayMessage(message);
-//                break;
-            case 8:
-                message = textStrings.getLine(8);
-                displayMessage(message);
-                break;
-            case 9:
-                message = textStrings.getLine(9);
-                displayMessage(message);
-                break;
-//            case 10:
-//                message = textStrings.getLine(10);
-//                displayMessage(message);
-//                break;
-            case 11:
-                message = textStrings.getLine(11);
-                displayMessage(message);
-                break;
-            case 12:
-                message = textStrings.getLine(12);
-                displayMessage(message);
-                break;
-//            case 13:
-//                message = textStrings.getLine(13);
-//                displayMessage(message);
-//                break;
-            case 14:
-                message = textStrings.getLine(14);
-                displayMessage(message);
-                break;
-            case 15:
-                message = textStrings.getLine(15);
-                displayMessage(message);
-                break;
-//            case 16:
-//                message = textStrings.getLine(16);
-//                displayMessage(message);
-//                break;
-            case 17:
-                message = textStrings.getLine(17);
-                displayMessage(message);
-                break;
-            case 18:
-                message = textStrings.getLine(18);
-                displayMessage(message);
-                break;
-//            case 19:
-//                message = textStrings.getLine(19);
-//                displayMessage(message);
-//                break;
-            case 20:
-                message = textStrings.getLine(20);
-                displayMessage(message);
-                break;
-            case 21:
-                message = textStrings.getLine(21);
-                displayMessage(message);
-                break;
-//            case 22:
-//                message = textStrings.getLine(22);
-//                displayMessage(message);
-//                break;
-            case 23:
-                message = textStrings.getLine(23);
-                displayMessage(message);
-                break;
-            case 24:
-                message = textStrings.getLine(24);
-                displayMessage(message);
-                break;
+
+        Tile tile = board.getTile(player.getLocation());
+        String finalmsg = landString + " "+ tile.getGui_field().getTitle();
+        if (tile.getOwner()== null){
+            finalmsg += unOwnedString;
         }
+        else if(tile.getOwner() == player) {
+             displayMessage(finalmsg += ownedSelfString);
+             return;
+        }
+        else{
+            finalmsg += ownedOtherStringFirst + " " + tile.getOwner().getName() + ownedOtherStringLast;
+        }
+        finalmsg += " " + Integer.toString(tile.getRent());
+        if(tile.getRent() > 1){
+            finalmsg += currencyPlural;
+        }
+        else{
+            finalmsg += currencySingular;
+        }
+        displayMessage(finalmsg);
     }
     private void displayMessage(String message) {
-        getGui().displayChanceCard(message);
-
-        getGui().showMessage(tileString);
+        game.getGui().showMessage(message);
     }
     
         public GameBoard getBoard() {
@@ -132,8 +72,6 @@ public class Text {
         
 
 
-    public GUI getGui() {
-        return gui;
-    }
-    
+
+
 }

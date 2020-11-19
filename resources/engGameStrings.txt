@@ -3,3 +3,4 @@ Enter name of player
 's turn.
 has won the game! Congratulations!
 Roll dice
+has gone bankrrupt, loser!
