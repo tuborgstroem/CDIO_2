@@ -9,6 +9,7 @@ public class Player extends GUI_Player {
     final private Account account;
     private boolean bankrrupt;
     private boolean prison;
+    private int getOutOfJailCards;
 
     /**
      *
@@ -22,6 +23,7 @@ public class Player extends GUI_Player {
         this.location = startLocation;
         account = new Account(playerBalance);
         bankrrupt = false;
+        getOutOfJailCards = 0;
     }
 
     public boolean getBankrrupt(){ return this.bankrrupt;}
@@ -145,7 +147,10 @@ public class Player extends GUI_Player {
         this.prison=prison;
     }
 
-    public void setInPrison(boolean b) { prison = b;
-    }
+    public void setInPrison(boolean b) { prison = b;}
+
+    public void setGetOutOfJailCards(int amount){ getOutOfJailCards = amount;}
+
+    public int getGetOutOfJailCards(){return getOutOfJailCards;}
 }
 

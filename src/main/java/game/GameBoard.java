@@ -23,7 +23,7 @@ public class GameBoard {
         tiles = new Tile[numOfTiles];
         //tiles[0] = new Tile();
         for (int i = 0; i < numOfTiles; i++) {
-            tiles[i] = new Tile(effects[i],gui_fields[i]);
+            tiles[i] = new Tile(effects[i],gui_fields[i], i);
             if (gui_fields[i] instanceof GUI_Street || gui_fields[i] instanceof GUI_Start) {
                 tiles[i].getGui_field().setTitle(Main.tileStrings.getLine(i));
                 tiles[i].getGui_field().setSubText("M"+effects[i]);
@@ -37,17 +37,18 @@ public class GameBoard {
         //Setup board colors
         colorCounter = 0;
         arraySize = 2;
-        colorArr = new int[8][arraySize];
+        colorArr = new int[tileColor.length][arraySize];
         // Doesn't scale with board size, arraySize is the number of color-grouped tiles
-
+        int j = 0;
         for (int i = 1; i < numOfTiles; i++) {
             if (gui_fields[i] instanceof GUI_Street) {
+
                 tiles[i].setTileColor(tileColor[colorCounter]);
                 tiles[i].getGui_field().setBackGroundColor(tileColor[colorCounter]);
-            } else {
-                for (int j = 0; j < arraySize; j++) {
-                    colorArr[colorCounter][j] = ((i-arraySize)+j);
-                }
+                colorArr[colorCounter][j++] = i;
+            }
+            else {
+                j = 0;
                 colorCounter++;
             }
         }
@@ -65,7 +66,7 @@ public class GameBoard {
         int[] tempArr = new int[arraySize];
         tempArr[0] = 0; //default
         tempArr[1] = 0; //default
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < tileColor.length; i++) {
             if (c == tileColor[i]) {
                 for (int j = 0; j < arraySize; j++) {
                     tempArr[j] = colorArr[i][j];
@@ -74,5 +75,7 @@ public class GameBoard {
         }
         return tempArr;
     }
+
+    public Color[] getTileColor() {return tileColor;}
 }
 

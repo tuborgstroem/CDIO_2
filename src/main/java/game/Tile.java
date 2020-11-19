@@ -8,14 +8,14 @@ import java.awt.*;
 public class Tile {
 
     private Player owner;
-    private int number;
+    private final int number;
     private String description;
     private int rent;
     private GUI_Field gui_field;
     private Color tileColor;
-    public Tile (){}
+
     public Tile (int number1, String description1, int effect1, GUI_Field gui_field1){
-        number=number1;
+        this.number=number1;
         description=description1;
         rent =effect1;
         gui_field=gui_field1;
@@ -24,10 +24,11 @@ public class Tile {
         owner = null;
     }
 
-    public Tile (int effect1, GUI_Field gui_field1){
+    public Tile (int effect1, GUI_Field gui_field1, int num){
         rent =effect1;
         gui_field=gui_field1;
         tileColor=null;
+        this.number=num;
         owner = null;
     }
 
@@ -58,5 +59,7 @@ public class Tile {
     public void showMessage(Player player){
         System.out.println(player.getName() + this.description + "penis");
     }
+
+    public int getNumber() {return number;}
 }
 
