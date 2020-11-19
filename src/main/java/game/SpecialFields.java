@@ -20,9 +20,7 @@ public abstract class SpecialFields {
         }
 
 
-
-
-    public abstract String toString();
+        public abstract String toString();
 
 
         public abstract void landOnField(Player player);
