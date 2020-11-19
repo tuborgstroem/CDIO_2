@@ -1,6 +1,7 @@
 package game;
 
 import gui_fields.GUI_Field;
+import java.awt.*;
 
 public class Tile {
 
@@ -11,6 +12,7 @@ public class Tile {
     private int effect;
     private GUI_Field gui_field;
     private String flavor;
+    private Color tileColor;
     public Tile (){}
     public Tile (int number1, String description1, int effect1, GUI_Field gui_field1, String flavor1){
         number=number1;
@@ -27,6 +29,7 @@ public class Tile {
     public Tile (int effect1, GUI_Field gui_field1){
         effect=effect1;
         gui_field=gui_field1;
+        tileColor=null;
         owner = null;
     }
 
@@ -36,6 +39,18 @@ public class Tile {
 
     public Player getOwner() {
         return owner;
+    }
+
+    public void setOwner(Player owner) {
+        this.owner = owner;
+    }
+
+    public Color getTileColor() {
+        return tileColor;
+    }
+
+    public void setTileColor(Color tileColor) {
+        this.tileColor = tileColor;
     }
 
     public GUI_Field getGui_field() {
