@@ -17,8 +17,9 @@ public class Text {
         textStrings = new Language("resources/engFieldText.txt");
         tileString = textStrings.getLine(0);
         this.game = game;
-        location = player.getLocation();
     }
+
+
     public void TileMessage (Player player) {
         switch (player.getLocation()) {
 //            case 1:
