@@ -14,7 +14,7 @@ public class Game {
     private DiceCup cup;
     private GameBoard board;
     private GUI gui;
-    private final int startBalance = 1000;
+    private final int startBalance = 16;
     private final int startLocation = 0;
     private final int numberOfTiles = 24;
     private final int maxNumberOfPlayers = 4;
