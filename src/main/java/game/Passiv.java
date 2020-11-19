@@ -6,10 +6,6 @@ import gui_main.GUI;
 public class Passiv extends SpecialFields{
         private String fieldNavn;
 
-        /**
-         * Konstruktøren angiver passivfelternes lokation på brættet, ud fra feltnr.
-
-         */
         public Passiv (int fields, GUI gui) {
             super(fields, gui);
             switch(fields){

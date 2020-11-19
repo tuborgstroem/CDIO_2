@@ -23,7 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="added special fields">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/Passiv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Passiv.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +43,13 @@
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -208,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605789127767</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added special fields">
+      <created>1605789207679</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605789207679</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,11 +336,11 @@
       <screen x="56" y="0" width="1864" height="2160" />
     </state>
     <state x="517" y="225" width="876" height="636" key="VCS.ChangeListViewerDialog/56.0.1864.2160@56.0.1864.2160" timestamp="1605046318312" />
-    <state x="221" y="180" key="Vcs.Push.Dialog.v2" timestamp="1605789151073">
+    <state x="221" y="180" key="Vcs.Push.Dialog.v2" timestamp="1605789214860">
       <screen x="0" y="23" width="1440" height="832" />
     </state>
     <state x="221" y="180" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1605789055634" />
-    <state x="221" y="180" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1605789151073" />
+    <state x="221" y="180" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1605789214860" />
     <state x="414" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605788620933">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
