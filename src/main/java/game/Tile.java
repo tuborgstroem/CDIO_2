@@ -9,7 +9,7 @@ public class Tile {
     private Player owner;
     private int number;
     private String description;
-    private int effect;
+    private int rent;
     private GUI_Field gui_field;
     private String flavor;
     private Color tileColor;
@@ -17,7 +17,7 @@ public class Tile {
     public Tile (int number1, String description1, int effect1, GUI_Field gui_field1, String flavor1){
         number=number1;
         description=description1;
-        effect=effect1;
+        rent =effect1;
         gui_field=gui_field1;
         flavor=flavor1;
         gui_field.setTitle(description);
@@ -27,14 +27,14 @@ public class Tile {
     }
 
     public Tile (int effect1, GUI_Field gui_field1){
-        effect=effect1;
+        rent =effect1;
         gui_field=gui_field1;
         tileColor=null;
         owner = null;
     }
 
-    public int getEffect() {
-        return effect;
+    public int getRent() {
+        return rent;
     }
 
     public Player getOwner() {
