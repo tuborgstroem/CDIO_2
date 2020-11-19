@@ -13,7 +13,7 @@ public class Text {
     int location;
 
     public Text(Game game) {
-        textStrings = new Language("resources/engChancecard.txt");
+        textStrings = new Language("resources/engFieldText.txt");
         tileString = textStrings.getLine(0);
         this.game = game;
         location = player.getLocation();
