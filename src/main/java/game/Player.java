@@ -3,12 +3,13 @@ package game;
 import gui_fields.GUI_Car;
 import gui_fields.GUI_Field;
 import gui_fields.GUI_Player;
-
 public class Player extends GUI_Player {
 
     //player variables
     private int location;
     private Account account;
+    private boolean prison;
+    private int placering;
 
     /**
      *
@@ -85,6 +86,15 @@ public class Player extends GUI_Player {
                 }
             }
         }
+    }
+
+    public void setPrison(boolean prison ) {
+
+        this.prison=prison;
+    }
+
+    public void setPlacering(int placering) {
+        this.placering=placering;
     }
 }
 

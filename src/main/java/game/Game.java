@@ -12,6 +12,7 @@ public class Game implements englishStrings {
     private Player[] playerList;
     private DiceCup cup;
     private GameBoard board;
+    private SpecialFields[] specialFields = new SpecialFields[24];
     private GUI gui;
     private final int startBalance = 1000;
     private final int startLocation = 0;
@@ -43,6 +44,10 @@ public class Game implements englishStrings {
             if(i%chanceFreq == 0){
                 if(i%2 == 0){ //Only works with this size
                     switch (i){
+                        case(0):
+                            fields[i] =  new GUI_Start();
+                            fields[i].setSubText("Start");
+                            break;
                         case(6):
                             fields[i] = new GUI_Jail();
                             fields[i].setSubText("Prison");
