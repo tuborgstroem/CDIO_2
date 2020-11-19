@@ -1,19 +1,24 @@
 package game;
+import gui_fields.*;
+import gui_main.GUI;
 
-public class Text {
+public class Text (Player player){
+    private GUI_Field[] fields;
     private Game game;
     public final Language textStrings;
     private String tileString;
     private GameBoard board;
-    private Player[] playerList;
+    private GUI gui;
+    int location;
 
     public Text(Game game) {
         textStrings = new Language("resources/engChancecard.txt");
         tileString = textStrings.getLine(0);
         this.game = game;
+        location = player.getLocation();
     }
 
-     switch (player.getLocation()) {
+    switch (player.getLocation()) {
                     case 1:
                         String message = tileString.getLine(1);
                         displayMessage(message);
@@ -110,20 +115,24 @@ public class Text {
                         message = tileString.getLine(24);
                         displayMessage(message);
                         break;
-                } 
+                }
 
     private void displayMessage(String message) {
-        game.getGui().displayChanceCard(message);
+        getGui().displayChanceCard(message);
 
-        game.getGui().showMessage(tileString);
+        getGui().showMessage(tileString);
     }
     
         public GameBoard getBoard() {
             return board;
         }
         
-        public Player[] getPlayerList() { 
-        return playerList; 
+        public Player player {
+        return player;
+    }
+
+    public GUI getGui() {
+        return gui;
     }
     
 }
