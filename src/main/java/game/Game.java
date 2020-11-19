@@ -25,11 +25,11 @@ public class Game {
     private Text textStrings;
 
     public Game(Boolean test){
-        textStrings = new Text(this);
         initGUIFields();
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
         chanceCards = new ChanceCards(this);
+        textStrings = new Text(this);
         totalNumPlayers = 4;
         String[] playerNames = {"Thor", "Tobias", "Kian", "Sume"};
         playerList = new Player[totalNumPlayers];
@@ -45,11 +45,11 @@ public class Game {
         playGame();
     }
     public Game() {
-        textStrings = new Text(this);
         initGUIFields();
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
         chanceCards = new ChanceCards(this);
+        textStrings = new Text(this);
         totalNumPlayers = gui.getUserInteger(Main.langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
         if(totalNumPlayers >1){
             addPlayers(totalNumPlayers);
@@ -115,11 +115,13 @@ public class Game {
                 gui.setDie(a);
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
+                textStrings.TileMessage(player);
 
                 if (player.getBalance() >= 3000) {
                     winnerID = i;
                     break;
                 }
+
             }
         }
         gui.showMessage(playerList[winnerID].getName()+Main.langStrings.getLine(3));
