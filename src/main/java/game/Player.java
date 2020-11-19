@@ -1,15 +1,12 @@
 package game;
 
-import gui_fields.GUI_Car;
-import gui_fields.GUI_Field;
-import gui_fields.GUI_Player;
+import gui_fields.*;
+
 public class Player extends GUI_Player {
 
     //player variables
     private int location;
-    private Account account;
-    private boolean prison;
-    private int placering;
+    final private Account account;
 
     /**
      *
@@ -49,19 +46,42 @@ public class Player extends GUI_Player {
         while (location >= 24) {
             location -= 24;
         }
-        landOnField(game.getBoard().getTiles()[location]);
+        landOnField(game.getBoard().getTiles()[location], game);
     }
 
-    /**
+    /*
      * This is what happens when a player lands on a new field
      * @param field the field the player lands on
      */
-    private void landOnField(Tile tile) {
+    private void landOnField(Tile tile, Game game) {
         tile.getGui_field().setCar(this, true);
-        //int playerValue = getBalance()+tile.getEffect();
-        int playerValue = account.getBalance()+tile.getEffect();
-        account.setBalance(playerValue);
-        setBalance(playerValue);
+        int playerValue;
+        int ownerValue;
+        int tempTileNumber;
+
+        if(tile.getGui_field() instanceof GUI_Street) {
+            if (tile.getOwner() == null){
+                tile.setOwner(this);
+                playerValue = getBalance() - tile.getEffect();
+                setBalance(playerValue);
+            } else if (tile.getOwner() != this && tile.getOwner() != null) {
+
+                GameBoard b = game.getBoard();
+                tempTileNumber = b.getColorArray(tile.getTileColor())[0];
+                if (b.getTiles()[tempTileNumber].getOwner() == b.getTiles()[(tempTileNumber+1)].getOwner()) {
+                    playerValue = getBalance() - tile.getEffect() * 2;
+                    ownerValue = tile.getOwner().getBalance() + tile.getEffect() * 2;
+                } else {
+                    playerValue = getBalance() - tile.getEffect();
+                    ownerValue = tile.getOwner().getBalance() + tile.getEffect();
+                }
+                setBalance(playerValue);
+                tile.getOwner().setBalance(ownerValue);
+            }
+        }
+        else if(tile.getGui_field() instanceof GUI_Chance){
+            game.drawChance(this);
+        }
     }
 
     /**
@@ -86,15 +106,6 @@ public class Player extends GUI_Player {
                 }
             }
         }
-    }
-
-    public void setPrison(boolean prison ) {
-
-        this.prison=prison;
-    }
-
-    public void setPlacering(int placering) {
-        this.placering=placering;
     }
 }
 
