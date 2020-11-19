@@ -8,7 +8,7 @@ public class Player extends GUI_Player {
     private int location;
     final private Account account;
     private boolean bankrrupt;
-
+    private boolean prison;
     /**
      *
      * @param playerName The name of the player string
@@ -135,6 +135,13 @@ public class Player extends GUI_Player {
                 }
             }
         }
+    }
+
+    public void setPrison(boolean prison) {
+        this.prison=prison;
+    }
+
+    public void setInPrison(boolean b) { prison = b;
     }
 }
 
