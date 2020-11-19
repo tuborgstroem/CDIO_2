@@ -108,8 +108,8 @@ public class Game {
                 Player player = playerList[i];
                 gui.getUserButtonPressed(playerList[i].getName()+Main.langStrings.getLine(2),Main.langStrings.getLine(4));
                 cup.rollDice();
-                int a = cup.getDiceinCup().get(0).getValue();
-//                int a = 3;
+//                int a = cup.getDiceinCup().get(0).getValue();
+                int a = 3;
                 gui.setDie(a);
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);

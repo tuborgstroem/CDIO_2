@@ -16,8 +16,8 @@ public class ChanceCards {
 
     public void DrawCard(Player player){
 
-        int a = rand.nextInt();
-//        int a = 0;
+//        int a = rand.nextInt(9);
+        int a = 7;
         switch (a){
             case(0):
                 moveToStart(player);
@@ -105,11 +105,14 @@ public class ChanceCards {
 
 
     private void moveToLastTile(Player player){
+        int maxNum = game.getNumberOfTiles();
         System.out.println("movelast");
         String message = chanceCardsStrings.getLine(8);
-        int moveNum = game.getNumberOfTiles() - player.getLocation() -1;
-        player.moveLocation(moveNum, game);
+        message= message.replace("[Last Tile]", game.getBoard().getTile(maxNum-1).getGui_field().getDescription());
+        int moveNum = maxNum- player.getLocation() -1;
         displayMessage(message);
+        player.moveLocation(moveNum, game);
+
     }
 
     private void getFreeTileTwoColors(Player player){
@@ -120,8 +123,7 @@ public class ChanceCards {
 
     private void displayMessage(String message){
         game.getGui().displayChanceCard(message);
-
         game.getGui().showMessage(defString);
-
+        game.getGui().displayChanceCard(" ");
     }
 }
