@@ -116,7 +116,7 @@ public class Game {
                 gui.setDie(a);
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
-                textStrings.TileMessage(player);
+
 
                 if (player.getBankrrupt()) {
                     gui.showMessage(player.getName() + Main.langStrings.getLine(5));
@@ -161,4 +161,6 @@ public class Game {
     }
 
     public int getNumberOfTiles(){return  numberOfTiles;}
+
+    public Text getTextStrings(){ return textStrings;}
 }

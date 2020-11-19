@@ -12,18 +12,15 @@ public class Tile {
     private String description;
     private int rent;
     private GUI_Field gui_field;
-    private String flavor;
     private Color tileColor;
     public Tile (){}
-    public Tile (int number1, String description1, int effect1, GUI_Field gui_field1, String flavor1){
+    public Tile (int number1, String description1, int effect1, GUI_Field gui_field1){
         number=number1;
         description=description1;
         rent =effect1;
         gui_field=gui_field1;
-        flavor=flavor1;
         gui_field.setTitle(description);
         gui_field.setSubText(Integer.toString(number));
-        gui_field.setDescription(flavor);
         owner = null;
     }
 

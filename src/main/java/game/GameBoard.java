@@ -52,6 +52,10 @@ public class GameBoard {
         }
     }
 
+    public Tile getTile(int num){
+        return tiles[num];
+    }
+
     public Tile[] getTiles() {
         return tiles;
     }

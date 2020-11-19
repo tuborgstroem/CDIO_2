@@ -9,6 +9,7 @@ public class Player extends GUI_Player {
     final private Account account;
     private boolean bankrrupt;
     private boolean prison;
+
     /**
      *
      * @param playerName The name of the player string
@@ -70,15 +71,18 @@ public class Player extends GUI_Player {
      * @param field the field the player lands on
      */
     private void landOnField(Tile tile, Game game) {
+        Text textStrings = game.getTextStrings();
         tile.getGui_field().setCar(this, true);
         int tileRent;
         int ownerValue;
         int tempTileNumber;
 
         if(tile.getGui_field() instanceof GUI_Street) {
+
+            textStrings.TileMessage(this);
             if (tile.getOwner() == null){
                 buyTile(this, tile, false);
-                game.getGui().showMessage(this.getName() + " buys " + tile.getGui_field().getTitle() + " for " + Integer.toString(tile.getRent()));
+//                game.getGui().showMessage(this.getName() + " buys " + tile.getGui_field().getTitle() + " for " + Integer.toString(tile.getRent()));
             } else if (tile.getOwner() != this && tile.getOwner() != null) {
                 GameBoard b = game.getBoard();
                 tempTileNumber = b.getColorArray(tile.getTileColor())[0];
@@ -88,7 +92,7 @@ public class Player extends GUI_Player {
                     tileRent = tile.getRent();
                 }
                 payRent(this, tile.getOwner(), tileRent);
-                game.getGui().showMessage(this.getName() + " pays " + Integer.toString(tileRent) + " to " + tile.getOwner().getName());
+//                game.getGui().showMessage(this.getName() + " pays " + Integer.toString(tileRent) + " to " + tile.getOwner().getName());
             }
         }
         else if(tile.getGui_field() instanceof GUI_Chance){

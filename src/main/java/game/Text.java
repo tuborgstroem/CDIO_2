@@ -9,7 +9,14 @@ public class Text {
     private Game game;
     public final Language textStrings;
     private String tileString;
+    private String landString;
+    private String unOwnedString;
+    private String ownedSelfString;
+    private String ownedOtherStringLast;
+    private String ownedOtherStringFirst;
 
+    private String currencyPlural;
+    private String currencySingular;
     private GameBoard board;
     private GUI gui;
     private Player player;
@@ -17,6 +24,15 @@ public class Text {
 
     public Text(Game game) {
         textStrings = new Language("resources/engFieldText.txt");
+        int i = 0;
+        landString = textStrings.getLine(i++);
+        unOwnedString = textStrings.getLine(i++);
+        ownedSelfString = textStrings.getLine(i++);
+        ownedOtherStringFirst = textStrings.getLine(i++);
+        ownedOtherStringLast = textStrings.getLine(i++);
+        currencyPlural = textStrings.getLine(i++);
+        currencySingular = textStrings.getLine(i++);
+
 //        tileString = textStrings.getLine(0);
         this.game = game;
         board = game.getBoard();
@@ -25,23 +41,30 @@ public class Text {
 
 
     public void TileMessage (Player player) {
-        Player owner = board.getTiles()[player.getLocation()].getOwner();
-        if (owner==null) {
-            String message = textStrings.getLine(player.getLocation() * 3);
-            displayMessage(message);
-        }else if (owner.getName().equals(player.getName())){
-            String message = textStrings.getLine(player.getLocation() * 3+1);
-            displayMessage(message);
-        }else {
-            String message = textStrings.getLine(player.getLocation() * 3+2);
-            displayMessage(message);
-        }
 
+        Tile tile = board.getTile(player.getLocation());
+        String finalmsg = landString + " "+ tile.getGui_field().getTitle();
+        if (tile.getOwner()== null){
+            finalmsg += unOwnedString;
+        }
+        else if(tile.getOwner() == player) {
+             displayMessage(finalmsg += ownedSelfString);
+             return;
+        }
+        else{
+            finalmsg += ownedOtherStringFirst + " " + tile.getOwner().getName() + ownedOtherStringLast;
+        }
+        finalmsg += " " + Integer.toString(tile.getRent());
+        if(tile.getRent() > 1){
+            finalmsg += currencyPlural;
+        }
+        else{
+            finalmsg += currencySingular;
+        }
+        displayMessage(finalmsg);
     }
     private void displayMessage(String message) {
-        game.getGui().displayChanceCard(message);
-
-        game.getGui().showMessage(tileString);
+        game.getGui().showMessage(message);
     }
     
         public GameBoard getBoard() {
