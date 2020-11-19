@@ -74,7 +74,6 @@ public class Game {
                     switch (i){
                         case(0):
                             fields[i] =  new GUI_Start();
-                            fields[i].setSubText("Start");
                             break;
                         case(6):
                             fields[i] = new GUI_Jail();
@@ -89,7 +88,6 @@ public class Game {
                 }
                 else {
                     fields[i] = new GUI_Chance();
-                    fields[i].setSubText("Chancecard");
                 }
             }
             else{

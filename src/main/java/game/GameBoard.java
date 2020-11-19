@@ -30,6 +30,7 @@ public class GameBoard {
                 tiles[i].getGui_field().setDescription(Main.tileStrings.getLine(i));
             } else {
                 tiles[i].getGui_field().setSubText(Main.tileStrings.getLine(i));
+                tiles[i].getGui_field().setDescription(Main.tileStrings.getLine(i));
             }
         }
 
