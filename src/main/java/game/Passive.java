@@ -3,14 +3,14 @@ import gui_fields.GUI_Field;
 import gui_fields.*;
 import gui_main.GUI;
 
-public class Passiv extends SpecialFields{
+public class Passive extends SpecialFields{
         private String fieldNavn;
 
-        public Passiv (int fields, GUI gui) {
+        public Passive(int fields, GUI gui) {
             super(fields, gui);
             switch(fields){
-                case 6: fieldNavn = "på besøg"; break;
-                case 12: fieldNavn = "parking lot"; break;
+                case 6: fieldNavn = "On visit"; break;
+                case 12: fieldNavn = "Parking lot"; break;
                 default:
                     break;
             }
@@ -23,10 +23,10 @@ public class Passiv extends SpecialFields{
          */
         @Override
         public String toString(){
-            if(fieldNavn.equals("på besøg"))
-                return "Du er bare " + fieldNavn;
+            if(fieldNavn.equals("On visit"))
+                return "You are just " + fieldNavn;
             else
-                return fieldNavn + ", du behøver ikke gøre noget, bare snup dig en pause";
+                return fieldNavn + ", You don't have to do anything just take a break";
         }
     @Override
     public void landOnField(Player player) {
