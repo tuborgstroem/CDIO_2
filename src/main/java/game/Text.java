@@ -8,15 +8,14 @@ public class Text {
     private GUI_Field[] fields;
     private Game game;
     public final Language textStrings;
-    private String tileString;
-    private String landString;
-    private String unOwnedString;
-    private String ownedSelfString;
-    private String ownedOtherStringLast;
-    private String ownedOtherStringFirst;
+    private final String landString;
+    private final String unOwnedString;
+    private final String ownedSelfString;
+    private final String ownedOtherStringLast;
+    private final String ownedOtherStringFirst;
 
-    private String currencyPlural;
-    private String currencySingular;
+    private final String currencyPlural;
+    private final String currencySingular;
     private GameBoard board;
     private GUI gui;
     private Player player;

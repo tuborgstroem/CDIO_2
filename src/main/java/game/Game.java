@@ -11,7 +11,6 @@ public class Game {
     private Player[] playerList;
     private DiceCup cup;
     private GameBoard board;
-//    private SpecialFields[] specialFields = new SpecialFields[24];
     private GUI gui;
     private final int startBalance = 16;
     private final int startLocation = 0;

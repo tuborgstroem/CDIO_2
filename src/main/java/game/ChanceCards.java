@@ -16,8 +16,8 @@ public class ChanceCards {
 
     public void DrawCard(Player player){
 
-//        int a = rand.nextInt();
-        int a = 0;
+        int a = rand.nextInt();
+//        int a = 0;
         switch (a){
             case(0):
                 moveToStart(player);
