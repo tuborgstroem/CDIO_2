@@ -29,7 +29,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="special fields" />
+    <list default="true" id="52d4ae8a-2e74-40c9-aeee-94502276f600" name="Default Changelist" comment="special fields">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/game/DiceCupTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/game/DiceTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605789365531</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="special fields">
+      <created>1605789725258</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605789725258</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,10 +299,10 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="490" y="1181" width="986" height="911" key="CommitChangelistDialog2/0.1080.1920.1080/56.0.1864.1080@0.1080.1920.1080" timestamp="1605183301273" />
-    <state x="26" y="23" width="1710" height="887" key="DiffContextDialog" timestamp="1605789446947">
+    <state x="26" y="23" width="1152" height="664" key="DiffContextDialog" timestamp="1605790013048">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
-    <state x="26" y="23" key="DiffContextDialog/0.23.1440.831@0.23.1440.831" timestamp="1605789446947" />
+    <state x="26" y="23" width="1152" height="664" key="DiffContextDialog/0.23.1440.831@0.23.1440.831" timestamp="1605790013048" />
     <state x="90" y="0" width="1710" height="887" key="DiffContextDialog/56.0.1864.2160@56.0.1864.2160" timestamp="1605046405288" />
     <state width="1177" height="201" key="GridCell.Tab.0.bottom" timestamp="1605789065321">
       <screen x="0" y="23" width="1440" height="831" />
@@ -349,15 +360,15 @@
       <screen x="56" y="0" width="1864" height="2160" />
     </state>
     <state x="517" y="225" width="876" height="636" key="VCS.ChangeListViewerDialog/56.0.1864.2160@56.0.1864.2160" timestamp="1605046318312" />
-    <state x="221" y="180" key="Vcs.Push.Dialog.v2" timestamp="1605789539893">
+    <state x="221" y="180" key="Vcs.Push.Dialog.v2" timestamp="1605789999182">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
-    <state x="221" y="180" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1605789539893" />
+    <state x="221" y="180" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1605789999182" />
     <state x="221" y="180" key="Vcs.Push.Dialog.v2/0.23.1440.832@0.23.1440.832" timestamp="1605789214860" />
-    <state x="414" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605788620933">
+    <state x="414" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605790002115">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
-    <state x="414" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.831@0.23.1440.831" timestamp="1605788620933" />
+    <state x="414" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.831@0.23.1440.831" timestamp="1605790002115" />
     <state x="690" y="1327" width="586" height="619" key="git4idea.branch.GitSmartOperationDialog" timestamp="1605183314260">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
