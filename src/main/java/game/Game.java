@@ -1,7 +1,5 @@
 package game;
 
-
-
 import com.company.Main;
 import gui_fields.*;
 import gui_main.GUI;
@@ -15,7 +13,7 @@ public class Game {
     private GameBoard board;
     private SpecialFields[] specialFields = new SpecialFields[24];
     private GUI gui;
-    private final int startBalance = 1000;
+    private final int startBalance = 16;
     private final int startLocation = 0;
     private final int numberOfTiles = 24;
     private final int maxNumberOfPlayers = 4;
@@ -24,8 +22,10 @@ public class Game {
                             Color.YELLOW,/*, Color.CYAN, Color.PINK};*/};
     private ChanceCards chanceCards;
     private GUI_Field[] fields;
+    private Text textStrings;
 
     public Game(Boolean test){
+        textStrings = new Text(this);
         initGUIFields();
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
@@ -45,6 +45,7 @@ public class Game {
         playGame();
     }
     public Game() {
+        textStrings = new Text(this);
         initGUIFields();
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
@@ -136,7 +137,6 @@ public class Game {
             gui.getFields()[p.getLocation()].setCar(p, true);
         }
     }
-
 
 
     public Player[] getPlayerList() { return playerList; }

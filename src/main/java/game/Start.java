@@ -18,10 +18,10 @@ import java.awt.*;
         @Override
         public String toString(){
             if(fields == 0){
-                return "Du har landet på start, og modtager en startbonus på " + startbonus + "M";
+                return "You landed on start and will receive a bonus on your next turn" + startbonus + "M";
             }
             else{
-                return "Du har passeret start, og modtager en startbonus på " + startbonus + "M";
+                return "You've passed start and will receive a bonus" + startbonus + "M";
             }
         }
 
