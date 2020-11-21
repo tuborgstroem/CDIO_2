@@ -1,48 +1,7 @@
-You landed on Burger Bar, it is not owned by anyone so you buy it for 1 dollars
-You landed on Burger bar, it is owned by yourself so you enjoy your stay
-You landed on Burger Bar, it is owned by another player and you have to pay rent lose 1 dollars
-You landed on Pizza House, it is not owned by anyone so you buy it for 1 dollars
-You landed on Pizza House, it is owned by yourself so you enjoy your stay
-You landed on Pizza House, it is owned by another player and you have to pay rent lose 1 dollars
-You landed on Candy Store, it is not owned by anyone so you buy it for 1 dollars
-You landed on Candy Store, it is owned by yourself so you enjoy your stay
-You landed on Candy Store, it is owned by another player and you have to pay rent lose 1 dollars
-You landed on Icecream Kiosk, it is not owned by anyone so you buy it for 1 dollars
-You landed on Icecream Kiosk, it is owned by yourself so you enjoy your stay
-You landed on Icecream Kiosk, it is owned by another player and you have to pay rent lose 1 dollars
-You landed on Museum, it is not owned by anyone so you buy it for 2 dollars
-You landed on Museum, it is owned by yourself so you enjoy your stay
-You landed on Museum, it is owned by another player and you have to pay rent lose 2 dollars
-You landed on Library, it is not owned by anyone so you buy it for 2 dollars
-You landed on Library, it is owned by yourself so you enjoy your stay
-You landed on Library, it is owned by another player and you have to pay rent lose 2 dollars
-You landed on Skate Park, it is not owned by anyone so you buy it for 2 dollars
-You landed on Skate Park, it is owned by yourself so you enjoy your stay
-You landed on Skate Park, it is owned by another player and you have to pay rent lose 2 dollars
-You landed on Swimming pool, it is not owned by anyone so you buy it for 2 dollars
-You landed on Swimming pool, it is owned by yourself so you enjoy your stay
-You landed on Swimming pool, it is owned by another player and you have to pay rent lose 2 dollars
-You landed on Game Hall, it is not owned by anyone so you buy it for 3 dollars
-You landed on Game Hall, it is owned by yourself so you enjoy your stay
-You landed on Game Hall, it is owned by another player and you have to pay rent lose 3 dollars
-You landed on Cinema, it is not owned by anyone so you buy it for 3 dollars
-You landed on Cinema, it is owned by yourself so you enjoy your stay
-You landed on Cinema, it is owned by another player and you have to pay rent lose 3 dollars
-You landed on Toy Store, it is not owned by anyone so you buy it for 3 dollars
-You landed on Toy Store, it is owned by yourself so you enjoy your stay
-You landed on Toy Store, it is owned by another player and you have to pay rent lose 3 dollars
-You landed on Animal Store, it is not owned by anyone so you buy it for 3 dollars
-You landed on Animal Store, it is owned by yourself so you enjoy your stay
-You landed on Animal Store, it is owned by another player and you have to pay rent lose 3 dollars
-You landed on Bowling Hall, it is not owned by anyone so you buy it for 4 dollars
-You landed on Bowling Hall, it is owned by yourself so you enjoy your stay
-You landed on Bowling Hall, it is owned by another player and you have to pay rent lose 4 dollars
-You landed on Zoo, it is not owned by anyone so you buy it for 4 dollars
-You landed on Zoo, it is owned by yourself so you enjoy your stay
-You landed on Zoo, it is owned by another player and you have to pay rent lose 4 dollars
-You landed on Water Park, it is not owned by anyone so you buy it for 4 dollars
-You landed on Water Park, it is owned by yourself so you enjoy your stay
-You landed on Water Park, it is owned by another player and you have to pay rent lose 4 dollars
-You landed on Beach Promenade, it is not owned by anyone so you buy it for 5 dollars
-You landed on Beach Promenade, it is owned by yourself so you enjoy your stay
-You landed on Beach Promenade, it is owned by another player and you have to pay rent lose 5 dollars
+You landed on
+ it is not owned by anyone so you buy it for
+ it is owned by yourself so you enjoy your stay
+ it is owned by
+ and you have to pay rent lose
+ dollars
+ dollar

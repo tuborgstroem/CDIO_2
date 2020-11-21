@@ -7,7 +7,7 @@ public class Player extends GUI_Player {
     //player variables
     private int location;
     final private Account account;
-private boolean prison;
+private int prisonCards;
 private int placering=0;
     /**
      *
@@ -20,6 +20,7 @@ private int placering=0;
         super(playerName, playerBalance, playerCar);
         this.location = startLocation;
         account = new Account(playerBalance);
+        this.prisonCards = 0;
     }
 
     //adds to gamescore
@@ -96,7 +97,33 @@ private int placering=0;
         }
 
     }
+    /**
+     * Retrieve amount of Prisoncards
+     * @return The balance of int prisonCards
+     */
+    public int getPrisonCard () {return this.prisonCards; }
 
+    /**
+     * Add to amount of Prisoncards
+     * @return The balance of int prisonCards
+     */
+    public int addPrisonCard (int numbersOfPrisonCards)
+    {
+        this.prisonCards += numbersOfPrisonCards;
+
+        return this.prisonCards;
+    }
+
+    /**
+     * Remove to amount of Prisoncards
+     * @return The balance of int prisonCards
+     */
+    public int removePrisonCard (int numbersOfPrisonCards)
+    {
+        this.prisonCards -= numbersOfPrisonCards;
+
+        return this.prisonCards;
+    }
     /**
      * removes the players car from the field and redraws the others
      * @param game the game
@@ -121,12 +148,6 @@ private int placering=0;
         }
     }
 
-    public void setPrison(boolean prison) {
-        this.prison=prison;
-    }
 
-    public void setPlacering(int placering) {
-        this.placering=placering;
-    }
 }
 

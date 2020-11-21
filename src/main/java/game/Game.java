@@ -11,7 +11,6 @@ public class Game {
     private Player[] playerList;
     private DiceCup cup;
     private GameBoard board;
-    private SpecialFields[] specialFields = new SpecialFields[24];
     private GUI gui;
     private final int startBalance = 16;
     private final int startLocation = 0;
@@ -23,6 +22,7 @@ public class Game {
     private ChanceCards chanceCards;
     private GUI_Field[] fields;
     private Text textStrings;
+
 
     public Game(Boolean test){
         initGUIFields();
@@ -49,7 +49,7 @@ public class Game {
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
         chanceCards = new ChanceCards(this);
-        textStrings = new Text(this);
+//        textStrings = new Text(this);
         totalNumPlayers = gui.getUserInteger(Main.langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
         if(totalNumPlayers >1){
             addPlayers(totalNumPlayers);
@@ -74,7 +74,6 @@ public class Game {
                     switch (i){
                         case(0):
                             fields[i] =  new GUI_Start();
-                            fields[i].setSubText("Start");
                             break;
                         case(6):
                             fields[i] = new GUI_Jail();
@@ -89,7 +88,6 @@ public class Game {
                 }
                 else {
                     fields[i] = new GUI_Chance();
-                    fields[i].setSubText("Chancecard");
                 }
             }
             else{
@@ -115,10 +113,10 @@ public class Game {
                 gui.setDie(a);
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
-                textStrings.TileMessage(player);
 
-                if (player.getBalance() >= 3000) {
-                    winnerID = i;
+
+                if (player.getBankrrupt()) {
+                    gui.showMessage(player.getName() + Main.langStrings.getLine(5));
                     break;
                 }
 
@@ -160,4 +158,6 @@ public class Game {
     }
 
     public int getNumberOfTiles(){return  numberOfTiles;}
+
+    public Text getTextStrings(){ return textStrings;}
 }
