@@ -1,5 +1,6 @@
 package game;
 
+import com.company.Main;
 import gui_fields.GUI_Field;
 import gui_fields.GUI_Street;
 
@@ -41,6 +42,10 @@ public class Tile {
     }
 
     public void setOwner(Player owner) {
+        //gui_field.setTitle(Main.tileStrings.getLine(number)+" ["+owner.getName()+"]");
+        ((GUI_Street) gui_field).setHouses(1);
+        ((GUI_Street) gui_field).setOwnerName(owner.getName());
+        ((GUI_Street) gui_field).setRent(Integer.toString(rent));
         this.owner = owner;
     }
 
