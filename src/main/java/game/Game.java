@@ -12,9 +12,11 @@ public class Game {
     private DiceCup cup;
     private GameBoard board;
     private GUI gui;
-    private final int startBalance = 16;
+    private final int startBalance = 100;
     private final int startLocation = 0;
     private final int numberOfTiles = 24;
+    private final int prisonLocation = 6;
+    private final int goToJailLocation = 18;
     private final int maxNumberOfPlayers = 4;
     private final int chancePerSide = 1;
     private final Color[] colors= {Color.RED, Color.BLUE, Color.GREEN,
@@ -22,6 +24,7 @@ public class Game {
     private ChanceCards chanceCards;
     private GUI_Field[] fields;
     private Text textStrings;
+    private static TileHandler tileHandler;
 
 
     public Game(Boolean test){
@@ -30,13 +33,14 @@ public class Game {
         board = new GameBoard(gui.getFields().length, gui.getFields());
         chanceCards = new ChanceCards(this);
         textStrings = new Text(this);
+        tileHandler = new TileHandler(prisonLocation);
         totalNumPlayers = 4;
         String[] playerNames = {"Thor", "Tobias", "Kian", "Sume"};
         playerList = new Player[totalNumPlayers];
         for(int i = 0; i < totalNumPlayers; i++){
             GUI_Car car = new GUI_Car();
             car.setPrimaryColor(colors[i]);
-            Player p = new Player(playerNames[i], startBalance, startLocation, car);
+            Player p = new Player(playerNames[i], startBalance, startLocation, car, tileHandler);
             gui.addPlayer(p);
             playerList[i] = p;
             gui.getFields()[p.getLocation()].setCar(p, true);
@@ -49,7 +53,6 @@ public class Game {
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
         chanceCards = new ChanceCards(this);
-//        textStrings = new Text(this);
         totalNumPlayers = gui.getUserInteger(Main.langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
         if(totalNumPlayers >1){
             addPlayers(totalNumPlayers);
@@ -75,13 +78,13 @@ public class Game {
                         case(0):
                             fields[i] =  new GUI_Start();
                             break;
-                        case(6):
+                        case(prisonLocation):
                             fields[i] = new GUI_Jail();
                         break;
                         case(12):
                             fields[i] = new GUI_Refuge();
                         break;
-                        case(18):
+                        case(goToJailLocation):
                             fields[i] = new GUI_Jail();
                         break;
                     }
@@ -100,16 +103,18 @@ public class Game {
 
     public void playGame() {
         int winnerID = -1;
-        //boolean ownsAdjacent;
-
         while (winnerID == -1) //Game loop till winner is found
         {
             for (int i = 0; i < playerList.length; i++) {   //A full round
                 Player player = playerList[i];
+                if (player.getPrison()){
+                    player.startFromPrison(this);
+                }
+
                 gui.getUserButtonPressed(playerList[i].getName()+Main.langStrings.getLine(2),Main.langStrings.getLine(4));
                 cup.rollDice();
                 int a = cup.getDiceinCup().get(0).getValue();
-//                int a = 3;
+//                int a = 1;
                 gui.setDie(a);
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
@@ -131,13 +136,12 @@ public class Game {
             GUI_Car car = new GUI_Car();
             car.setPrimaryColor(colors[i]);
 
-            Player p = new Player(gui.getUserString(Main.langStrings.getLine(1)+" "+(i+1)+"."), startBalance, startLocation, car);
+            Player p = new Player(gui.getUserString(Main.langStrings.getLine(1)+" "+(i+1)+"."), startBalance, startLocation, car, tileHandler);
             gui.addPlayer(p);
             playerList[i] = p;
             gui.getFields()[p.getLocation()].setCar(p, true);
         }
     }
-
 
     public Player[] getPlayerList() { return playerList; }
 

@@ -5,3 +5,10 @@ You landed on
  and you have to pay rent lose
  dollars
  dollar
+You are in prison
+ and you pay the 2 dollar bail
+ and you use your get out of prison free card
+Go to jail. You are sent to jail, do not pass start.
+Free parking, enjoy your turn here.
+You have passed start you receive
+You visit the jail, the parking is free so enjoy yourself

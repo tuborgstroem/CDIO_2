@@ -77,5 +77,22 @@ public class GameBoard {
     }
 
     public Color[] getTileColor() {return tileColor;}
+
+    public int getRent(Tile tile){
+        if(tile.getOwner() != null){
+            Player owner = tile.getOwner();
+            int[] checklist = getColorArray(tile.getTileColor());
+            for (int i = 0; i < checklist.length; i++){
+                Tile otherTile;
+                if(checklist[i] != tile.getNumber()){
+                    otherTile = tiles[checklist[i]];
+                    if(tile.getOwner() == otherTile.getOwner()){
+                        return tile.getRent()*2;
+                    }
+                }
+            }
+        }
+        return tile.getRent();
+    }
 }
 
