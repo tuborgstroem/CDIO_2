@@ -7,8 +7,10 @@ public class Player extends GUI_Player {
     //player variables
     private int location;
     final private Account account;
-private int prisonCards;
-private int placering=0;
+    private boolean bankrrupt;
+    private boolean prison;
+    private int getOutOfJailCards;
+
     /**
      *
      * @param playerName The name of the player string
@@ -20,12 +22,27 @@ private int placering=0;
         super(playerName, playerBalance, playerCar);
         this.location = startLocation;
         account = new Account(playerBalance);
-        this.prisonCards = 0;
+        bankrrupt = false;
+        getOutOfJailCards = 0;
     }
+
+    public boolean getBankrrupt(){ return this.bankrrupt;}
 
     //adds to gamescore
     public void addToBalance(int balanceGain) {
         this.setBalance(this.getBalance()+balanceGain) ;
+    }
+
+    public boolean withdrawFromBalance(int payment){
+        int newBalance = this.getBalance() - payment;
+        if (newBalance < 0){
+            bankrrupt = true;
+            return false;
+        }
+        else{
+            this.setBalance(newBalance);
+            return true;
+        }
     }
 
 
@@ -56,27 +73,28 @@ private int placering=0;
      * @param field the field the player lands on
      */
     private void landOnField(Tile tile, Game game) {
+        Text textStrings = game.getTextStrings();
         tile.getGui_field().setCar(this, true);
-        int playerValue;
+        int tileRent;
         int ownerValue;
         int tempTileNumber;
 
         if(tile.getGui_field() instanceof GUI_Street) {
+
+            textStrings.TileMessage(this);
             if (tile.getOwner() == null){
                 buyTile(this, tile, false);
+//                game.getGui().showMessage(this.getName() + " buys " + tile.getGui_field().getTitle() + " for " + Integer.toString(tile.getRent()));
             } else if (tile.getOwner() != this && tile.getOwner() != null) {
-
                 GameBoard b = game.getBoard();
                 tempTileNumber = b.getColorArray(tile.getTileColor())[0];
                 if (b.getTiles()[tempTileNumber].getOwner() == b.getTiles()[(tempTileNumber+1)].getOwner()) {
-                    playerValue = getBalance() - tile.getRent() * 2;
-                    ownerValue = tile.getOwner().getBalance() + tile.getRent() * 2;
+                    tileRent = tile.getRent() * 2;
                 } else {
-                    playerValue = getBalance() - tile.getRent();
-                    ownerValue = tile.getOwner().getBalance() + tile.getRent();
+                    tileRent = tile.getRent();
                 }
-                setBalance(playerValue);
-                tile.getOwner().setBalance(ownerValue);
+                payRent(this, tile.getOwner(), tileRent);
+//                game.getGui().showMessage(this.getName() + " pays " + Integer.toString(tileRent) + " to " + tile.getOwner().getName());
             }
         }
         else if(tile.getGui_field() instanceof GUI_Chance){
@@ -86,44 +104,21 @@ private int placering=0;
 
     public void buyTile(Player player, Tile tile, boolean getFree){
         if(!getFree){
-            if (player.getBalance() >= tile.getRent()){
+            if(this.withdrawFromBalance(tile.getRent())){
                 tile.setOwner(this);
-                int playerValue = getBalance() - tile.getRent();
-                setBalance(playerValue);
             }
         }
-        else{
+        else {
             tile.setOwner(this);
         }
-
-    }
-    /**
-     * Retrieve amount of Prisoncards
-     * @return The balance of int prisonCards
-     */
-    public int getPrisonCard () {return this.prisonCards; }
-
-    /**
-     * Add to amount of Prisoncards
-     * @return The balance of int prisonCards
-     */
-    public int addPrisonCard (int numbersOfPrisonCards)
-    {
-        this.prisonCards += numbersOfPrisonCards;
-
-        return this.prisonCards;
     }
 
-    /**
-     * Remove to amount of Prisoncards
-     * @return The balance of int prisonCards
-     */
-    public int removePrisonCard (int numbersOfPrisonCards)
-    {
-        this.prisonCards -= numbersOfPrisonCards;
-
-        return this.prisonCards;
+    public void payRent(Player fromPlayer, Player toPlayer, int amount){
+        if (fromPlayer.withdrawFromBalance(amount)){
+            toPlayer.addToBalance(amount);
+        }
     }
+
     /**
      * removes the players car from the field and redraws the others
      * @param game the game
@@ -148,6 +143,24 @@ private int placering=0;
         }
     }
 
+    public void setPrison(boolean prison) {
+        this.prison=prison;
+    }
 
+    public void setInPrison(boolean b) { prison = b;}
+
+    public void setGetOutOfJailCards(int amount){ getOutOfJailCards = amount;}
+
+    public int getGetOutOfJailCards(){return getOutOfJailCards;}
+
+    public void addGetOutofJailCard(int amount){getOutOfJailCards += amount;}
+
+    public boolean removeGetOutOfJailCard(int amount){
+        if (getOutOfJailCards < 0){
+            getOutOfJailCards -= 0;
+            return true;
+        }
+        return false;
+    }
 }
 
