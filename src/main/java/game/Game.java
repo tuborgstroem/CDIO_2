@@ -99,10 +99,8 @@ public class Game {
             }
             else{
                 fields[i]= new GUI_Street();
-
             }
         }
-
     }
 
     public void playGame() {
@@ -114,7 +112,6 @@ public class Game {
                 if (player.getPrison()){
                     player.startFromPrison(this);
                 }
-
                 gui.getUserButtonPressed(playerList[i].getName()+Main.langStrings.getLine(2),Main.langStrings.getLine(4));
                 cup.rollDice();
                 int a = cup.getDiceinCup().get(0).getValue();
@@ -122,13 +119,10 @@ public class Game {
                 gui.setDie(a);
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
-
-
-                if (player.getBankrrupt()) {
+                if (player.getBankrupt()) {
                     gui.showMessage(player.getName() + Main.langStrings.getLine(5));
                     break;
                 }
-
             }
         }
         gui.showMessage(playerList[winnerID].getName()+Main.langStrings.getLine(3));

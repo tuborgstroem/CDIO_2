@@ -6,8 +6,7 @@ public class Player extends GUI_Player {
 
     //player variables
     private int location;
-    final private Account account;
-    private boolean bankrrupt;
+    private boolean bankrupt;
     private boolean prison;
     private int getOutOfJailCards;
     private TileHandler tilehandler;
@@ -23,13 +22,12 @@ public class Player extends GUI_Player {
                   GUI_Car playerCar, TileHandler tileHandler){
         super(playerName, playerBalance, playerCar);
         this.location = startLocation;
-        account = new Account(playerBalance);
-        bankrrupt = false;
+        bankrupt = false;
         getOutOfJailCards = 0;
         this.tilehandler = tileHandler;
     }
 
-    public boolean getBankrrupt(){ return this.bankrrupt;}
+    public boolean getBankrupt(){ return this.bankrupt;}
 
     //adds to gamescore
     public void addToBalance(int balanceGain) {
@@ -39,7 +37,8 @@ public class Player extends GUI_Player {
     public boolean withdrawFromBalance(int payment){
         int newBalance = getBalance() - payment;
         if (newBalance < 0){
-            bankrrupt = true;
+            bankrupt = true;
+
             return false;
         }
         else{
@@ -91,6 +90,11 @@ public class Player extends GUI_Player {
     public void payRent(Player fromPlayer, Player toPlayer, int amount){
         if (fromPlayer.withdrawFromBalance(amount)){
             toPlayer.addToBalance(amount);
+        }
+        else{
+            int restAmount =fromPlayer.getBalance();
+            fromPlayer.withdrawFromBalance(restAmount);
+            toPlayer.addToBalance(restAmount);
         }
     }
 
