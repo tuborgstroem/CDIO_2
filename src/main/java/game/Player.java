@@ -18,8 +18,9 @@ public class Player extends GUI_Player {
      * @param startLocation The tile the player starts on
      * @param playerCar The GUI implementation for the car
      */
-    public Player(String playerName, int playerBalance, int startLocation,
-                  GUI_Car playerCar, TileHandler tileHandler){
+    public Player(
+            String playerName, int playerBalance, int startLocation,
+            GUI_Car playerCar, TileHandler tileHandler){
         super(playerName, playerBalance, playerCar);
         this.location = startLocation;
         bankrupt = false;
@@ -66,8 +67,8 @@ public class Player extends GUI_Player {
         location += moveNumber;
         while (location >= 24) {
             location -= 24;
-            game.getGui().showMessage(game.getTextStrings().passedStart +
-                    game.getTextStrings().moneyMessage(2));
+            game.getGui().showMessage(game.getTextStrings().passedStart
+                    + game.getTextStrings().moneyMessage(2));
             addToBalance(2);
         }
         tilehandler.landOnField(
@@ -77,8 +78,11 @@ public class Player extends GUI_Player {
 
     public void buyTile(Player player, Tile tile, boolean getFree){
         if(!getFree){
-            if(this.withdrawFromBalance(tile.getRent())){
+            if(withdrawFromBalance(tile.getRent())){
                 tile.setOwner(this);
+            }
+            else{
+                withdrawFromBalance(getBalance());
             }
         }
         else {
@@ -87,7 +91,8 @@ public class Player extends GUI_Player {
     }
 
 
-    public void payRent(Player fromPlayer, Player toPlayer, int amount){
+    public void payRent(
+            Player fromPlayer, Player toPlayer, int amount){
         if (fromPlayer.withdrawFromBalance(amount)){
             toPlayer.addToBalance(amount);
         }
@@ -104,11 +109,15 @@ public class Player extends GUI_Player {
 
     public void setInPrison(boolean b) { prison = b;}
 
-    public void setGetOutOfJailCards(int amount){ getOutOfJailCards = amount;}
+    public void setGetOutOfJailCards(int amount){
+        getOutOfJailCards = amount;
+    }
 
     public int getGetOutOfJailCards(){return getOutOfJailCards;}
 
-    public void addGetOutofJailCard(int amount){getOutOfJailCards += amount;}
+    public void addGetOutofJailCard(int amount){
+        getOutOfJailCards += amount;
+    }
 
     public boolean removeGetOutOfJailCard(int amount){
         if (getOutOfJailCards < 0){

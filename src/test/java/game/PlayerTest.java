@@ -30,4 +30,13 @@ int balance = 1000;
         assertEquals(balance+addedToBalance, testplayer.getBalance());
     }
 
+    @Test
+    void withdrawFromBalanceTest(){
+        int withdrawAmount = 100;
+        testplayer.withdrawFromBalance(withdrawAmount);
+        assertEquals(testplayer.getBalance(), balance -100);
+        int tooBigamount =100000;
+        testplayer.withdrawFromBalance(tooBigamount);
+        assertEquals(testplayer.getBankrupt(), true);
+    }
 }
