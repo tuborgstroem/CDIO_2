@@ -12,7 +12,7 @@ public class Game {
     private DiceCup cup;
     private GameBoard board;
     private GUI gui;
-    private final int startBalance = 100;
+    private int startBalance ;
     private final int startLocation = 0;
     private final int numberOfTiles = 24;
     private final int prisonLocation = 6;
@@ -35,6 +35,7 @@ public class Game {
         textStrings = new Text(this);
         tileHandler = new TileHandler(prisonLocation);
         totalNumPlayers = 4;
+        decideStartBalance(totalNumPlayers);
         String[] playerNames = {"Thor", "Tobias", "Kian", "Sume"};
         playerList = new Player[totalNumPlayers];
         for(int i = 0; i < totalNumPlayers; i++){
@@ -53,8 +54,11 @@ public class Game {
         gui = new GUI(fields);
         board = new GameBoard(gui.getFields().length, gui.getFields());
         chanceCards = new ChanceCards(this);
+        textStrings = new Text(this);
+        tileHandler = new TileHandler(prisonLocation);
         totalNumPlayers = gui.getUserInteger(Main.langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
         if(totalNumPlayers >1){
+            decideStartBalance(totalNumPlayers);
             addPlayers(totalNumPlayers);
         }
         else{
@@ -164,4 +168,24 @@ public class Game {
     public int getNumberOfTiles(){return  numberOfTiles;}
 
     public Text getTextStrings(){ return textStrings;}
+
+    public void decideStartBalance(int numberOfPlayers){
+        switch (numberOfPlayers){
+            case(1):
+                startBalance = 22;
+            break;
+            case(2):
+                startBalance = 20;
+            break;
+            case(3):
+                startBalance = 18;
+            break;
+            case(4):
+                startBalance = 16;
+            break;
+            default:
+                startBalance = 12;
+            break;
+        }
+    }
 }
