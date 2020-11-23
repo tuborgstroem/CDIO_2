@@ -9,7 +9,7 @@ public class Main {
     public static final Language tileStrings = new Language("resources/engTileStrings.txt");
 
     public static void main(String[] args) {
-        boolean test = true;
+        boolean test = false;
         if (test){
             Game game = new Game(test);
         }
