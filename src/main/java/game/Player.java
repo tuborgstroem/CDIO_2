@@ -28,7 +28,7 @@ public class Player extends GUI_Player {
         this.tilehandler = tileHandler;
     }
 
-    public boolean getBankrupt(){ return this.bankrupt;}
+    public boolean getBankrupt(){ return bankrupt;}
 
     //adds to gamescore
     public void addToBalance(int balanceGain) {
@@ -142,10 +142,5 @@ public class Player extends GUI_Player {
         }
 
     }
-
-    public void goToJail(int jailLocation){
-
-    }
-
 }
 
