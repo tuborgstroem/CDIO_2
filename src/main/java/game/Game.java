@@ -121,7 +121,35 @@ public class Game {
                 gui.getFields()[player.getLocation()].setCar(player, true);
                 if (player.getBankrupt()) {
                     gui.showMessage(player.getName() + Main.langStrings.getLine(5));
+                    resolveGame(player,winnerID);
+                    winnerID=100; //Why wont the loop stop without this?!?!?!
                     break;
+                }
+            }
+        }
+    }
+
+    private void resolveGame(Player p, int winner) {
+        int highestBalance;
+        int numWinners;
+        int[] totalValue = new int[playerList.length];
+
+        gui.showMessage(p.getName() + Main.langStrings.getLine(5));
+        highestBalance = 0;
+        numWinners = 0;
+        for (int j = 0; j < playerList.length; j++) { highestBalance = Math.max(highestBalance,playerList[j].getBalance()); }
+        for (int j = 0; j < playerList.length; j++) {
+            if (playerList[j].getBalance() == highestBalance){ numWinners++; winner = j; }
+        }
+        if (numWinners == 1) {
+            gui.showMessage(playerList[winner].getName()+Main.langStrings.getLine(3));
+        } else {
+            for (int i = 0; i < playerList.length; i++) {
+                totalValue[i] = playerList[i].getBalance();
+                for (int j = 0; j < numberOfTiles; j++) {
+                    if (board.getTiles()[j].getOwner() == playerList[i]) {
+                        totalValue[i] += board.getTiles()[i].getRent();
+                    }
                 }
             }
         }
