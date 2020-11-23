@@ -13,9 +13,16 @@ public class Text {
     private final String ownedSelfString;
     private final String ownedOtherStringLast;
     private final String ownedOtherStringFirst;
-
     private final String currencyPlural;
     private final String currencySingular;
+    protected final String playerInprison;
+    protected final String payBail;
+    protected final String useJailCard;
+    protected final String goToJail;
+    protected final String freeParking;
+    protected final String passedStart;
+    protected final String visitingJail;
+
     private GameBoard board;
     private GUI gui;
     private Player player;
@@ -31,8 +38,13 @@ public class Text {
         ownedOtherStringLast = textStrings.getLine(i++);
         currencyPlural = textStrings.getLine(i++);
         currencySingular = textStrings.getLine(i++);
-
-//        tileString = textStrings.getLine(0);
+        playerInprison = textStrings.getLine(i++);
+        payBail = textStrings.getLine(i++);
+        useJailCard = textStrings.getLine(i++);
+        goToJail = textStrings.getLine(i++);
+        freeParking= textStrings.getLine(i++);
+        passedStart = textStrings.getLine(i++);
+        visitingJail = textStrings.getLine(i++);
         this.game = game;
         board = game.getBoard();
         gui = game.getGui();
@@ -53,7 +65,7 @@ public class Text {
         else{
             finalmsg += ownedOtherStringFirst + " " + tile.getOwner().getName() + ownedOtherStringLast;
         }
-        finalmsg += " " + Integer.toString(tile.getRent());
+        finalmsg += " " + Integer.toString(game.getBoard().getRent(tile));
         if(tile.getRent() > 1){
             finalmsg += currencyPlural;
         }
@@ -69,7 +81,17 @@ public class Text {
         public GameBoard getBoard() {
             return board;
         }
-        
+
+    public String moneyMessage(int amount){
+    String currency;
+        if(amount == 1 || amount == -1){
+            currency = currencySingular;
+        }
+        else{
+            currency = currencyPlural;
+        }
+        return " " + Integer.toString(amount) + currency;
+    }
 
 
 

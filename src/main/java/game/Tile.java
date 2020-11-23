@@ -34,6 +34,7 @@ public class Tile {
     }
 
     public int getRent() {
+
         return rent;
     }
 

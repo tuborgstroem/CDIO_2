@@ -7,8 +7,11 @@ public class Player extends GUI_Player {
     //player variables
     private int location;
     final private Account account;
-private int prisonCards;
-private int placering=0;
+    private boolean bankrrupt;
+    private boolean prison;
+    private int getOutOfJailCards;
+    private TileHandler tilehandler;
+
     /**
      *
      * @param playerName The name of the player string
@@ -16,16 +19,33 @@ private int placering=0;
      * @param startLocation The tile the player starts on
      * @param playerCar The GUI implementation for the car
      */
-    public Player(String playerName, int playerBalance, int startLocation, GUI_Car playerCar){
+    public Player(String playerName, int playerBalance, int startLocation,
+                  GUI_Car playerCar, TileHandler tileHandler){
         super(playerName, playerBalance, playerCar);
         this.location = startLocation;
         account = new Account(playerBalance);
-        this.prisonCards = 0;
+        bankrrupt = false;
+        getOutOfJailCards = 0;
+        this.tilehandler = tileHandler;
     }
+
+    public boolean getBankrrupt(){ return this.bankrrupt;}
 
     //adds to gamescore
     public void addToBalance(int balanceGain) {
-        this.setBalance(this.getBalance()+balanceGain) ;
+        setBalance(getBalance()+balanceGain) ;
+    }
+
+    public boolean withdrawFromBalance(int payment){
+        int newBalance = getBalance() - payment;
+        if (newBalance < 0){
+            bankrrupt = true;
+            return false;
+        }
+        else{
+            setBalance(newBalance);
+            return true;
+        }
     }
 
 
@@ -43,111 +63,76 @@ private int placering=0;
      * @param game the game class for redrawing the cars in the gui
      */
     public void moveLocation(int moveNumber, Game game){
-        removeOneCar(game);
+        tilehandler.removeOneCar(game, this);
         location += moveNumber;
         while (location >= 24) {
             location -= 24;
+            game.getGui().showMessage(game.getTextStrings().passedStart +
+                    game.getTextStrings().moneyMessage(2));
+            addToBalance(2);
         }
-        landOnField(game.getBoard().getTiles()[location], game);
+        tilehandler.landOnField(
+                game.getBoard().getTiles()[location], game,this);
     }
 
-    /*
-     * This is what happens when a player lands on a new field
-     * @param field the field the player lands on
-     */
-    private void landOnField(Tile tile, Game game) {
-        tile.getGui_field().setCar(this, true);
-        int playerValue;
-        int ownerValue;
-        int tempTileNumber;
-
-        if(tile.getGui_field() instanceof GUI_Street) {
-            if (tile.getOwner() == null){
-                buyTile(this, tile, false);
-            } else if (tile.getOwner() != this && tile.getOwner() != null) {
-
-                GameBoard b = game.getBoard();
-                tempTileNumber = b.getColorArray(tile.getTileColor())[0];
-                if (b.getTiles()[tempTileNumber].getOwner() == b.getTiles()[(tempTileNumber+1)].getOwner()) {
-                    playerValue = getBalance() - tile.getRent() * 2;
-                    ownerValue = tile.getOwner().getBalance() + tile.getRent() * 2;
-                } else {
-                    playerValue = getBalance() - tile.getRent();
-                    ownerValue = tile.getOwner().getBalance() + tile.getRent();
-                }
-                setBalance(playerValue);
-                tile.getOwner().setBalance(ownerValue);
-            }
-        }
-        else if(tile.getGui_field() instanceof GUI_Chance){
-            game.drawChance(this);
-        }
-    }
 
     public void buyTile(Player player, Tile tile, boolean getFree){
         if(!getFree){
-            if (player.getBalance() >= tile.getRent()){
+            if(this.withdrawFromBalance(tile.getRent())){
                 tile.setOwner(this);
-                int playerValue = getBalance() - tile.getRent();
-                setBalance(playerValue);
             }
         }
-        else{
+        else {
             tile.setOwner(this);
         }
-
-    }
-    /**
-     * Retrieve amount of Prisoncards
-     * @return The balance of int prisonCards
-     */
-    public int getPrisonCard () {return this.prisonCards; }
-
-    /**
-     * Add to amount of Prisoncards
-     * @return The balance of int prisonCards
-     */
-    public int addPrisonCard (int numbersOfPrisonCards)
-    {
-        this.prisonCards += numbersOfPrisonCards;
-
-        return this.prisonCards;
     }
 
-    /**
-     * Remove to amount of Prisoncards
-     * @return The balance of int prisonCards
-     */
-    public int removePrisonCard (int numbersOfPrisonCards)
-    {
-        this.prisonCards -= numbersOfPrisonCards;
 
-        return this.prisonCards;
-    }
-    /**
-     * removes the players car from the field and redraws the others
-     * @param game the game
-     */
-    private void removeOneCar(Game game){
-        GUI_Field field = game.getGui().getFields()[location];
-        Player replaceCars[] = new Player[game.getTotalNumPlayers()];
-        int j= 0;
-        for(int i =0; i < game.getPlayerList().length; i++ ){
-            if (field.hasCar(game.getPlayerList()[i]) & !game.getPlayerList()[i].getName().equals(this.getName()) ){
-                replaceCars[j] = game.getPlayerList()[i];
-                j++;
-            }
-        }
-        field.removeAllCars();
-        if (replaceCars.length > 0){
-            for(int i =0; i < replaceCars.length; i++){
-                if(replaceCars[i] != null){
-                    field.setCar(replaceCars[i], true);
-                }
-            }
+    public void payRent(Player fromPlayer, Player toPlayer, int amount){
+        if (fromPlayer.withdrawFromBalance(amount)){
+            toPlayer.addToBalance(amount);
         }
     }
 
+    public boolean getPrison() {
+        return prison;
+    }
+
+    public void setInPrison(boolean b) { prison = b;}
+
+    public void setGetOutOfJailCards(int amount){ getOutOfJailCards = amount;}
+
+    public int getGetOutOfJailCards(){return getOutOfJailCards;}
+
+    public void addGetOutofJailCard(int amount){getOutOfJailCards += amount;}
+
+    public boolean removeGetOutOfJailCard(int amount){
+        if (getOutOfJailCards < 0){
+            getOutOfJailCards -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    public void startFromPrison(Game game){
+        game.getGui().showMessage(game.getTextStrings().playerInprison);
+        if(getOutOfJailCards > 0){
+            removeGetOutOfJailCard(1);
+            game.getGui().showMessage(game.getTextStrings().useJailCard);
+            prison = false;
+        }
+        else{
+            if (withdrawFromBalance(2)){
+                game.getGui().showMessage(game.getTextStrings().payBail);
+                prison = false;
+            }
+        }
+
+    }
+
+    public void goToJail(int jailLocation){
+
+    }
 
 }
 

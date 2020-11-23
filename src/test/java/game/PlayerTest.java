@@ -20,7 +20,7 @@ int balance = 1000;
 
     @BeforeEach
     public void beforeTestsMethod(){
-        testplayer = new Player(testName, balance, location, null);
+        testplayer = new Player(testName, balance, location, null, null);
     }
 
     @Test
