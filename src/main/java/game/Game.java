@@ -134,7 +134,6 @@ public class Game {
         int numWinners;
         int[] totalValue = new int[playerList.length];
 
-        gui.showMessage(p.getName() + Main.langStrings.getLine(5));
         highestBalance = 0;
         numWinners = 0;
         for (int j = 0; j < playerList.length; j++) { highestBalance = Math.max(highestBalance,playerList[j].getBalance()); }
