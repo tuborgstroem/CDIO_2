@@ -126,7 +126,7 @@ public class Game {
                 //playerList[1].setBalance(50);
                 //playerList[2].setBalance(0);
 
-                if (player.getBankrrupt()) {
+                if (player.getBankrupt()) {
                     resolveGame(player,winnerID);
                     winnerID=100; //Why wont the loop stop without this?!?!?!
                     break;
