@@ -57,13 +57,20 @@ public class Game {
         textStrings = new Text(this);
         tileHandler = new TileHandler(prisonLocation);
         totalNumPlayers = gui.getUserInteger(Main.langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
-        if(totalNumPlayers >1){
-            decideStartBalance(totalNumPlayers);
-            addPlayers(totalNumPlayers);
+
+        if (totalNumPlayers>4){
+            decideStartBalance(maxNumberOfPlayers);
+            addPlayers(maxNumberOfPlayers);
         }
-        else{
+        else if(totalNumPlayers<1){
+            decideStartBalance(1);
             addPlayers(1);
+        }else {
+                decideStartBalance(totalNumPlayers);
+                addPlayers(totalNumPlayers);
         }
+
+
 
         cup = new DiceCup(1);
         playGame();
@@ -134,7 +141,6 @@ public class Game {
         int numWinners;
         int[] totalValue = new int[playerList.length];
 
-        gui.showMessage(p.getName() + Main.langStrings.getLine(5));
         highestBalance = 0;
         numWinners = 0;
         for (int j = 0; j < playerList.length; j++) { highestBalance = Math.max(highestBalance,playerList[j].getBalance()); }
@@ -152,8 +158,16 @@ public class Game {
                     }
                 }
             }
+            highestBalance = 0;
+            for (int j = 0; j < playerList.length; j++) { highestBalance = Math.max(highestBalance,totalValue[j]); }
+            for (int j = 0; j < playerList.length; j++) {
+                if (totalValue[j] == highestBalance){
+                    gui.showMessage(Main.langStrings.getLine(6));
+                    gui.showMessage(playerList[j].getName()+Main.langStrings.getLine(3));
+                    break;
+                }
+            }
         }
-        gui.showMessage(playerList[winner].getName()+Main.langStrings.getLine(3));
     }
 
     private void addPlayers(int a) {
