@@ -153,7 +153,7 @@ public class Game {
                 }
             }
         }
-        gui.showMessage(playerList[winnerID].getName()+Main.langStrings.getLine(3));
+        gui.showMessage(playerList[winner].getName()+Main.langStrings.getLine(3));
     }
 
     private void addPlayers(int a) {
