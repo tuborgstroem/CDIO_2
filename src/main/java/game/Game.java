@@ -57,13 +57,20 @@ public class Game {
         textStrings = new Text(this);
         tileHandler = new TileHandler(prisonLocation);
         totalNumPlayers = gui.getUserInteger(Main.langStrings.getLine(0)+". 1-"+maxNumberOfPlayers,1,maxNumberOfPlayers);
-        if(totalNumPlayers >1){
-            decideStartBalance(totalNumPlayers);
-            addPlayers(totalNumPlayers);
+
+        if (totalNumPlayers>4){
+            decideStartBalance(maxNumberOfPlayers);
+            addPlayers(maxNumberOfPlayers);
         }
-        else{
+        else if(totalNumPlayers<1){
+            decideStartBalance(1);
             addPlayers(1);
+        }else {
+                decideStartBalance(totalNumPlayers);
+                addPlayers(totalNumPlayers);
         }
+
+
 
         cup = new DiceCup(1);
         playGame();
