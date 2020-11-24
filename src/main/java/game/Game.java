@@ -152,8 +152,16 @@ public class Game {
                     }
                 }
             }
+            highestBalance = 0;
+            for (int j = 0; j < playerList.length; j++) { highestBalance = Math.max(highestBalance,totalValue[j]); }
+            for (int j = 0; j < playerList.length; j++) {
+                if (totalValue[j] == highestBalance){
+                    gui.showMessage(Main.langStrings.getLine(6));
+                    gui.showMessage(playerList[j].getName()+Main.langStrings.getLine(3));
+                    break;
+                }
+            }
         }
-        gui.showMessage(playerList[winnerID].getName()+Main.langStrings.getLine(3));
     }
 
     private void addPlayers(int a) {
