@@ -99,10 +99,8 @@ public class Game {
             }
             else{
                 fields[i]= new GUI_Street();
-
             }
         }
-
     }
 
     public void playGame() {
@@ -114,7 +112,6 @@ public class Game {
                 if (player.getPrison()){
                     player.startFromPrison(this);
                 }
-
                 gui.getUserButtonPressed(playerList[i].getName()+Main.langStrings.getLine(2),Main.langStrings.getLine(4));
                 cup.rollDice();
                 int a = cup.getDiceinCup().get(0).getValue();
@@ -122,11 +119,8 @@ public class Game {
                 gui.setDie(a);
                 player.moveLocation(a, this);
                 gui.getFields()[player.getLocation()].setCar(player, true);
-                //playerList[0].setBalance(0);
-                //playerList[1].setBalance(50);
-                //playerList[2].setBalance(0);
-
                 if (player.getBankrupt()) {
+                    gui.showMessage(player.getName() + Main.langStrings.getLine(5));
                     resolveGame(player,winnerID);
                     winnerID=100; //Why wont the loop stop without this?!?!?!
                     break;
@@ -158,16 +152,8 @@ public class Game {
                     }
                 }
             }
-            highestBalance = 0;
-            for (int j = 0; j < playerList.length; j++) { highestBalance = Math.max(highestBalance,totalValue[j]); }
-            for (int j = 0; j < playerList.length; j++) {
-                if (totalValue[j] == highestBalance){
-                    gui.showMessage(Main.langStrings.getLine(6));
-                    gui.showMessage(playerList[j].getName()+Main.langStrings.getLine(3));
-                    break;
-                }
-            }
         }
+        gui.showMessage(playerList[winnerID].getName()+Main.langStrings.getLine(3));
     }
 
     private void addPlayers(int a) {

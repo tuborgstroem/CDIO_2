@@ -83,7 +83,4 @@ public class TileHandler{
             game.getGui().showMessage(game.getTextStrings().visitingJail);
         }
     }
-
-
-
 }
